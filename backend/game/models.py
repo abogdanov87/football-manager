@@ -14,9 +14,22 @@ class Position(models.TextChoices):
     FWD = "FWD", "Нападение"
 
 
+class Competition(models.Model):
+    name = models.CharField(max_length=120)
+    slug = models.SlugField(max_length=64, unique=True)
+    logo_url = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self) -> str:
+        return self.name
+
+
 class Club(models.Model):
     name = models.CharField(max_length=120)
     short_name = models.CharField(max_length=3)
+    crest_url = models.CharField(max_length=255, blank=True)
     budget = models.PositiveIntegerField(default=5_000_000)
     stadium_capacity = models.PositiveIntegerField(default=15_000)
     is_player_controlled = models.BooleanField(default=False)
@@ -56,6 +69,13 @@ class Player(models.Model):
 
 class Season(models.Model):
     name = models.CharField(max_length=120)
+    competition = models.ForeignKey(
+        Competition,
+        on_delete=models.PROTECT,
+        related_name="seasons",
+        null=True,
+        blank=True,
+    )
     is_active = models.BooleanField(default=True)
     current_matchday = models.PositiveSmallIntegerField(default=1)
     total_matchdays = models.PositiveSmallIntegerField(default=1)

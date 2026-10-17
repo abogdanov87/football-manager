@@ -16,9 +16,17 @@ export type Club = {
   id: number
   name: string
   short_name: string
+  crest_url: string
   formation: string
   lineup_player_ids: number[]
   budget: number
+}
+
+export type Competition = {
+  id: number
+  name: string
+  slug: string
+  logo_url: string
 }
 
 export type Player = {
@@ -56,6 +64,7 @@ export type MatchResult = {
 export type SeasonOverview = {
   id: number
   name: string
+  competition: Competition | null
   current_matchday: number
   total_matchdays: number
   next_simulation_at: string | null

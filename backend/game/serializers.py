@@ -1,12 +1,18 @@
 from rest_framework import serializers
 
-from .models import Club, Fixture, Match, Player, Season, Standing
+from .models import Club, Competition, Fixture, Match, Player, Season, Standing
 
 
 class PlayerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Player
         fields = ["id", "name", "position", "age", "overall", "form"]
+
+
+class CompetitionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Competition
+        fields = ["id", "name", "slug", "logo_url"]
 
 
 class ClubSerializer(serializers.ModelSerializer):
@@ -16,6 +22,7 @@ class ClubSerializer(serializers.ModelSerializer):
             "id",
             "name",
             "short_name",
+            "crest_url",
             "budget",
             "stadium_capacity",
             "is_player_controlled",
@@ -81,6 +88,7 @@ class FixtureSerializer(serializers.ModelSerializer):
 
 
 class SeasonOverviewSerializer(serializers.ModelSerializer):
+    competition = CompetitionSerializer(read_only=True)
     standings = StandingSerializer(many=True, read_only=True)
     player_club_id = serializers.SerializerMethodField()
     recent_matches = serializers.SerializerMethodField()
@@ -92,6 +100,7 @@ class SeasonOverviewSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
+            "competition",
             "is_active",
             "is_complete",
             "current_matchday",

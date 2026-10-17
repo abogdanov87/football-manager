@@ -1,6 +1,11 @@
 from django.contrib import admin
 
-from .models import Club, Fixture, Match, MatchdayRun, Player, Season, Standing
+from .models import Club, Competition, Fixture, Match, MatchdayRun, Player, Season, Standing
+
+
+@admin.register(Competition)
+class CompetitionAdmin(admin.ModelAdmin):
+    list_display = ("name", "slug", "logo_url")
 
 
 @admin.register(Club)

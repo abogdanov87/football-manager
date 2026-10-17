@@ -3,62 +3,87 @@ import random
 from django.core.management.base import BaseCommand
 from django.db import transaction
 
-from game.models import Club, Player, Season, Standing
+from game.models import Club, Competition, Player, Season, Standing
 from game.scheduler import compute_next_simulation_at, ensure_season_schedule
 from game.services import default_lineup, generate_round_robin
 
-
-CLUB_DATA = [
-    ("Спартак Москва", "SPA"),
-    ("Динамо", "DIN"),
-    ("Локомотив", "LOK"),
-    ("ЦСКА", "CSK"),
-    ("Краснодар", "KRA"),
-    ("Рубин", "RUB"),
-    ("Ростов", "ROS"),
-    ("Сочи", "SOC"),
-    ("Ахмат", "AKH"),
-    ("Урал", "URA"),
+# English Premier League — 20 clubs for season 2026/27.
+# Lineup matches the 2025/26 PL composition as a proxy until the official
+# start-of-season list is published (promotion/relegation from Championship).
+# Slugs align with frontend/public/crests/clubs/<slug>.png (see crests README).
+CLUB_DATA: list[tuple[str, str, str]] = [
+    ("Arsenal", "ARS", "arsenal"),
+    ("Aston Villa", "AVL", "aston-villa"),
+    ("AFC Bournemouth", "BOU", "afc-bournemouth"),
+    ("Brentford", "BRE", "brentford"),
+    ("Brighton & Hove Albion", "BHA", "brighton"),
+    ("Chelsea", "CHE", "chelsea"),
+    ("Crystal Palace", "CRY", "crystal-palace"),
+    ("Everton", "EVE", "everton"),
+    ("Fulham", "FUL", "fulham"),
+    ("Ipswich Town", "IPS", "ipswich-town"),
+    ("Leicester City", "LEI", "leicester-city"),
+    ("Liverpool", "LIV", "liverpool"),
+    ("Manchester City", "MCI", "manchester-city"),
+    ("Manchester United", "MUN", "manchester-united"),
+    ("Newcastle United", "NEW", "newcastle-united"),
+    ("Nottingham Forest", "NFO", "nottingham-forest"),
+    ("Southampton", "SOU", "southampton"),
+    ("Tottenham Hotspur", "TOT", "tottenham-hotspur"),
+    ("West Ham United", "WHU", "west-ham-united"),
+    ("Wolverhampton Wanderers", "WOL", "wolverhampton-wanderers"),
 ]
+
+COMPETITION_NAME = "Premier League"
+COMPETITION_SLUG = "premier-league"
+COMPETITION_LOGO_URL = "/crests/competitions/premier-league.png"
+SEASON_DISPLAY_NAME = "Премьер-лига 2026/27"
 
 FIRST_NAMES = [
-    "Иван",
-    "Алексей",
-    "Дмитрий",
-    "Сергей",
-    "Андрей",
-    "Михаил",
-    "Никита",
-    "Павел",
-    "Артём",
-    "Максим",
-    "Кирилл",
-    "Егор",
-    "Олег",
-    "Виктор",
-    "Роман",
+    "James",
+    "Jack",
+    "Harry",
+    "George",
+    "Charlie",
+    "Thomas",
+    "William",
+    "Oliver",
+    "Jacob",
+    "Daniel",
+    "Michael",
+    "Benjamin",
+    "Lucas",
+    "Henry",
+    "Alexander",
 ]
 LAST_NAMES = [
-    "Петров",
-    "Сидоров",
-    "Козлов",
-    "Новиков",
-    "Морозов",
-    "Волков",
-    "Соколов",
-    "Лебедев",
-    "Кузнецов",
-    "Попов",
-    "Васильев",
-    "Смирнов",
-    "Иванов",
-    "Фёдоров",
-    "Медведев",
+    "Smith",
+    "Johnson",
+    "Williams",
+    "Brown",
+    "Taylor",
+    "Davies",
+    "Wilson",
+    "Evans",
+    "Thomas",
+    "Roberts",
+    "Walker",
+    "Wright",
+    "Thompson",
+    "White",
+    "Hughes",
 ]
+
+
+def club_crest_url(slug: str) -> str:
+    return f"/crests/clubs/{slug}.png"
 
 
 class Command(BaseCommand):
-    help = "Создать 10 клубов, игроков и сезон с расписанием (v0.1)"
+    help = (
+        "Создать соревнование Premier League, 20 клубов АПЛ, игроков и сезон 2026/27 "
+        "с расписанием (v0.1)"
+    )
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -79,18 +104,31 @@ class Command(BaseCommand):
             Season.objects.all().delete()
             Player.objects.all().delete()
             Club.objects.all().delete()
+            Competition.objects.all().delete()
             self.stdout.write("Данные очищены")
 
         if Season.objects.filter(is_active=True).exists():
             self.stdout.write(self.style.WARNING("Активный сезон уже есть — пропуск"))
             return
 
+        competition, _ = Competition.objects.get_or_create(
+            slug=COMPETITION_SLUG,
+            defaults={
+                "name": COMPETITION_NAME,
+                "logo_url": COMPETITION_LOGO_URL,
+            },
+        )
+        if not competition.logo_url:
+            competition.logo_url = COMPETITION_LOGO_URL
+            competition.save(update_fields=["logo_url"])
+
         rng = random.Random(42)
         clubs: list[Club] = []
-        for i, (name, short) in enumerate(CLUB_DATA):
+        for i, (name, short, slug) in enumerate(CLUB_DATA):
             club = Club.objects.create(
                 name=name,
                 short_name=short,
+                crest_url=club_crest_url(slug),
                 is_player_controlled=(i == 0),
                 formation="4-4-2",
                 budget=rng.randint(3_000_000, 12_000_000),
@@ -101,7 +139,8 @@ class Command(BaseCommand):
             club.save(update_fields=["lineup_player_ids"])
 
         season = Season.objects.create(
-            name="Премьер-лига 2025/26",
+            name=SEASON_DISPLAY_NAME,
+            competition=competition,
             is_active=True,
             current_matchday=1,
             next_simulation_at=compute_next_simulation_at(),
@@ -114,7 +153,7 @@ class Command(BaseCommand):
 
         self.stdout.write(
             self.style.SUCCESS(
-                f"Сид готов: {len(clubs)} клубов, сезон «{season.name}», "
+                f"Сид готов: {competition.name} — {len(clubs)} клубов, сезон «{season.name}», "
                 f"туров {season.total_matchdays}, следующий матч-день: {season.next_simulation_at}"
             )
         )

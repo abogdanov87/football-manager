@@ -8,7 +8,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
-python manage.py seed_league
+python manage.py seed_league   # Premier League 2026/27, 20 clubs (see frontend/public/crests/README.md)
 python manage.py runserver 8001
 ```
 

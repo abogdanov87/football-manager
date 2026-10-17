@@ -1,24 +1,37 @@
-import { Layout, Menu, Spin, theme } from 'antd'
-import { useCallback, useEffect, useState } from 'react'
-import { BrowserRouter, Link, Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import {
+  HistoryOutlined,
+  HomeOutlined,
+  MenuOutlined,
+  SettingOutlined,
+  SwapOutlined,
+  TableOutlined,
+  TeamOutlined,
+  ThunderboltOutlined,
+} from '@ant-design/icons'
+import { Avatar, Layout, Menu, Spin, Statistic, Typography, theme } from 'antd'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { BrowserRouter, Link, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { api } from './api/client'
-import type { SeasonOverview, StandingRow } from './api/client'
+import type { Club, SeasonOverview, StandingRow } from './api/client'
+import { ClubCrest } from './components/ClubCrest'
+import { ComingSoon } from './pages/ComingSoon'
 import { Dashboard } from './pages/Dashboard'
 import { LeagueTable } from './pages/LeagueTable'
 import { MatchResults } from './pages/MatchResults'
 import { SquadTactics } from './pages/SquadTactics'
-import './App.css'
+import dayjs from 'dayjs'
 
 const { Header, Content, Sider } = Layout
+const { Text } = Typography
 
 function Shell() {
   const location = useLocation()
+  const navigate = useNavigate()
   const [season, setSeason] = useState<SeasonOverview | null>(null)
   const [standings, setStandings] = useState<StandingRow[]>([])
+  const [playerClub, setPlayerClub] = useState<Club | null>(null)
   const [loading, setLoading] = useState(true)
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken()
+  const { token } = theme.useToken()
 
   const refresh = useCallback(async () => {
     setLoading(true)
@@ -26,8 +39,13 @@ function Shell() {
       const [s, st] = await Promise.all([api.getSeason(), api.getStandings()])
       setSeason(s)
       setStandings(st)
+      if (s.player_club_id) {
+        const squad = await api.getSquad(s.player_club_id)
+        setPlayerClub(squad.club)
+      }
     } catch {
       setSeason(null)
+      setStandings([])
     } finally {
       setLoading(false)
     }
@@ -37,49 +55,202 @@ function Shell() {
     refresh()
   }, [refresh])
 
-  const menuKey = location.pathname === '/' ? '/' : location.pathname
+  const menuKey = location.pathname === '/' ? '/' : location.pathname.split('/')[1] ? `/${location.pathname.split('/')[1]}` : '/'
+
+  const breadcrumb = useMemo(() => {
+    switch (menuKey) {
+      case '/':
+        return 'Обзор клуба'
+      case '/squad':
+        return 'Команда / Состав и тактика'
+      case '/table':
+        return 'Соревнования / Премьер-лига'
+      case '/matches':
+        return 'Соревнования / История матчей'
+      case '/transfers':
+        return 'Развитие / Трансферы'
+      case '/training':
+        return 'Развитие / Тренировки'
+      default:
+        return 'Football Manager'
+    }
+  }, [menuKey])
+
+  const countdownDeadline = season?.next_simulation_at
+    ? dayjs(season.next_simulation_at).valueOf()
+    : undefined
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Sider breakpoint="lg" collapsedWidth={0}>
-        <div style={{ color: '#fff', padding: 16, fontWeight: 600 }}>FM Online</div>
+      <Sider breakpoint="lg" collapsedWidth={68} width={250} theme="dark">
+        <div className="fm-brand" style={{ padding: '24px 12px 0' }}>
+          <span className="fm-brand-mark">FM</span>
+          <span>
+            <b>Football</b>
+            <em>Manager</em>
+          </span>
+        </div>
+        {playerClub && (
+          <div className="fm-club-chip">
+            <ClubCrest src={playerClub.crest_url} alt={playerClub.name} size="medium" />
+            <div>
+              <strong>{playerClub.name}</strong>
+              <small>{season?.competition?.name ?? 'Премьер-лига'}</small>
+            </div>
+          </div>
+        )}
+        <p className="fm-nav-label">КОМАНДА</p>
         <Menu
           theme="dark"
           mode="inline"
           selectedKeys={[menuKey]}
           items={[
-            { key: '/', label: <Link to="/">Главная</Link> },
-            { key: '/squad', label: <Link to="/squad">Состав</Link> },
-            { key: '/table', label: <Link to="/table">Таблица</Link> },
-            { key: '/matches', label: <Link to="/matches">Матчи</Link> },
+            { key: '/', icon: <HomeOutlined />, label: <Link to="/">Главная</Link> },
+            {
+              key: '/squad',
+              icon: <TeamOutlined />,
+              label: <Link to="/squad">Состав и тактика</Link>,
+            },
+            {
+              key: '/table',
+              icon: <TableOutlined />,
+              label: <Link to="/table">Таблица лиги</Link>,
+            },
+            {
+              key: '/matches',
+              icon: <HistoryOutlined />,
+              label: <Link to="/matches">История матчей</Link>,
+            },
           ]}
         />
+        <p className="fm-nav-label gap">РАЗВИТИЕ</p>
+        <Menu
+          theme="dark"
+          mode="inline"
+          selectedKeys={[menuKey]}
+          items={[
+            {
+              key: '/transfers',
+              icon: <SwapOutlined />,
+              label: (
+                <Link to="/transfers">
+                  Трансферы <span className="fm-soon-tag">СКОРО</span>
+                </Link>
+              ),
+            },
+            {
+              key: '/training',
+              icon: <ThunderboltOutlined />,
+              label: (
+                <Link to="/training">
+                  Тренировки <span className="fm-soon-tag">СКОРО</span>
+                </Link>
+              ),
+            },
+          ]}
+        />
+        <div className="fm-sidebar-footer">
+          <Menu
+            theme="dark"
+            mode="inline"
+            selectable={false}
+            items={[{ key: 'settings', icon: <SettingOutlined />, label: 'Настройки', disabled: true }]}
+          />
+          <small>v0.1.0 · Альфа</small>
+        </div>
       </Sider>
       <Layout>
-        <Header style={{ background: colorBgContainer, paddingInline: 24 }}>
-          {season?.name ?? 'Football Manager'}
-        </Header>
-        <Content style={{ margin: 24 }}>
-          {loading && !season ? (
-            <Spin size="large" />
-          ) : (
-            <Routes>
-              <Route path="/" element={<Dashboard season={season} loading={loading} onRefresh={refresh} />} />
-              <Route path="/squad" element={<SquadTactics clubId={season?.player_club_id ?? null} />} />
-              <Route path="/table" element={<LeagueTable standings={standings} loading={loading} />} />
-              <Route
-                path="/matches"
-                element={
-                  <MatchResults
-                    matches={season?.recent_matches ?? []}
-                    upcomingCount={season?.upcoming_fixtures?.length ?? 0}
-                    currentMatchday={season?.current_matchday ?? 1}
-                  />
-                }
+        <Header
+          style={{
+            background: token.colorBgContainer,
+            borderBottom: `1px solid ${token.colorBorder}`,
+            paddingInline: 32,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 20,
+            height: 66,
+          }}
+        >
+          <MenuOutlined style={{ display: 'none' }} />
+          <Text style={{ flex: 1, fontSize: 13, color: 'rgba(255,255,255,0.75)' }}>{breadcrumb}</Text>
+          {countdownDeadline && (
+            <div className="fm-topbar-matchday">
+              <span className="fm-pulse" />
+              ДО МАТЧ-ДНЯ
+              <Statistic.Countdown
+                value={countdownDeadline}
+                format="HH:mm:ss"
+                valueStyle={{ fontSize: 12, color: '#e0f7e9', fontWeight: 700 }}
               />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
+            </div>
           )}
+          <Text type="secondary" style={{ fontSize: 12 }}>
+            {season?.name ?? 'Сезон'}
+          </Text>
+          <Avatar style={{ background: '#224f3b', border: '1px solid #4ba879' }} size={32}>
+            {playerClub?.short_name?.slice(0, 2) ?? 'FM'}
+          </Avatar>
+        </Header>
+        <Content style={{ background: token.colorBgLayout }}>
+          <div className="fm-content-wrap">
+            {loading && !season ? (
+              <Spin size="large" />
+            ) : (
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <Dashboard
+                      season={season}
+                      standings={standings}
+                      playerClub={playerClub}
+                      loading={loading}
+                      onRefresh={refresh}
+                      onNavigate={navigate}
+                    />
+                  }
+                />
+                <Route
+                  path="/squad"
+                  element={
+                    <SquadTactics
+                      clubId={season?.player_club_id ?? null}
+                      currentMatchday={season?.current_matchday ?? 1}
+                    />
+                  }
+                />
+                <Route
+                  path="/table"
+                  element={
+                    <LeagueTable
+                      standings={standings}
+                      loading={loading}
+                      playerClubId={season?.player_club_id ?? null}
+                      competition={season?.competition}
+                      currentMatchday={season?.current_matchday ?? 1}
+                    />
+                  }
+                />
+                <Route
+                  path="/matches"
+                  element={
+                    <MatchResults
+                      matches={season?.recent_matches ?? []}
+                      upcomingFixtures={season?.upcoming_fixtures ?? []}
+                      currentMatchday={season?.current_matchday ?? 1}
+                      playerClubId={season?.player_club_id ?? null}
+                      standings={standings}
+                      competitionName={season?.competition?.name}
+                      onGoTable={() => navigate('/table')}
+                    />
+                  }
+                />
+                <Route path="/transfers" element={<ComingSoon title="Трансферный рынок" />} />
+                <Route path="/training" element={<ComingSoon title="План тренировок" />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            )}
+          </div>
         </Content>
       </Layout>
     </Layout>

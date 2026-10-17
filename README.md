@@ -7,7 +7,7 @@
 | Часть | Технологии |
 |-------|------------|
 | Backend | Django 6, DRF, SQLite (dev) / MySQL (prod) |
-| Frontend | Vite, React, TypeScript, Ant Design |
+| Frontend | Vite, React, TypeScript, Ant Design 6 (тёмная тема FM26) |
 | Симуляция тура | **Cron** → `python manage.py simulate_matchday` (раз в день) |
 
 Игрок между турами настраивает состав и схему; матчи лиги считаются автоматически по расписанию.

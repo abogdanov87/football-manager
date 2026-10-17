@@ -163,7 +163,7 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
                 <>
                   <div className="fm-match-teams">
                     <div className="fm-match-team fm-match-team--home">
-                      <ClubCrest src={nextFixture.home_club.crest_url} alt={nextFixture.home_club.name} size="large" />
+                      <ClubCrest src={nextFixture.home_club.crest_url} alt={nextFixture.home_club.name} size="match" />
                       <Text strong className="fm-match-club-name">{nextFixture.home_club.name}</Text>
                       <Text type="secondary" className="fm-match-side-label">
                         {nextFixture.home_club.id === season?.player_club_id ? 'Ваш клуб' : 'Дома'}
@@ -178,7 +178,7 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
                       </Text>
                     </div>
                     <div className="fm-match-team fm-match-team--away">
-                      <ClubCrest src={nextFixture.away_club.crest_url} alt={nextFixture.away_club.name} size="large" />
+                      <ClubCrest src={nextFixture.away_club.crest_url} alt={nextFixture.away_club.name} size="match" />
                       <Text strong className="fm-match-club-name">{nextFixture.away_club.name}</Text>
                       <Text type="secondary" className="fm-match-side-label">
                         {nextFixture.away_club.id === season?.player_club_id ? 'Ваш клуб' : 'В гостях'}
@@ -211,24 +211,26 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
               loading={loading}
             >
               {lastMatch ? (
-                <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
-                  <Space>
+                <div className="fm-last-result">
+                  <div className="fm-last-result-team">
                     <ClubCrest
                       src={resolveCrestUrl(lastMatch.home_club, clubMap)}
                       alt={lastMatch.home_club}
+                      size="match"
                     />
                     <Text>{lastMatch.home_club}</Text>
-                  </Space>
-                  <Text style={{ fontSize: 24, fontWeight: 700 }}>
+                  </div>
+                  <Text className="fm-last-result-score">
                     {lastMatch.home_score} : {lastMatch.away_score}
                   </Text>
-                  <Space>
+                  <div className="fm-last-result-team">
                     <ClubCrest
                       src={resolveCrestUrl(lastMatch.away_club, clubMap)}
                       alt={lastMatch.away_club}
+                      size="match"
                     />
                     <Text>{lastMatch.away_club}</Text>
-                  </Space>
+                  </div>
                   <span className="fm-win-tag">{lastResultTag()}</span>
                 </div>
               ) : (

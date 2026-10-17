@@ -22,27 +22,27 @@ Recommended size: **256×256 px** (UI scales to 24–64 px). Transparent backgro
 
 ### Clubs (Premier League 2026/27 seed)
 
-| Slug | Club name (official) |
-|------|----------------------|
-| `arsenal` | Arsenal |
-| `aston-villa` | Aston Villa |
-| `afc-bournemouth` | AFC Bournemouth |
-| `brentford` | Brentford |
-| `brighton` | Brighton & Hove Albion |
-| `chelsea` | Chelsea |
-| `crystal-palace` | Crystal Palace |
-| `everton` | Everton |
-| `fulham` | Fulham |
-| `ipswich-town` | Ipswich Town |
-| `leicester-city` | Leicester City |
-| `liverpool` | Liverpool |
-| `manchester-city` | Manchester City |
-| `manchester-united` | Manchester United |
-| `newcastle-united` | Newcastle United |
-| `nottingham-forest` | Nottingham Forest |
-| `southampton` | Southampton |
-| `tottenham-hotspur` | Tottenham Hotspur |
-| `west-ham-united` | West Ham United |
-| `wolverhampton-wanderers` | Wolverhampton Wanderers |
+| Slug (файл PNG) | Отображаемое имя (`Club.name`, RU) |
+|-----------------|-------------------------------------|
+| `arsenal` | Арсенал |
+| `aston-villa` | Астон Вилла |
+| `afc-bournemouth` | Борнмут |
+| `brentford` | Брентфорд |
+| `brighton` | Брайтон |
+| `chelsea` | Челси |
+| `crystal-palace` | Кристал Пэлас |
+| `everton` | Эвертон |
+| `fulham` | Фулхэм |
+| `ipswich-town` | Ипсвич |
+| `leicester-city` | Лестер |
+| `liverpool` | Ливерпуль |
+| `manchester-city` | Манчестер Сити |
+| `manchester-united` | Манчестер Юнайтед |
+| `newcastle-united` | Ньюкасл Юнайтед |
+| `nottingham-forest` | Ноттингем Форест |
+| `southampton` | Саутгемптон |
+| `tottenham-hotspur` | Тоттенхэм |
+| `west-ham-united` | Вест Хэм |
+| `wolverhampton-wanderers` | Вулверхэмптон |
 
-The Django `seed_league` command sets `Club.crest_url` to `/crests/clubs/<slug>.png` and `Competition.logo_url` to `/crests/competitions/premier-league.png`.
+The Django `seed_league` command sets `Club.name` to the Russian display name, `Club.crest_url` to `/crests/clubs/<slug>.png` (English slug), and `Competition.logo_url` to `/crests/competitions/premier-league.png`.

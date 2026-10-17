@@ -26,7 +26,7 @@ export function LeagueTable({
         leading={
           <ClubCrest
             src={competition?.logo_url ?? '/crests/competitions/premier-league.png'}
-            alt={competition?.name ?? 'Premier League'}
+            alt={competition?.name ?? 'Премьер-лига'}
             size="large"
           />
         }

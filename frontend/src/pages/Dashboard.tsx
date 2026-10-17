@@ -95,9 +95,9 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
         subtitle="Ваш клуб готов к следующему матчу."
       />
 
-      <Row gutter={[14, 14]} style={{ marginBottom: 18 }}>
-        <Col xs={24} sm={12} xl={6}>
-          <Card loading={loading}>
+      <Row gutter={[14, 14]} className="fm-dashboard-stats" style={{ marginBottom: 18 }} align="stretch">
+        <Col xs={24} sm={12} xl={6} className="fm-stat-col">
+          <Card loading={loading} className="fm-stat-card">
             <Statistic
               title={<Text type="secondary" style={{ fontSize: 10, letterSpacing: 0.6 }}>ТЕКУЩИЙ ТУР</Text>}
               value={season?.current_matchday ?? '—'}
@@ -106,8 +106,8 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
             />
           </Card>
         </Col>
-        <Col xs={24} sm={12} xl={6}>
-          <Card loading={loading}>
+        <Col xs={24} sm={12} xl={6} className="fm-stat-col">
+          <Card loading={loading} className="fm-stat-card">
             <Statistic
               title={<Text type="secondary" style={{ fontSize: 10, letterSpacing: 0.6 }}>СЛЕДУЮЩАЯ СИМУЛЯЦИЯ</Text>}
               value={
@@ -124,8 +124,8 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
             )}
           </Card>
         </Col>
-        <Col xs={24} sm={12} xl={6}>
-          <Card loading={loading}>
+        <Col xs={24} sm={12} xl={6} className="fm-stat-col">
+          <Card loading={loading} className="fm-stat-card">
             <Statistic
               title={<Text type="secondary" style={{ fontSize: 10, letterSpacing: 0.6 }}>МЕСТО В ЛИГЕ</Text>}
               value={playerRow ? standings.indexOf(playerRow) + 1 : '—'}
@@ -140,8 +140,8 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
             />
           </Card>
         </Col>
-        <Col xs={24} sm={12} xl={6}>
-          <Card loading={loading}>
+        <Col xs={24} sm={12} xl={6} className="fm-stat-col">
+          <Card loading={loading} className="fm-stat-card">
             <Statistic
               title={<Text type="secondary" style={{ fontSize: 10, letterSpacing: 0.6 }}>РАЗНИЦА МЯЧЕЙ</Text>}
               value={playerRow?.goal_difference ?? '—'}
@@ -169,30 +169,30 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
               {nextFixture ? (
                 <>
                   <div className="fm-match-teams">
-                    <div className="fm-match-team">
+                    <div className="fm-match-team fm-match-team--home">
                       <ClubCrest src={nextFixture.home_club.crest_url} alt={nextFixture.home_club.name} size="large" />
-                      <Text strong>{nextFixture.home_club.name}</Text>
-                      <Text type="secondary" style={{ fontSize: 11 }}>
+                      <Text strong className="fm-match-club-name">{nextFixture.home_club.name}</Text>
+                      <Text type="secondary" className="fm-match-side-label">
                         {nextFixture.home_club.id === season?.player_club_id ? 'Ваш клуб' : 'Дома'}
                       </Text>
                     </div>
                     <div className="fm-versus">
-                      <Text strong>VS</Text>
-                      <Text type="secondary" style={{ fontSize: 10 }}>
+                      <Text strong className="fm-versus-label">VS</Text>
+                      <Text type="secondary" className="fm-versus-time">
                         {season?.next_simulation_at
                           ? dayjs(season.next_simulation_at).format('DD.MM, HH:mm')
                           : 'По расписанию'}
                       </Text>
                     </div>
-                    <div className="fm-match-team">
+                    <div className="fm-match-team fm-match-team--away">
                       <ClubCrest src={nextFixture.away_club.crest_url} alt={nextFixture.away_club.name} size="large" />
-                      <Text strong>{nextFixture.away_club.name}</Text>
-                      <Text type="secondary" style={{ fontSize: 11 }}>
+                      <Text strong className="fm-match-club-name">{nextFixture.away_club.name}</Text>
+                      <Text type="secondary" className="fm-match-side-label">
                         {nextFixture.away_club.id === season?.player_club_id ? 'Ваш клуб' : 'В гостях'}
                       </Text>
                     </div>
                   </div>
-                  <div style={{ borderTop: '1px solid #29353d', paddingTop: 14, display: 'flex', justifyContent: 'space-between' }}>
+                  <div className="fm-match-footer">
                     <Text type="secondary" style={{ fontSize: 11 }}>Матч тура лиги</Text>
                     <Button type="primary" onClick={() => onNavigate('/squad')}>
                       Настроить состав →

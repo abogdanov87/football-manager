@@ -31,7 +31,10 @@ export const fmTheme: ThemeConfig = {
       darkItemSelectedBg: '#193d31',
       darkItemSelectedColor: '#5ce29c',
       darkItemHoverBg: '#19242d',
-      itemHeight: 43,
+      itemHeight: 40,
+      itemMarginBlock: 2,
+      itemMarginInline: 8,
+      itemPaddingInline: 12,
     },
     Card: {
       colorBgContainer: '#151e25',

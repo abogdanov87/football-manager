@@ -57,6 +57,60 @@ function Shell() {
 
   const menuKey = location.pathname === '/' ? '/' : location.pathname.split('/')[1] ? `/${location.pathname.split('/')[1]}` : '/'
 
+  const siderMenuItems = useMemo(
+    () => [
+      {
+        type: 'group' as const,
+        label: 'КОМАНДА',
+        children: [
+          { key: '/', icon: <HomeOutlined />, label: <Link to="/">Главная</Link> },
+          {
+            key: '/squad',
+            icon: <TeamOutlined />,
+            label: <Link to="/squad">Состав и тактика</Link>,
+          },
+          {
+            key: '/table',
+            icon: <TableOutlined />,
+            label: <Link to="/table">Таблица лиги</Link>,
+          },
+          {
+            key: '/matches',
+            icon: <HistoryOutlined />,
+            label: <Link to="/matches">История матчей</Link>,
+          },
+        ],
+      },
+      {
+        type: 'group' as const,
+        label: 'РАЗВИТИЕ',
+        children: [
+          {
+            key: '/transfers',
+            icon: <SwapOutlined />,
+            label: (
+              <Link to="/transfers" className="fm-menu-link">
+                <span>Трансферы</span>
+                <span className="fm-soon-tag">СКОРО</span>
+              </Link>
+            ),
+          },
+          {
+            key: '/training',
+            icon: <ThunderboltOutlined />,
+            label: (
+              <Link to="/training" className="fm-menu-link">
+                <span>Тренировки</span>
+                <span className="fm-soon-tag">СКОРО</span>
+              </Link>
+            ),
+          },
+        ],
+      },
+    ],
+    [],
+  )
+
   const breadcrumb = useMemo(() => {
     switch (menuKey) {
       case '/':
@@ -82,81 +136,49 @@ function Shell() {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Sider breakpoint="lg" collapsedWidth={68} width={250} theme="dark">
-        <div className="fm-brand" style={{ padding: '24px 12px 0' }}>
-          <span className="fm-brand-mark">FM</span>
-          <span>
-            <b>Football</b>
-            <em>Manager</em>
-          </span>
-        </div>
-        {playerClub && (
-          <div className="fm-club-chip">
-            <ClubCrest src={playerClub.crest_url} alt={playerClub.name} size="medium" />
-            <div>
-              <strong>{playerClub.name}</strong>
-              <small>{season?.competition?.name ?? 'Премьер-лига'}</small>
+      <Sider
+        className="fm-sider"
+        breakpoint="lg"
+        collapsedWidth={72}
+        width={268}
+        theme="dark"
+      >
+        <div className="fm-sider-inner">
+          <div className="fm-sider-head">
+            <div className="fm-brand">
+              <span className="fm-brand-mark">FM</span>
+              <span>
+                <b>Football</b>
+                <em>Manager</em>
+              </span>
             </div>
+            {playerClub && (
+              <div className="fm-club-chip">
+                <ClubCrest src={playerClub.crest_url} alt={playerClub.name} size="medium" />
+                <div className="fm-club-chip-text">
+                  <strong>{playerClub.name}</strong>
+                  <small>{season?.competition?.name ?? 'Премьер-лига'}</small>
+                </div>
+              </div>
+            )}
           </div>
-        )}
-        <p className="fm-nav-label">КОМАНДА</p>
-        <Menu
-          theme="dark"
-          mode="inline"
-          selectedKeys={[menuKey]}
-          items={[
-            { key: '/', icon: <HomeOutlined />, label: <Link to="/">Главная</Link> },
-            {
-              key: '/squad',
-              icon: <TeamOutlined />,
-              label: <Link to="/squad">Состав и тактика</Link>,
-            },
-            {
-              key: '/table',
-              icon: <TableOutlined />,
-              label: <Link to="/table">Таблица лиги</Link>,
-            },
-            {
-              key: '/matches',
-              icon: <HistoryOutlined />,
-              label: <Link to="/matches">История матчей</Link>,
-            },
-          ]}
-        />
-        <p className="fm-nav-label gap">РАЗВИТИЕ</p>
-        <Menu
-          theme="dark"
-          mode="inline"
-          selectedKeys={[menuKey]}
-          items={[
-            {
-              key: '/transfers',
-              icon: <SwapOutlined />,
-              label: (
-                <Link to="/transfers">
-                  Трансферы <span className="fm-soon-tag">СКОРО</span>
-                </Link>
-              ),
-            },
-            {
-              key: '/training',
-              icon: <ThunderboltOutlined />,
-              label: (
-                <Link to="/training">
-                  Тренировки <span className="fm-soon-tag">СКОРО</span>
-                </Link>
-              ),
-            },
-          ]}
-        />
-        <div className="fm-sidebar-footer">
-          <Menu
-            theme="dark"
-            mode="inline"
-            selectable={false}
-            items={[{ key: 'settings', icon: <SettingOutlined />, label: 'Настройки', disabled: true }]}
-          />
-          <small>v0.1.0 · Альфа</small>
+          <div className="fm-sider-nav">
+            <Menu
+              theme="dark"
+              mode="inline"
+              selectedKeys={[menuKey]}
+              items={siderMenuItems}
+            />
+          </div>
+          <div className="fm-sidebar-footer">
+            <Menu
+              theme="dark"
+              mode="inline"
+              selectable={false}
+              items={[{ key: 'settings', icon: <SettingOutlined />, label: 'Настройки', disabled: true }]}
+            />
+            <small>v0.1.0 · Альфа</small>
+          </div>
         </div>
       </Sider>
       <Layout>

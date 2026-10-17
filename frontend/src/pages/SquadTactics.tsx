@@ -1,8 +1,27 @@
-import { Alert, Avatar, Button, Card, Col, Row, Select, Space, Table, Tag, Typography, message } from 'antd'
-import { useEffect, useMemo, useState } from 'react'
+import {
+  DndContext,
+  DragOverlay,
+  PointerSensor,
+  useDraggable,
+  useDroppable,
+  useSensor,
+  useSensors,
+  type DragEndEvent,
+  type DragStartEvent,
+} from '@dnd-kit/core'
+import {
+  SortableContext,
+  useSortable,
+  verticalListSortingStrategy,
+  arrayMove,
+} from '@dnd-kit/sortable'
+import { CSS } from '@dnd-kit/utilities'
+import { Alert, Button, Card, Col, Row, Select, Space, Tag, Typography, message } from 'antd'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { api } from '../api/client'
 import type { Player } from '../api/client'
 import { PageHeading } from '../components/PageHeading'
+import { PlayerAvatar } from '../components/PlayerAvatar'
 
 const { Text } = Typography
 
@@ -16,15 +35,145 @@ const SLOT_LAYOUTS: Record<string, number[]> = {
   '4-3-3': [1, 4, 3, 3],
 }
 
+const playerDndId = (id: number) => `player-${id}`
+const slotDndId = (index: number) => `slot-${index}`
+
+function parsePlayerId(id: string): number | null {
+  if (!id.startsWith('player-')) return null
+  const n = Number(id.slice(7))
+  return Number.isFinite(n) ? n : null
+}
+
+function parseSlotIndex(id: string): number | null {
+  if (!id.startsWith('slot-')) return null
+  const n = Number(id.slice(5))
+  return Number.isFinite(n) ? n : null
+}
+
+function shortName(name: string): string {
+  const parts = name.trim().split(/\s+/)
+  return parts.length > 1 ? (parts[parts.length - 1] ?? name) : name
+}
+
 type Props = { clubId: number | null; currentMatchday: number }
+
+function PitchSlot({
+  index,
+  player,
+  isOver,
+}: {
+  index: number
+  player: Player | null
+  isOver: boolean
+}) {
+  const { setNodeRef, isOver: dropOver } = useDroppable({ id: slotDndId(index) })
+  const highlighted = isOver || dropOver
+
+  return (
+    <div className={`fm-field-slot${highlighted ? ' fm-field-slot--over' : ''}`} ref={setNodeRef}>
+      {player ? (
+        <PitchPlayerChip player={player} slotIndex={index} />
+      ) : (
+        <div className="fm-slot-empty">
+          <span className="fm-slot-empty-icon">+</span>
+          <span>Слот</span>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function PitchPlayerChip({ player, slotIndex }: { player: Player; slotIndex: number }) {
+  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
+    id: playerDndId(player.id),
+    data: { type: 'pitch', slotIndex, playerId: player.id },
+  })
+  const style = {
+    transform: CSS.Translate.toString(transform),
+    opacity: isDragging ? 0.35 : 1,
+  }
+
+  return (
+    <div
+      ref={setNodeRef}
+      style={style}
+      className="fm-pitch-player"
+      {...listeners}
+      {...attributes}
+    >
+      <span className="fm-slot-ovr">{player.overall}</span>
+      <PlayerAvatar name={player.name} size={44} />
+      <Text className="fm-slot-name" ellipsis title={player.name}>
+        {shortName(player.name)}
+      </Text>
+      <Text type="secondary" className="fm-slot-pos">{player.position}</Text>
+    </div>
+  )
+}
+
+function BenchRow({ player }: { player: Player }) {
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
+    id: playerDndId(player.id),
+    data: { type: 'bench', playerId: player.id },
+  })
+
+  return (
+    <div
+      ref={setNodeRef}
+      className={`fm-bench-row${isDragging ? ' fm-bench-row--dragging' : ''}`}
+      style={{
+        transform: CSS.Transform.toString(transform),
+        transition,
+      }}
+      {...listeners}
+      {...attributes}
+    >
+      <span className="fm-bench-grip" aria-hidden>⋮⋮</span>
+      <PlayerAvatar name={player.name} size={32} />
+      <div className="fm-bench-meta">
+        <Text strong className="fm-bench-name" ellipsis>
+          {player.name}
+        </Text>
+        <Text type="secondary" className="fm-bench-sub">
+          {player.position}
+        </Text>
+      </div>
+      <Tag className="fm-bench-ovr" color="success">{player.overall}</Tag>
+      <Tag color="default" style={{ fontSize: 9, margin: 0 }}>Готов</Tag>
+    </div>
+  )
+}
+
+function DragPreview({ player }: { player: Player }) {
+  return (
+    <div className="fm-pitch-player fm-pitch-player--overlay">
+      <span className="fm-slot-ovr">{player.overall}</span>
+      <PlayerAvatar name={player.name} size={44} />
+      <Text className="fm-slot-name">{shortName(player.name)}</Text>
+    </div>
+  )
+}
 
 export function SquadTactics({ clubId, currentMatchday }: Props) {
   const [clubName, setClubName] = useState('')
   const [players, setPlayers] = useState<Player[]>([])
   const [formation, setFormation] = useState('4-4-2')
   const [slotIds, setSlotIds] = useState<number[]>([])
+  const [benchOrder, setBenchOrder] = useState<number[]>([])
+  const [initialFormation, setInitialFormation] = useState('4-4-2')
+  const [initialSlotIds, setInitialSlotIds] = useState<number[]>([])
   const [loading, setLoading] = useState(false)
   const [savedFlash, setSavedFlash] = useState(false)
+  const [activeDragId, setActiveDragId] = useState<string | null>(null)
+  const [overId, setOverId] = useState<string | null>(null)
+
+  const playerById = useMemo(() => new Map(players.map((p) => [p.id, p])), [players])
+
+  const syncBenchOrder = useCallback((allPlayers: Player[], lineupIds: number[]) => {
+    const inLineup = new Set(lineupIds.filter(Boolean))
+    const benchIds = allPlayers.filter((p) => !inLineup.has(p.id)).map((p) => p.id)
+    setBenchOrder(benchIds)
+  }, [])
 
   useEffect(() => {
     if (!clubId) return
@@ -35,13 +184,18 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
         setClubName(data.club.name)
         setPlayers(data.players)
         setFormation(data.club.formation)
-        const ids = data.club.lineup_player_ids
+        setInitialFormation(data.club.formation)
         const layout = SLOT_LAYOUTS[data.club.formation] ?? SLOT_LAYOUTS['4-4-2']
         const total = layout.reduce((a, b) => a + b, 0)
-        setSlotIds(ids.length === total ? ids : ids.slice(0, total))
+        const ids = data.club.lineup_player_ids
+        const normalized =
+          ids.length === total ? [...ids] : [...ids.slice(0, total), ...Array(Math.max(0, total - ids.length)).fill(0)]
+        setSlotIds(normalized)
+        setInitialSlotIds(normalized)
+        syncBenchOrder(data.players, normalized)
       })
       .finally(() => setLoading(false))
-  }, [clubId])
+  }, [clubId, syncBenchOrder])
 
   const layout = SLOT_LAYOUTS[formation] ?? SLOT_LAYOUTS['4-4-2']
   const slotCount = layout.reduce((a, b) => a + b, 0)
@@ -53,16 +207,85 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
     setSlotIds((prev) => {
       const next = prev.slice(0, nextCount)
       while (next.length < nextCount) next.push(0)
+      syncBenchOrder(players, next)
       return next
     })
   }
 
-  const setSlot = (index: number, playerId: number) => {
+  const resetLineup = () => {
+    setFormation(initialFormation)
+    setSlotIds([...initialSlotIds])
+    syncBenchOrder(players, initialSlotIds)
+  }
+
+  const assignPlayerToSlot = useCallback((playerId: number, toSlot: number) => {
     setSlotIds((prev) => {
       const next = [...prev]
-      next[index] = playerId
+      const fromSlot = next.indexOf(playerId)
+      const displaced = next[toSlot] || 0
+
+      if (fromSlot >= 0) {
+        next[fromSlot] = displaced
+      }
+      next[toSlot] = playerId
+
+      setBenchOrder((bo) => {
+        let order = bo.filter((id) => id !== playerId)
+        if (displaced && displaced !== playerId && !next.includes(displaced)) {
+          order = [...order, displaced]
+        }
+        const inLineup = new Set(next.filter(Boolean))
+        const missing = players
+          .filter((p) => !inLineup.has(p.id) && !order.includes(p.id))
+          .map((p) => p.id)
+        return [...order, ...missing]
+      })
       return next
     })
+  }, [players])
+
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
+  )
+
+  const onDragStart = (event: DragStartEvent) => {
+    setActiveDragId(String(event.active.id))
+  }
+
+  const onDragEnd = (event: DragEndEvent) => {
+    const { active, over } = event
+    setActiveDragId(null)
+    setOverId(null)
+    if (!over) return
+
+    const activePlayerId = parsePlayerId(String(active.id))
+    if (!activePlayerId) return
+
+    const overSlot = parseSlotIndex(String(over.id))
+    if (overSlot !== null) {
+      assignPlayerToSlot(activePlayerId, overSlot)
+      return
+    }
+
+    const overPlayerId = parsePlayerId(String(over.id))
+    if (overPlayerId && overPlayerId !== activePlayerId) {
+      const activeOnBench = benchOrder.includes(activePlayerId)
+      const overOnBench = benchOrder.includes(overPlayerId)
+      if (activeOnBench && overOnBench) {
+        setBenchOrder((items) => {
+          const oldIndex = items.indexOf(activePlayerId)
+          const newIndex = items.indexOf(overPlayerId)
+          if (oldIndex < 0 || newIndex < 0) return items
+          return arrayMove(items, oldIndex, newIndex)
+        })
+        return
+      }
+
+      const overSlotIdx = slotIds.indexOf(overPlayerId)
+      if (overSlotIdx >= 0) {
+        assignPlayerToSlot(activePlayerId, overSlotIdx)
+      }
+    }
   }
 
   const save = async () => {
@@ -75,6 +298,8 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
     try {
       await api.updateTactics(clubId, { formation, lineup_player_ids: lineup })
       message.success('Тактика сохранена')
+      setInitialFormation(formation)
+      setInitialSlotIds([...slotIds])
       setSavedFlash(true)
       window.setTimeout(() => setSavedFlash(false), 2500)
     } catch (e) {
@@ -82,42 +307,30 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
     }
   }
 
-  const bench = useMemo(() => {
-    const inLineup = new Set(slotIds.filter(Boolean))
-    return players.filter((p) => !inLineup.has(p.id))
-  }, [players, slotIds])
+  const benchPlayers = useMemo(
+    () =>
+      benchOrder
+        .map((id) => playerById.get(id))
+        .filter((p): p is Player => Boolean(p)),
+    [benchOrder, playerById],
+  )
 
   const avgOverall = useMemo(() => {
-    const picked = slotIds.map((id) => players.find((p) => p.id === id)?.overall).filter(Boolean) as number[]
+    const picked = slotIds.map((id) => playerById.get(id)?.overall).filter(Boolean) as number[]
     if (!picked.length) return '—'
     return Math.round(picked.reduce((a, b) => a + b, 0) / picked.length)
-  }, [slotIds, players])
+  }, [slotIds, playerById])
+
+  const activePlayer = activeDragId ? playerById.get(parsePlayerId(activeDragId) ?? -1) ?? null : null
 
   let slotIndex = 0
   const lines = layout.map((count, lineIdx) => {
     const rowSlots = Array.from({ length: count }, () => {
       const idx = slotIndex++
-      return (
-        <div className="fm-field-slot" key={idx}>
-          <Select
-            size="small"
-            placeholder="Игрок"
-            value={slotIds[idx] || undefined}
-            onChange={(v) => setSlot(idx, v)}
-            options={players.map((p) => ({
-              value: p.id,
-              label: p.name.split(' ').pop() ?? p.name,
-              disabled: slotIds.includes(p.id) && slotIds[idx] !== p.id,
-            }))}
-            popupMatchSelectWidth={false}
-          />
-          {slotIds[idx] && (
-            <Text type="secondary" style={{ fontSize: 9 }}>
-              {players.find((p) => p.id === slotIds[idx])?.overall}
-            </Text>
-          )}
-        </div>
-      )
+      const pid = slotIds[idx]
+      const player = pid ? playerById.get(pid) ?? null : null
+      const slotOver = overId === slotDndId(idx)
+      return <PitchSlot key={idx} index={idx} player={player} isOver={slotOver} />
     })
     return (
       <div className="fm-pitch-line" key={lineIdx}>
@@ -135,12 +348,12 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
       <PageHeading
         eyebrow="КОМАНДА"
         title="Состав и тактика"
-        subtitle="Настройте стартовый состав перед матчем."
+        subtitle="Перетащите игроков с запаса на поле или между слотами."
         extra={
           <Space>
-            <Button onClick={() => onFormationChange(formation)}>Сбросить</Button>
+            <Button onClick={resetLineup}>Сбросить</Button>
             <Button type="primary" onClick={save}>
-              {savedFlash ? '✓ Сохранено' : 'Сохранить'}
+              {savedFlash ? '✓ Сохранено' : 'Сохранить состав'}
             </Button>
           </Space>
         }
@@ -150,69 +363,67 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
         type="info"
         showIcon
         style={{ marginBottom: 18 }}
-        message={`Изменения будут применены к матчу ${currentMatchday}-го тура. Состав можно менять до начала симуляции.`}
+        message={`Изменения будут применены к матчу ${currentMatchday}-го тура. Перетаскивайте игроков на схему до начала симуляции.`}
       />
 
-      <Row gutter={[18, 18]}>
-        <Col xs={24} lg={16}>
-          <Card loading={loading} className="fm-pitch-card">
-            <Space style={{ marginBottom: 16, width: '100%', justifyContent: 'space-between' }} wrap>
-              <Space>
-                <Text type="secondary" style={{ fontSize: 10, fontWeight: 700 }}>СХЕМА</Text>
-                <Select value={formation} options={FORMATIONS} onChange={onFormationChange} style={{ width: 120 }} />
+      <DndContext
+        sensors={sensors}
+        onDragStart={onDragStart}
+        onDragOver={(e) => setOverId(e.over ? String(e.over.id) : null)}
+        onDragEnd={onDragEnd}
+        onDragCancel={() => {
+          setActiveDragId(null)
+          setOverId(null)
+        }}
+      >
+        <Row gutter={[18, 18]}>
+          <Col xs={24} lg={16}>
+            <Card loading={loading} className="fm-pitch-card">
+              <Space style={{ marginBottom: 16, width: '100%', justifyContent: 'space-between' }} wrap>
+                <Space>
+                  <Text type="secondary" style={{ fontSize: 10, fontWeight: 700 }}>СХЕМА</Text>
+                  <Select value={formation} options={FORMATIONS} onChange={onFormationChange} style={{ width: 120 }} />
+                </Space>
+                <Text type="secondary" style={{ fontSize: 11 }}>
+                  Средний рейтинг <Text strong>{avgOverall}</Text>
+                </Text>
               </Space>
-              <Text type="secondary" style={{ fontSize: 11 }}>
-                Средний рейтинг <Text strong>{avgOverall}</Text>
+              <div className="fm-pitch">{lines}</div>
+            </Card>
+          </Col>
+          <Col xs={24} lg={8}>
+            <Card
+              className="fm-bench-card"
+              title={
+                <Space>
+                  <Text style={{ fontSize: 10, letterSpacing: 0.8, fontWeight: 700 }}>ЗАПАС И СОСТАВ</Text>
+                  <Text type="secondary" style={{ fontSize: 10 }}>{benchPlayers.length} игроков</Text>
+                </Space>
+              }
+              loading={loading}
+            >
+              <Text type="secondary" className="fm-bench-hint">
+                Перетащите на поле или меняйте порядок в списке
               </Text>
-            </Space>
-            <div className="fm-pitch">{lines}</div>
-          </Card>
-        </Col>
-        <Col xs={24} lg={8}>
-          <Card
-            title={
-              <Space>
-                <Text style={{ fontSize: 10, letterSpacing: 0.8, fontWeight: 700 }}>ЗАПАСНЫЕ</Text>
-                <Text type="secondary" style={{ fontSize: 10 }}>{bench.length} игроков</Text>
-              </Space>
-            }
-            loading={loading}
-          >
-            <Table
-              size="small"
-              pagination={false}
-              rowKey="id"
-              dataSource={bench}
-              columns={[
-                {
-                  title: '',
-                  width: 40,
-                  render: (_, row) => (
-                    <Avatar size={26} style={{ background: '#326a52', fontSize: 8 }}>
-                      {row.name
-                        .split(' ')
-                        .map((n) => n[0])
-                        .join('')
-                        .slice(0, 2)}
-                    </Avatar>
-                  ),
-                },
-                { title: 'Игрок', dataIndex: 'name' },
-                { title: 'Поз.', dataIndex: 'position', width: 48 },
-                { title: 'ОВР', dataIndex: 'overall', width: 48 },
-                {
-                  title: '',
-                  width: 64,
-                  render: () => <Tag color="success" style={{ fontSize: 8 }}>Готов</Tag>,
-                },
-              ]}
-            />
-            <Text type="secondary" style={{ fontSize: 11, marginTop: 12, display: 'block' }}>
-              {clubName} · слотов на поле: {slotCount}
-            </Text>
-          </Card>
-        </Col>
-      </Row>
+              <SortableContext items={benchOrder.map(playerDndId)} strategy={verticalListSortingStrategy}>
+                <div className="fm-bench-list">
+                  {benchPlayers.length === 0 ? (
+                    <Text type="secondary" style={{ fontSize: 12 }}>Все игроки в стартовом составе</Text>
+                  ) : (
+                    benchPlayers.map((p) => <BenchRow key={p.id} player={p} />)
+                  )}
+                </div>
+              </SortableContext>
+              <Text type="secondary" style={{ fontSize: 11, marginTop: 12, display: 'block' }}>
+                {clubName} · слотов на поле: {slotCount}
+              </Text>
+            </Card>
+          </Col>
+        </Row>
+        <DragOverlay dropAnimation={null}>
+          {activePlayer ? <DragPreview player={activePlayer} /> : null}
+        </DragOverlay>
+      </DndContext>
     </div>
   )
 }

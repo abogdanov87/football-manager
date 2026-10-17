@@ -40,7 +40,7 @@ export function MatchReportModal({
       </Text>
       <div className="fm-report-score">
         <Space direction="vertical" align="center" size={8}>
-          <ClubCrest src={homeCrest} alt={match.home_club} size="large" />
+          <ClubCrest src={homeCrest} alt={match.home_club} size="match" />
           <Text>{match.home_club}</Text>
         </Space>
         <TitleScore home={match.home_score} away={match.away_score} />

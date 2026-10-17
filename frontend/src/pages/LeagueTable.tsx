@@ -71,7 +71,6 @@ export function LeagueTable({
                 <Space>
                   <ClubCrest src={row.club.crest_url} alt={row.club.name} size="small" />
                   <Text>{row.club.name}</Text>
-                  {row.club.id === playerClubId && <Tag color="success">ВАШ КЛУБ</Tag>}
                 </Space>
               ),
             },

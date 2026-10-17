@@ -14,7 +14,6 @@ import { api } from '../api/client'
 import type { Club, MatchResult, SeasonOverview, StandingRow } from '../api/client'
 import { ClubCrest } from '../components/ClubCrest'
 import { MatchReportModal } from '../components/MatchReportModal'
-import { PageHeading } from '../components/PageHeading'
 import { clubMapFromStandings, playerStanding, resolveCrestUrl } from '../utils/clubs'
 
 dayjs.extend(relativeTime)
@@ -89,12 +88,6 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
 
   return (
     <div>
-      <PageHeading
-        eyebrow="ДОБРО ПОЖАЛОВАТЬ ОБРАТНО"
-        title="Добрый вечер, менеджер"
-        subtitle="Ваш клуб готов к следующему матчу."
-      />
-
       <Row gutter={[14, 14]} className="fm-dashboard-stats" style={{ marginBottom: 18 }} align="stretch">
         <Col xs={24} sm={12} xl={6} className="fm-stat-col">
           <Card loading={loading} className="fm-stat-card">

@@ -1,3 +1,20 @@
+import {
+  FORMATION_PITCH_SLOTS,
+  formationSlotCount,
+  formationSlotRoles,
+  slotLayoutFromPitch,
+  type FormationPitchSlot,
+  type PitchRole,
+} from './formationLayouts'
+
+export {
+  FORMATION_PITCH_SLOTS,
+  formationSlotCount,
+  formationSlotRoles,
+  type FormationPitchSlot,
+  type PitchRole,
+}
+
 /** Tactical schemes from https://t-j.ru/football-tactics/ — GK/DEF/MID/FWD slot counts. */
 export const FORMATIONS = [
   { value: '4-3-3', label: '4-3-3' },
@@ -22,25 +39,7 @@ export const FORMATIONS = [
   { value: '4-1-3-2', label: '4-1-3-2' },
 ] as const
 
-export const SLOT_LAYOUTS: Record<string, number[]> = {
-  '4-3-3': [1, 4, 3, 3],
-  '4-5-1': [1, 4, 5, 1],
-  '4-4-2': [1, 4, 4, 2],
-  '4-4-2-d': [1, 4, 4, 2],
-  '4-2-3-1': [1, 4, 5, 1],
-  '3-4-3': [1, 3, 4, 3],
-  '3-5-2': [1, 3, 5, 2],
-  '2-3-5': [1, 2, 3, 5],
-  '4-2-4': [1, 4, 2, 4],
-  '3-6-1': [1, 3, 6, 1],
-  '2-4-3-1': [1, 2, 7, 1],
-  '4-1-4-1': [1, 4, 5, 1],
-  '4-3-2-1': [1, 4, 5, 1],
-  '3-2-4-1': [1, 3, 6, 1],
-  '4-2-2-2': [1, 4, 4, 2],
-  '4-4-1-1': [1, 4, 5, 1],
-  '3-1-3-3': [1, 3, 4, 3],
-  '3-1-4-2': [1, 3, 5, 2],
-  '5-4-1': [1, 5, 4, 1],
-  '4-1-3-2': [1, 4, 4, 2],
-}
+/** @deprecated Prefer FORMATION_PITCH_SLOTS; kept for tests and row-count checks. */
+export const SLOT_LAYOUTS: Record<string, number[]> = Object.fromEntries(
+  FORMATIONS.map((f) => [f.value, slotLayoutFromPitch(f.value)]),
+)

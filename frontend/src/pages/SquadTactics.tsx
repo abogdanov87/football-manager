@@ -22,7 +22,7 @@ import { api } from '../api/client'
 import type { Player } from '../api/client'
 import { PageHeading } from '../components/PageHeading'
 import { PlayerAvatar } from '../components/PlayerAvatar'
-import { FORMATIONS, SLOT_LAYOUTS } from '../formations'
+import { FORMATIONS, FORMATION_PITCH_SLOTS, formationSlotCount } from '../formations'
 
 const { Text } = Typography
 
@@ -50,10 +50,14 @@ type Props = { clubId: number | null; currentMatchday: number }
 
 function PitchSlot({
   index,
+  x,
+  y,
   player,
   isOver,
 }: {
   index: number
+  x: number
+  y: number
   player: Player | null
   isOver: boolean
 }) {
@@ -61,7 +65,11 @@ function PitchSlot({
   const highlighted = isOver || dropOver
 
   return (
-    <div className={`fm-field-slot${highlighted ? ' fm-field-slot--over' : ''}`} ref={setNodeRef}>
+    <div
+      className={`fm-field-slot${highlighted ? ' fm-field-slot--over' : ''}`}
+      ref={setNodeRef}
+      style={{ left: `${x}%`, top: `${y}%` }}
+    >
       {player ? (
         <PitchPlayerChip player={player} slotIndex={index} />
       ) : (
@@ -176,8 +184,7 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
         setPlayers(data.players)
         setFormation(data.club.formation)
         setInitialFormation(data.club.formation)
-        const layout = SLOT_LAYOUTS[data.club.formation] ?? SLOT_LAYOUTS['4-4-2']
-        const total = layout.reduce((a, b) => a + b, 0)
+        const total = formationSlotCount(data.club.formation)
         const ids = data.club.lineup_player_ids
         const normalized =
           ids.length === total ? [...ids] : [...ids.slice(0, total), ...Array(Math.max(0, total - ids.length)).fill(0)]
@@ -188,13 +195,12 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
       .finally(() => setLoading(false))
   }, [clubId, syncBenchOrder])
 
-  const layout = SLOT_LAYOUTS[formation] ?? SLOT_LAYOUTS['4-4-2']
-  const slotCount = layout.reduce((a, b) => a + b, 0)
+  const pitchSlots = FORMATION_PITCH_SLOTS[formation] ?? FORMATION_PITCH_SLOTS['4-4-2']
+  const slotCount = pitchSlots.length
 
   const onFormationChange = (value: string) => {
     setFormation(value)
-    const nextLayout = SLOT_LAYOUTS[value] ?? SLOT_LAYOUTS['4-4-2']
-    const nextCount = nextLayout.reduce((a, b) => a + b, 0)
+    const nextCount = formationSlotCount(value)
     setSlotIds((prev) => {
       const next = prev.slice(0, nextCount)
       while (next.length < nextCount) next.push(0)
@@ -314,19 +320,19 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
 
   const activePlayer = activeDragId ? playerById.get(parsePlayerId(activeDragId) ?? -1) ?? null : null
 
-  let slotIndex = 0
-  const lines = layout.map((count, lineIdx) => {
-    const rowSlots = Array.from({ length: count }, () => {
-      const idx = slotIndex++
-      const pid = slotIds[idx]
-      const player = pid ? playerById.get(pid) ?? null : null
-      const slotOver = overId === slotDndId(idx)
-      return <PitchSlot key={idx} index={idx} player={player} isOver={slotOver} />
-    })
+  const pitchMarkers = pitchSlots.map((slot, idx) => {
+    const pid = slotIds[idx]
+    const player = pid ? playerById.get(pid) ?? null : null
+    const slotOver = overId === slotDndId(idx)
     return (
-      <div className="fm-pitch-line" key={lineIdx}>
-        {rowSlots}
-      </div>
+      <PitchSlot
+        key={`${formation}-${slot.id}`}
+        index={idx}
+        x={slot.x}
+        y={slot.y}
+        player={player}
+        isOver={slotOver}
+      />
     )
   })
 
@@ -386,7 +392,7 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
               <div className="fm-pitch">
                 <div className="fm-pitch-halfway" aria-hidden="true" />
                 <div className="fm-pitch-circle" aria-hidden="true" />
-                {lines}
+                <div className="fm-pitch-slots">{pitchMarkers}</div>
               </div>
             </Card>
           </Col>

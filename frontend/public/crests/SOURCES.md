@@ -22,4 +22,8 @@ One line per file. Thumbnails ~256px wide from Wikimedia API.
 - `clubs/tottenham-hotspur.png` — https://en.wikipedia.org/wiki/File:Tottenham_Hotspur.svg
 - `clubs/west-ham-united.png` — https://en.wikipedia.org/wiki/File:West_Ham_United_FC_logo.svg
 - `clubs/wolverhampton-wanderers.png` — https://en.wikipedia.org/wiki/File:Wolverhampton_Wanderers.svg
+- `clubs/sunderland.png` — https://en.wikipedia.org/wiki/File:Logo_Sunderland.svg
+- `clubs/leeds-united.png` — https://en.wikipedia.org/wiki/File:Leeds_United_F.C._logo.svg
+- `clubs/coventry-city.png` — https://en.wikipedia.org/wiki/File:Coventry_City_FC_crest.svg
+- `clubs/hull-city.png` — https://en.wikipedia.org/wiki/File:Hull_City_A.F.C._logo.svg
 - `competitions/premier-league.png` — https://en.wikipedia.org/wiki/File:Premier_League_Logo.svg

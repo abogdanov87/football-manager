@@ -9,13 +9,7 @@ from game.services import default_lineup, generate_round_robin
 
 # АПЛ — 20 клубов, сезон 2026/27. Состав как прокси 2025/26 до официального списка.
 # `name` — русское отображаемое имя (API/UI); slug только для crest_url (английский).
-# slug → name: arsenal→Арсенал, aston-villa→Астон Вилла, afc-bournemouth→Борнмут,
-# brentford→Брентфорд, brighton→Брайтон, chelsea→Челси, crystal-palace→Кристал Пэлас,
-# everton→Эвертон, fulham→Фулхэм, ipswich-town→Ипсвич, leicester-city→Лестер,
-# liverpool→Ливерпуль, manchester-city→Манчестер Сити, manchester-united→Манчестер Юнайтед,
-# newcastle-united→Ньюкасл Юнайтед, nottingham-forest→Ноттингем Форест,
-# southampton→Саутгемптон, tottenham-hotspur→Тоттенхэм, west-ham-united→Вест Хэм,
-# wolverhampton-wanderers→Вулверхэмптон
+# Slugs align with Transfermarkt GB1 26/27 and crest_url filenames.
 CLUB_DATA: list[tuple[str, str, str]] = [
     ("Арсенал", "ARS", "arsenal"),
     ("Астон Вилла", "AVL", "aston-villa"),
@@ -23,20 +17,20 @@ CLUB_DATA: list[tuple[str, str, str]] = [
     ("Брентфорд", "BRE", "brentford"),
     ("Брайтон", "BHA", "brighton"),
     ("Челси", "CHE", "chelsea"),
+    ("Ковентри", "COV", "coventry-city"),
     ("Кристал Пэлас", "CRY", "crystal-palace"),
     ("Эвертон", "EVE", "everton"),
     ("Фулхэм", "FUL", "fulham"),
+    ("Халл Сити", "HUL", "hull-city"),
     ("Ипсвич", "IPS", "ipswich-town"),
-    ("Лестер", "LEI", "leicester-city"),
+    ("Лидс Юнайтед", "LEE", "leeds-united"),
     ("Ливерпуль", "LIV", "liverpool"),
     ("Манчестер Сити", "MCI", "manchester-city"),
     ("Манчестер Юнайтед", "MUN", "manchester-united"),
     ("Ньюкасл Юнайтед", "NEW", "newcastle-united"),
     ("Ноттингем Форест", "NFO", "nottingham-forest"),
-    ("Саутгемптон", "SOU", "southampton"),
+    ("Сандерленд", "SUN", "sunderland"),
     ("Тоттенхэм", "TOT", "tottenham-hotspur"),
-    ("Вест Хэм", "WHU", "west-ham-united"),
-    ("Вулверхэмптон", "WOL", "wolverhampton-wanderers"),
 ]
 
 COMPETITION_NAME = "Премьер-лига"

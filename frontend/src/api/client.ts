@@ -35,6 +35,20 @@ export type Player = {
   position: string
   age: number
   overall: number
+  form?: number
+  transfermarkt_id?: number | null
+  transfermarkt_slug?: string
+  tm_position?: string
+  market_value_usd?: number
+  pac?: number
+  sho?: number
+  pas?: number
+  dri?: number
+  defending?: number
+  phy?: number
+  aerial?: number
+  mentality?: number
+  injury_resistance?: number
 }
 
 export type StandingRow = {

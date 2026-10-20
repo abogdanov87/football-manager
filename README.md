@@ -22,8 +22,11 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py seed_league
+python manage.py import_transfermarkt_epl   # реальные составы АПЛ (Transfermarkt)
 python manage.py runserver 8001
 ```
+
+Составы и статы: см. [docs/transfermarkt-import.md](docs/transfermarkt-import.md). Если live-скрапинг недоступен на хостинге, используйте `--fixture-dir game/fixtures/transfermarkt` (нужны HTML-файлы по клубам).
 
 ### Frontend (порт 43123)
 

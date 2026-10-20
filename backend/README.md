@@ -8,7 +8,8 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
-python manage.py seed_league   # Премьер-лига 2026/27, 20 клубов (русские `name`, slug в crest — см. seed_league.py)
+python manage.py seed_league
+python manage.py import_transfermarkt_epl   # Премьер-лига 2026/27, 20 клубов (русские `name`, slug в crest — см. seed_league.py)
 python manage.py runserver 8001
 ```
 

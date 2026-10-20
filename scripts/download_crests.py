@@ -54,6 +54,17 @@ CLUBS: dict[str, list[tuple[str, str]]] = {
     "tottenham-hotspur": [("en", "Tottenham_Hotspur.svg")],
     "west-ham-united": [("en", "West_Ham_United_FC_logo.svg")],
     "wolverhampton-wanderers": [("en", "Wolverhampton_Wanderers.svg")],
+    "sunderland": [
+        ("en", "Logo Sunderland.svg"),
+        ("en", "SAFC1972-97crest.svg"),
+        ("en", "Sunderland AFC cat badge.jpg"),
+    ],
+    "leeds-united": [("en", "Leeds_United_F.C._logo.svg")],
+    "coventry-city": [
+        ("en", "Coventry_City_FC_crest.svg"),
+        ("en", "Covcfclogo.png"),
+    ],
+    "hull-city": [("en", "Hull_City_A.F.C._logo.svg")],
 }
 
 COMPETITIONS: dict[str, list[tuple[str, str]]] = {

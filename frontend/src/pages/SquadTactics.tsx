@@ -22,6 +22,7 @@ import { api } from '../api/client'
 import type { Player } from '../api/client'
 import { PageHeading } from '../components/PageHeading'
 import { PlayerAvatar } from '../components/PlayerAvatar'
+import { PlayerMiniStatStrip, PlayerStatsPopover } from '../components/PlayerFifaStats'
 import { FORMATIONS, FORMATION_PITCH_SLOTS, formationSlotCount } from '../formations'
 
 const { Text } = Typography
@@ -93,20 +94,23 @@ function PitchPlayerChip({ player, slotIndex }: { player: Player; slotIndex: num
   }
 
   return (
-    <div
-      ref={setNodeRef}
-      style={style}
-      className="fm-pitch-player"
-      {...listeners}
-      {...attributes}
-    >
-      <span className="fm-slot-ovr">{player.overall}</span>
-      <PlayerAvatar name={player.name} size={44} />
-      <Text className="fm-slot-name" ellipsis title={player.name}>
-        {shortName(player.name)}
-      </Text>
-      <Text type="secondary" className="fm-slot-pos">{player.position}</Text>
-    </div>
+    <PlayerStatsPopover player={player}>
+      <div
+        ref={setNodeRef}
+        style={style}
+        className="fm-pitch-player"
+        {...listeners}
+        {...attributes}
+      >
+        <span className="fm-slot-ovr">{player.overall}</span>
+        <PlayerAvatar name={player.name} size={44} />
+        <Text className="fm-slot-name" ellipsis title={player.name}>
+          {shortName(player.name)}
+        </Text>
+        <Text type="secondary" className="fm-slot-pos">{player.position}</Text>
+        <PlayerMiniStatStrip player={player} compact />
+      </div>
+    </PlayerStatsPopover>
   )
 }
 
@@ -130,12 +134,17 @@ function BenchRow({ player }: { player: Player }) {
       <span className="fm-bench-grip" aria-hidden>⋮⋮</span>
       <PlayerAvatar name={player.name} size={32} />
       <div className="fm-bench-meta">
-        <Text strong className="fm-bench-name" ellipsis>
-          {player.name}
-        </Text>
-        <Text type="secondary" className="fm-bench-sub">
-          {player.position}
-        </Text>
+        <PlayerStatsPopover player={player}>
+          <div>
+            <Text strong className="fm-bench-name" ellipsis>
+              {player.name}
+            </Text>
+            <Text type="secondary" className="fm-bench-sub">
+              {player.position}
+            </Text>
+            <PlayerMiniStatStrip player={player} />
+          </div>
+        </PlayerStatsPopover>
       </div>
       <em className="fm-bench-ovr">{player.overall}</em>
       <Tag className="fm-bench-ready">Готов</Tag>

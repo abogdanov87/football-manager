@@ -66,7 +66,7 @@ export function MatchResults({
       </Space>
 
       <Card styles={{ body: { padding: '0 20px 8px' } }}>
-        <div style={{ padding: '16px 0', borderBottom: '1px solid #29353d' }}>
+        <div className="fm-fixtures-header">
           <Text strong>Тур {selectedDay}</Text>
           {selectedDay === currentMatchday && upcomingFixtures.length > 0 && (
             <Text type="secondary" style={{ marginLeft: 12, fontSize: 11 }}>
@@ -85,12 +85,14 @@ export function MatchResults({
               key={m.id}
               className={`fm-fixture-row ${isPlayerMatch(m) ? 'club-match' : ''}`}
             >
+              {isPlayerMatch(m) && <span className="fm-club-match-label">ВАШ МАТЧ</span>}
+              <span className="fm-fixture-status">ЗАВЕРШЁН</span>
               <div className="fm-fixture-home">
                 <Text>{m.home_club}</Text>
                 <ClubCrest src={resolveCrestUrl(m.home_club, clubMap)} alt={m.home_club} size="small" />
               </div>
-              <Text strong style={{ textAlign: 'center', fontSize: 15 }}>
-                {m.home_score} : {m.away_score}
+              <Text strong className="fm-fixture-score">
+                {m.home_score} <i style={{ color: '#6e7e87', fontStyle: 'normal' }}>:</i> {m.away_score}
               </Text>
               <div className="fm-fixture-away">
                 <ClubCrest src={resolveCrestUrl(m.away_club, clubMap)} alt={m.away_club} size="small" />

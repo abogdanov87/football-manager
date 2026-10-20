@@ -45,7 +45,7 @@ export function MatchReportModal({
         </Space>
         <TitleScore home={match.home_score} away={match.away_score} />
         <Space direction="vertical" align="center" size={8}>
-          <ClubCrest src={awayCrest} alt={match.away_club} size="large" />
+          <ClubCrest src={awayCrest} alt={match.away_club} size="match" />
           <Text>{match.away_club}</Text>
         </Space>
       </div>

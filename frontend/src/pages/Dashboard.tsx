@@ -202,7 +202,7 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
                 <Space style={{ width: '100%', justifyContent: 'space-between' }}>
                   <Text style={{ fontSize: 10, letterSpacing: 0.8, fontWeight: 700 }}>ПОСЛЕДНИЙ РЕЗУЛЬТАТ</Text>
                   {lastMatch && (
-                    <Button type="link" size="small" onClick={() => setReportMatch(lastMatch)}>
+                    <Button type="link" size="small" className="fm-link-action" onClick={() => setReportMatch(lastMatch)}>
                       Отчёт матча →
                     </Button>
                   )}
@@ -245,7 +245,9 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
             title={
               <Space style={{ width: '100%', justifyContent: 'space-between' }}>
                 <Text style={{ fontSize: 10, letterSpacing: 0.8, fontWeight: 700 }}>ТУРНИРНАЯ ТАБЛИЦА</Text>
-                <TextLink onClick={() => onNavigate('/table')}>Вся таблица →</TextLink>
+                <TextLink className="fm-link-action" onClick={() => onNavigate('/table')}>
+                  Вся таблица →
+                </TextLink>
               </Space>
             }
             loading={loading}

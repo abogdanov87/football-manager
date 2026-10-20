@@ -1,4 +1,4 @@
-import { Button, Card, Space, Table, Tag, Typography } from 'antd'
+import { Button, Card, Space, Table, Typography } from 'antd'
 import type { Competition, StandingRow } from '../api/client'
 import { ClubCrest } from '../components/ClubCrest'
 import { PageHeading } from '../components/PageHeading'
@@ -43,7 +43,7 @@ export function LeagueTable({
         styles={{ body: { padding: 0 } }}
         loading={loading}
       >
-        <div style={{ padding: '16px 20px', borderBottom: '1px solid #29353d' }}>
+        <div className="fm-league-meta">
           <Text>Таблица после {Math.max(0, currentMatchday - 1)}-го тура</Text>
           <Text type="secondary" style={{ marginLeft: 12, fontSize: 10 }}>
             Обновляется после каждой симуляции
@@ -109,19 +109,10 @@ export function LeagueTable({
             },
           ]}
         />
-        <div
-          style={{
-            borderTop: '1px solid #29353d',
-            padding: '14px 20px',
-            display: 'flex',
-            gap: 20,
-            fontSize: 10,
-            color: '#788891',
-          }}
-        >
-          <span><Tag color="green" /> Лига чемпионов</span>
-          <span><Tag color="gold" /> Лига Европы</span>
-          <span><Tag color="red" /> Зона вылета</span>
+        <div className="fm-table-legend">
+          <span><i className="fm-legend-dot fm-legend-dot--ucl" /> Лига чемпионов</span>
+          <span><i className="fm-legend-dot fm-legend-dot--uel" /> Лига Европы</span>
+          <span><i className="fm-legend-dot fm-legend-dot--rel" /> Зона вылета</span>
         </div>
       </Card>
     </div>

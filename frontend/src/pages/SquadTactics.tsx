@@ -138,8 +138,8 @@ function BenchRow({ player }: { player: Player }) {
           {player.position}
         </Text>
       </div>
-      <Tag className="fm-bench-ovr" color="success">{player.overall}</Tag>
-      <Tag color="default" style={{ fontSize: 9, margin: 0 }}>Готов</Tag>
+      <em className="fm-bench-ovr">{player.overall}</em>
+      <Tag className="fm-bench-ready">Готов</Tag>
     </div>
   )
 }
@@ -359,12 +359,10 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
         }
       />
 
-      <Alert
-        type="info"
-        showIcon
-        style={{ marginBottom: 18 }}
-        message={`Изменения будут применены к матчу ${currentMatchday}-го тура. Перетаскивайте игроков на схему до начала симуляции.`}
-      />
+      <div className="fm-notice" role="status">
+        ⓘ &nbsp; Изменения будут применены к матчу <b>{currentMatchday}-го тура</b>. Перетаскивайте
+        игроков на схему до начала симуляции.
+      </div>
 
       <DndContext
         sensors={sensors}
@@ -388,7 +386,11 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
                   Средний рейтинг <Text strong>{avgOverall}</Text>
                 </Text>
               </Space>
-              <div className="fm-pitch">{lines}</div>
+              <div className="fm-pitch">
+                <div className="fm-pitch-halfway" aria-hidden="true" />
+                <div className="fm-pitch-circle" aria-hidden="true" />
+                {lines}
+              </div>
             </Card>
           </Col>
           <Col xs={24} lg={8}>

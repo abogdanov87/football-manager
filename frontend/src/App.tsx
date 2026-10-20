@@ -8,7 +8,7 @@ import {
   TeamOutlined,
   ThunderboltOutlined,
 } from '@ant-design/icons'
-import { Avatar, Layout, Menu, Spin, Statistic, Typography, theme } from 'antd'
+import { Avatar, Layout, Menu, Spin, Statistic, Typography } from 'antd'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { BrowserRouter, Link, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { api } from './api/client'
@@ -31,8 +31,6 @@ function Shell() {
   const [standings, setStandings] = useState<StandingRow[]>([])
   const [playerClub, setPlayerClub] = useState<Club | null>(null)
   const [loading, setLoading] = useState(true)
-  const { token } = theme.useToken()
-
   const refresh = useCallback(async () => {
     setLoading(true)
     try {
@@ -135,22 +133,22 @@ function Shell() {
     : undefined
 
   return (
-    <Layout style={{ minHeight: '100vh' }}>
+    <div className="fm-app-shell">
+      <div className="fm-stadium-backdrop" aria-hidden="true" />
+      <Layout className="fm-layout" style={{ minHeight: '100vh' }}>
       <Sider
         className="fm-sider"
         breakpoint="lg"
-        collapsedWidth={72}
-        width={268}
+        collapsedWidth={68}
+        width={250}
         theme="dark"
       >
         <div className="fm-sider-inner">
           <div className="fm-sider-head">
             <div className="fm-brand">
-              <span className="fm-brand-mark">FM</span>
-              <span>
-                <b>Football</b>
-                <em>Manager</em>
-              </span>
+              <span className="fm-sports-word">sports</span>
+              <span className="fm-brand-divider" />
+              <span className="fm-manager-label">Football Manager</span>
             </div>
             {playerClub && (
               <div className="fm-club-chip">
@@ -181,20 +179,17 @@ function Shell() {
           </div>
         </div>
       </Sider>
-      <Layout>
+      <Layout style={{ background: 'transparent' }}>
         <Header
+          className="fm-topbar"
           style={{
-            background: token.colorBgContainer,
-            borderBottom: `1px solid ${token.colorBorder}`,
-            paddingInline: 32,
             display: 'flex',
             alignItems: 'center',
-            gap: 20,
-            height: 66,
+            gap: 25,
           }}
         >
           <MenuOutlined style={{ display: 'none' }} />
-          <Text style={{ flex: 1, fontSize: 13, color: 'rgba(255,255,255,0.75)' }}>{breadcrumb}</Text>
+          <Text className="fm-topbar-crumb">{breadcrumb}</Text>
           {countdownDeadline && (
             <div className="fm-topbar-matchday">
               <span className="fm-pulse" />
@@ -202,18 +197,18 @@ function Shell() {
               <Statistic.Countdown
                 value={countdownDeadline}
                 format="HH:mm:ss"
-                valueStyle={{ fontSize: 12, color: '#e0f7e9', fontWeight: 700 }}
+                valueStyle={{ fontSize: 12, color: '#fff', fontWeight: 700 }}
               />
             </div>
           )}
-          <Text type="secondary" style={{ fontSize: 12 }}>
-            {season?.name ?? 'Сезон'}
+          <Text className="fm-topbar-season">
+            {season?.name ?? 'Сезон'} <span style={{ color: '#6e7d86' }}>⌄</span>
           </Text>
-          <Avatar style={{ background: '#224f3b', border: '1px solid #4ba879' }} size={32}>
-            {playerClub?.short_name?.slice(0, 2) ?? 'FM'}
+          <Avatar className="fm-profile-avatar" size={32}>
+            {playerClub?.short_name?.slice(0, 2) ?? 'АМ'}
           </Avatar>
         </Header>
-        <Content style={{ background: token.colorBgLayout }}>
+        <Content style={{ background: 'transparent' }}>
           <div className="fm-content-wrap">
             {loading && !season ? (
               <Spin size="large" />
@@ -276,6 +271,7 @@ function Shell() {
         </Content>
       </Layout>
     </Layout>
+    </div>
   )
 }
 

@@ -4,6 +4,7 @@ from typing import Iterable
 
 from django.db import transaction
 
+from .formations import formation_position_counts
 from .match_engine import ENGINE_VERSION, MatchSimulationResult, simulate_match, squad_strength
 from .models import Club, Fixture, Match, Player, Season, Standing
 
@@ -17,11 +18,7 @@ def default_lineup(club: Club) -> list[int]:
     for key in by_pos:
         by_pos[key].sort(key=lambda pid: -Player.objects.get(pk=pid).overall)
 
-    formation = club.formation
-    if formation == "4-3-3":
-        counts = {"GK": 1, "DEF": 4, "MID": 3, "FWD": 3}
-    else:
-        counts = {"GK": 1, "DEF": 4, "MID": 4, "FWD": 2}
+    counts = formation_position_counts(club.formation)
 
     ids: list[int] = []
     for pos, count in counts.items():

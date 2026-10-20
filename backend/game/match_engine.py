@@ -7,10 +7,13 @@ import random
 from dataclasses import dataclass
 from typing import Iterable
 
+from .formations import FORMATION_SPECS
+
 ENGINE_VERSION = "0.1"
 
-FORMATION_ATTACK = {"4-4-2": 1.0, "4-3-3": 1.08}
-FORMATION_DEFENSE = {"4-4-2": 1.02, "4-3-3": 0.96}
+# Per-formation modifiers from T—Ж tactical profiles (see formations.py).
+FORMATION_ATTACK = {code: spec["attack"] for code, spec in FORMATION_SPECS.items()}
+FORMATION_DEFENSE = {code: spec["defense"] for code, spec in FORMATION_SPECS.items()}
 HOME_ADVANTAGE = 1.06
 
 

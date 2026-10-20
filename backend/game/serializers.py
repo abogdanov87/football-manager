@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from .formations import FORMATION_CHOICES
 from .models import Club, Competition, Fixture, Match, Player, Season, Standing
 
 
@@ -141,7 +142,7 @@ class SeasonOverviewSerializer(serializers.ModelSerializer):
 
 
 class TacticsUpdateSerializer(serializers.Serializer):
-    formation = serializers.ChoiceField(choices=["4-4-2", "4-3-3"])
+    formation = serializers.ChoiceField(choices=[c[0] for c in FORMATION_CHOICES])
     lineup_player_ids = serializers.ListField(
         child=serializers.IntegerField(), allow_empty=False, max_length=11
     )

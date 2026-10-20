@@ -22,18 +22,9 @@ import { api } from '../api/client'
 import type { Player } from '../api/client'
 import { PageHeading } from '../components/PageHeading'
 import { PlayerAvatar } from '../components/PlayerAvatar'
+import { FORMATIONS, SLOT_LAYOUTS } from '../formations'
 
 const { Text } = Typography
-
-const FORMATIONS = [
-  { value: '4-4-2', label: '4-4-2' },
-  { value: '4-3-3', label: '4-3-3' },
-]
-
-const SLOT_LAYOUTS: Record<string, number[]> = {
-  '4-4-2': [1, 4, 4, 2],
-  '4-3-3': [1, 4, 3, 3],
-}
 
 const playerDndId = (id: number) => `player-${id}`
 const slotDndId = (index: number) => `slot-${index}`
@@ -380,7 +371,13 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
               <Space style={{ marginBottom: 16, width: '100%', justifyContent: 'space-between' }} wrap>
                 <Space>
                   <Text type="secondary" style={{ fontSize: 10, fontWeight: 700 }}>СХЕМА</Text>
-                  <Select value={formation} options={FORMATIONS} onChange={onFormationChange} style={{ width: 120 }} />
+                  <Select
+                    value={formation}
+                    options={[...FORMATIONS]}
+                    onChange={onFormationChange}
+                    style={{ width: 220 }}
+                    listHeight={320}
+                  />
                 </Space>
                 <Text type="secondary" style={{ fontSize: 11 }}>
                   Средний рейтинг <Text strong>{avgOverall}</Text>

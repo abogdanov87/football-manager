@@ -1,10 +1,7 @@
 from django.conf import settings
 from django.db import models
 
-
-class Formation(models.TextChoices):
-    F442 = "4-4-2", "4-4-2"
-    F433 = "4-3-3", "4-3-3"
+from .formations import FORMATION_CHOICES
 
 
 class Position(models.TextChoices):
@@ -41,7 +38,7 @@ class Club(models.Model):
         related_name="clubs",
     )
     formation = models.CharField(
-        max_length=10, choices=Formation.choices, default=Formation.F442
+        max_length=12, choices=FORMATION_CHOICES, default="4-4-2"
     )
     lineup_player_ids = models.JSONField(default=list, blank=True)
 

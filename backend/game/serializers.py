@@ -6,7 +6,27 @@ from .models import Club, Competition, Fixture, Match, Player, Season, Standing
 class PlayerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Player
-        fields = ["id", "name", "position", "age", "overall", "form"]
+        fields = [
+            "id",
+            "name",
+            "position",
+            "age",
+            "overall",
+            "form",
+            "transfermarkt_id",
+            "transfermarkt_slug",
+            "tm_position",
+            "market_value_usd",
+            "pac",
+            "sho",
+            "pas",
+            "dri",
+            "defending",
+            "phy",
+            "aerial",
+            "mentality",
+            "injury_resistance",
+        ]
 
 
 class CompetitionSerializer(serializers.ModelSerializer):

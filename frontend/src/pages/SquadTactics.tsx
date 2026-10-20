@@ -16,7 +16,7 @@ import {
   arrayMove,
 } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
-import { Alert, Button, Card, Col, Row, Select, Space, Tag, Typography, message } from 'antd'
+import { Alert, Button, Card, Col, Row, Select, Space, Tag, Tooltip, Typography, message } from 'antd'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { api } from '../api/client'
 import type { Player } from '../api/client'
@@ -24,6 +24,18 @@ import { PageHeading } from '../components/PageHeading'
 import { PlayerAvatar } from '../components/PlayerAvatar'
 
 const { Text } = Typography
+
+function playerStatTip(player: Player): string {
+  const mv = player.market_value_usd
+    ? `$${Math.round(player.market_value_usd / 1_000_000)}M`
+    : '—'
+  return [
+    `PAC ${player.pac ?? '—'} · SHO ${player.sho ?? '—'} · PAS ${player.pas ?? '—'}`,
+    `DRI ${player.dri ?? '—'} · DEF ${player.defending ?? '—'} · PHY ${player.phy ?? '—'}`,
+    `Верх ${player.aerial ?? '—'} · Мент ${player.mentality ?? '—'} · Травмы ${player.injury_resistance ?? '—'}`,
+    `Рынок: ${mv}`,
+  ].join('\n')
+}
 
 const FORMATIONS = [
   { value: '4-4-2', label: '4-4-2' },
@@ -101,7 +113,9 @@ function PitchPlayerChip({ player, slotIndex }: { player: Player; slotIndex: num
       {...listeners}
       {...attributes}
     >
-      <span className="fm-slot-ovr">{player.overall}</span>
+      <Tooltip title={<span style={{ whiteSpace: 'pre-line' }}>{playerStatTip(player)}</span>}>
+        <span className="fm-slot-ovr">{player.overall}</span>
+      </Tooltip>
       <PlayerAvatar name={player.name} size={44} />
       <Text className="fm-slot-name" ellipsis title={player.name}>
         {shortName(player.name)}
@@ -138,7 +152,9 @@ function BenchRow({ player }: { player: Player }) {
           {player.position}
         </Text>
       </div>
-      <em className="fm-bench-ovr">{player.overall}</em>
+      <Tooltip title={<span style={{ whiteSpace: 'pre-line' }}>{playerStatTip(player)}</span>}>
+        <em className="fm-bench-ovr">{player.overall}</em>
+      </Tooltip>
       <Tag className="fm-bench-ready">Готов</Tag>
     </div>
   )

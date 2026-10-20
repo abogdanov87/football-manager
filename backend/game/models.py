@@ -59,12 +59,42 @@ class Player(models.Model):
     age = models.PositiveSmallIntegerField(default=25)
     overall = models.PositiveSmallIntegerField(default=70)
     form = models.FloatField(default=1.0)
+    transfermarkt_id = models.PositiveIntegerField(null=True, blank=True, unique=True)
+    transfermarkt_slug = models.SlugField(max_length=120, blank=True)
+    tm_position = models.CharField(max_length=64, blank=True)
+    market_value_usd = models.PositiveIntegerField(default=0)
+    pac = models.PositiveSmallIntegerField(default=50)
+    sho = models.PositiveSmallIntegerField(default=50)
+    pas = models.PositiveSmallIntegerField(default=50)
+    dri = models.PositiveSmallIntegerField(default=50)
+    defending = models.PositiveSmallIntegerField(default=50)
+    phy = models.PositiveSmallIntegerField(default=50)
+    aerial = models.PositiveSmallIntegerField(default=50)
+    mentality = models.PositiveSmallIntegerField(default=50)
+    injury_resistance = models.PositiveSmallIntegerField(default=50)
 
     class Meta:
         ordering = ["-overall", "name"]
 
     def __str__(self) -> str:
         return f"{self.name} ({self.overall})"
+
+    def recompute_overall_from_attributes(self) -> int:
+        from game.transfermarkt.attributes import PlayerAttributes, overall_from_stats
+
+        attrs: PlayerAttributes = {
+            "pac": self.pac,
+            "sho": self.sho,
+            "pas": self.pas,
+            "dri": self.dri,
+            "defending": self.defending,
+            "phy": self.phy,
+            "aerial": self.aerial,
+            "mentality": self.mentality,
+            "injury_resistance": self.injury_resistance,
+            "overall": self.overall,
+        }
+        return overall_from_stats(self.position, attrs)
 
 
 class Season(models.Model):

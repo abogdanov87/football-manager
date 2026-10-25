@@ -10,18 +10,19 @@ from game.models import Position
 
 EUR_TO_USD_RATE = 1.08
 
-# Position group weights for overall (must sum to 1.0).
+# GK stored attrs map to FIFA GK face stats: pac=SPE, pas=KIC, dri=REF,
+# defending=DIV, phy=HAN, aerial=POS (sho unused on card).
 _OVR_WEIGHTS: dict[str, dict[str, float]] = {
     Position.GK: {
         "pac": 0.05,
-        "sho": 0.02,
-        "pas": 0.12,
-        "dri": 0.05,
-        "defending": 0.28,
-        "phy": 0.18,
+        "sho": 0.0,
+        "pas": 0.05,
+        "dri": 0.22,
+        "defending": 0.22,
+        "phy": 0.22,
         "aerial": 0.12,
-        "mentality": 0.10,
-        "injury_resistance": 0.08,
+        "mentality": 0.07,
+        "injury_resistance": 0.05,
     },
     Position.DEF: {
         "pac": 0.12,
@@ -184,13 +185,13 @@ def compute_player_attributes(
 
     if game_pos == Position.GK:
         attrs = {
-            "pac": stat(pace - 8),
-            "sho": stat(base - 25),
-            "pas": stat(base - 2),
-            "dri": stat(base - 10),
-            "defending": stat(base + 6),
-            "phy": stat(phy),
-            "aerial": stat(aerial + 4),
+            "pac": stat(pace - 6),
+            "sho": stat(base - 35),
+            "pas": stat(base - 5),
+            "dri": stat(base + 7),
+            "defending": stat(base + 5),
+            "phy": stat(phy + 4),
+            "aerial": stat(base + 3),
             "mentality": stat(mentality + 2),
             "injury_resistance": stat(injury),
         }

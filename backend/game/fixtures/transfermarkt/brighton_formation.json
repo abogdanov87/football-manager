@@ -1,0 +1,629 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "565093",
+        "name": "Bart Verbruggen",
+        "shortName": "Verbruggen",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/bart-verbruggen/profil/spieler/565093",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "318508",
+        "name": "Olivier Boscagli",
+        "shortName": "Boscagli",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/olivier-boscagli/profil/spieler/318508",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Vuskovic",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/892160-1758187820.jpg?lm=4711",
+            "playerOut": "Boscagli",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/318508-1763637922.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "438961",
+        "name": "Michael Svoboda",
+        "shortName": "Svoboda",
+        "captain": "",
+        "number": "30",
+        "profileUrl": "/michael-svoboda/profil/spieler/438961",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "750903",
+        "name": "Jaouen Hadjam",
+        "shortName": "Hadjam",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/jaouen-hadjam/profil/spieler/750903",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Kad\u0131o\u011flu",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/369316-1724792538.jpg?lm=4711",
+            "playerOut": "Hadjam",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/750903-1733948529.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "86",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "539252",
+        "name": "Costinha",
+        "shortName": "Costinha",
+        "captain": "",
+        "number": "20",
+        "profileUrl": "/costinha/profil/spieler/539252",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Costinha",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/539252-1781598083.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+                "name": "FK Jablonec"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "69",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "867688",
+        "name": "Jack Hinshelwood",
+        "shortName": "Hinshelwood",
+        "captain": "",
+        "number": "8",
+        "profileUrl": "/jack-hinshelwood/profil/spieler/867688",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "David",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/888785-1760114175.jpg?lm=4711",
+            "playerOut": "Hinshelwood",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/867688-1698353957.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1178758",
+        "name": "Malick Yalcouy\u00e9",
+        "shortName": "Yalcouy\u00e9",
+        "captain": "",
+        "number": "35",
+        "profileUrl": "/malick-yalcouye/profil/spieler/1178758",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "82873",
+        "name": "Pascal Gro\u00df",
+        "shortName": "Gro\u00df",
+        "captain": "x",
+        "number": "13",
+        "profileUrl": "/pascal-gross/profil/spieler/82873",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Andr\u00e9s",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/948279-1787317526.jpg?lm=4711",
+            "playerOut": "Gro\u00df",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/82873-1746195832.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "406634",
+        "name": "Matt O'Riley",
+        "shortName": "O'Riley",
+        "captain": "",
+        "number": "33",
+        "profileUrl": "/matt-oriley/profil/spieler/406634",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Ayari",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/667287-1746438362.jpg?lm=4711",
+            "playerOut": "O'Riley",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/406634-1661800636.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1110406",
+        "name": "Ibrahim Osman",
+        "shortName": "Osman",
+        "captain": "",
+        "number": "15",
+        "profileUrl": "/ibrahim-osman/profil/spieler/1110406",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "538977",
+        "name": "Georginio Rutter",
+        "shortName": "Rutter",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/georginio-rutter/profil/spieler/538977",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "970266",
+        "name": "Steven Hall",
+        "shortName": "Hall",
+        "captain": "",
+        "number": "61",
+        "profileUrl": "/steven-hall/profil/spieler/970266",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "406556",
+        "name": "Tom McGill",
+        "shortName": "McGill",
+        "captain": "",
+        "number": "38",
+        "profileUrl": "/tom-mcgill/profil/spieler/406556",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "148153",
+        "name": "Lewis Dunk",
+        "shortName": "Dunk",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/lewis-dunk/profil/spieler/148153",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "892160",
+        "name": "Luka Vuskovic",
+        "shortName": "Vuskovic",
+        "captain": "",
+        "number": "44",
+        "profileUrl": "/luka-vuskovic/profil/spieler/892160",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Vuskovic",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/892160-1758187820.jpg?lm=4711",
+            "playerOut": "Boscagli",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/318508-1763637922.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "369316",
+        "name": "Ferdi Kad\u0131o\u011flu",
+        "shortName": "Kad\u0131o\u011flu",
+        "captain": "",
+        "number": "24",
+        "profileUrl": "/ferdi-kadioglu/profil/spieler/369316",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Kad\u0131o\u011flu",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/369316-1724792538.jpg?lm=4711",
+            "playerOut": "Hadjam",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/750903-1733948529.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "86",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "948279",
+        "name": "Chema Andr\u00e9s",
+        "shortName": "Andr\u00e9s",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/chema-andres/profil/spieler/948279",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Andr\u00e9s",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/948279-1787317526.jpg?lm=4711",
+            "playerOut": "Gro\u00df",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/82873-1746195832.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1062438",
+        "name": "Shane Nti",
+        "shortName": "Nti",
+        "captain": "",
+        "number": "50",
+        "profileUrl": "/shane-nti/profil/spieler/1062438",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "667287",
+        "name": "Yasin Ayari",
+        "shortName": "Ayari",
+        "captain": "",
+        "number": "26",
+        "profileUrl": "/yasin-ayari/profil/spieler/667287",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Ayari",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/667287-1746438362.jpg?lm=4711",
+            "playerOut": "O'Riley",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/406634-1661800636.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1288145",
+        "name": "Younes Ibrahim",
+        "shortName": "Ibrahim",
+        "captain": "",
+        "number": "59",
+        "profileUrl": "/younes-ibrahim/profil/spieler/1288145",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "914269",
+        "name": "Nehemiah Oriola",
+        "shortName": "Oriola",
+        "captain": "",
+        "number": "49",
+        "profileUrl": "/nehemiah-oriola/profil/spieler/914269",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "888785",
+        "name": "Promise David",
+        "shortName": "David",
+        "captain": "",
+        "number": "12",
+        "profileUrl": "/promise-david/profil/spieler/888785",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "David",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/888785-1760114175.jpg?lm=4711",
+            "playerOut": "Hinshelwood",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/867688-1698353957.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1322.png?lm=1789459244",
+              "name": "FK Jablonec"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1060087",
+        "name": "Charalampos Kostoulas",
+        "shortName": "Kostoulas",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/charalampos-kostoulas/profil/spieler/1060087",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "UCOL",
+      "name": "UEFA Conference League",
+      "url": "/uefa-europa-conference-league/startseite/pokalwettbewerb/UCOL"
+    },
+    "matchday": {
+      "day": "2",
+      "url": "/bundesliga/spieltag/pokalwettbewerb/UCOL/saison_id/2026/spieltag/2"
+    },
+    "date": "Thu, 22/10/2026 - 5:45 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "5037590",
+    "url": "/spielbericht/index/spielbericht/5037590",
+    "result": "0:0 "
+  },
+  "teams": {
+    "team1": {
+      "id": "1322",
+      "name": "Jablonec",
+      "url": "/fk-jablonec/startseite/verein/1322",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/1322.png?lm=1789459244",
+      "rank": ""
+    },
+    "team2": {
+      "id": "1237",
+      "name": "Brighton",
+      "url": "/brighton-amp-hove-albion/startseite/verein/1237",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/1237.png?lm=1789459242",
+      "rank": ""
+    }
+  },
+  "trainer": {
+    "id": "48076",
+    "name": "Fabian H\u00fcrzeler",
+    "profileUrl": "/fabian-hurzeler/profil/trainer/48076"
+  },
+  "url": "/spielbericht/index/spielbericht/5037590"
+}

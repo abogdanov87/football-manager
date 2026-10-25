@@ -2,6 +2,7 @@ import {
   FORMATION_PITCH_SLOTS,
   formationSlotCount,
   formationSlotRoles,
+  pitchSlotDisplayY,
   slotLayoutFromPitch,
   type FormationPitchSlot,
   type PitchRole,
@@ -11,9 +12,20 @@ export {
   FORMATION_PITCH_SLOTS,
   formationSlotCount,
   formationSlotRoles,
+  pitchSlotDisplayY,
   type FormationPitchSlot,
   type PitchRole,
 }
+
+export type GamePosition = 'GK' | 'DEF' | 'MID' | 'FWD'
+
+export const POSITION_FILTER_OPTIONS: { value: 'ALL' | GamePosition; label: string }[] = [
+  { value: 'ALL', label: 'Все позиции' },
+  { value: 'GK', label: 'Вратарь' },
+  { value: 'DEF', label: 'Защита' },
+  { value: 'MID', label: 'Полузащита' },
+  { value: 'FWD', label: 'Нападение' },
+]
 
 /** Tactical schemes from https://t-j.ru/football-tactics/ — GK/DEF/MID/FWD slot counts. */
 export const FORMATIONS = [

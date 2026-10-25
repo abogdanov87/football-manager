@@ -133,12 +133,12 @@ class Command(BaseCommand):
 
         rng = random.Random(42)
         clubs: list[Club] = []
-        for i, (name, short, slug) in enumerate(CLUB_DATA):
+        for name, short, slug in CLUB_DATA:
             club = Club.objects.create(
                 name=name,
                 short_name=short,
                 crest_url=club_crest_url(slug),
-                is_player_controlled=(i == 0),
+                is_player_controlled=False,
                 formation="4-4-2",
                 budget=rng.randint(3_000_000, 12_000_000),
             )

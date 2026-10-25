@@ -9,7 +9,17 @@ export type FormationPitchSlot = {
   role: PitchRole
 }
 
-const gk = (): FormationPitchSlot => ({ id: 'gk', x: 50, y: 91, role: 'GK' })
+/** Own-goal line (y=100). Outfield lines use OUTFIELD_Y_OFFSET below stored coords. */
+export const GK_PITCH_Y = 100
+export const OUTFIELD_Y_OFFSET = -4
+
+const gk = (): FormationPitchSlot => ({ id: 'gk', x: 50, y: GK_PITCH_Y, role: 'GK' })
+
+/** Map stored slot y to on-pitch position (equal line spacing vs GK). */
+export function pitchSlotDisplayY(slot: FormationPitchSlot): number {
+  if (slot.role === 'GK') return GK_PITCH_Y
+  return Math.max(6, slot.y + OUTFIELD_Y_OFFSET)
+}
 
 const defLine = (y: number, xs: number[]): FormationPitchSlot[] =>
   xs.map((x, i) => ({ id: `def-${i}`, x, y, role: 'DEF' as PitchRole }))

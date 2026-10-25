@@ -1,0 +1,602 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "208379",
+        "name": "Christian Walton",
+        "shortName": "Walton",
+        "captain": "",
+        "number": "28",
+        "profileUrl": "/christian-walton/profil/spieler/208379",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "272622",
+        "name": "Issa Diop",
+        "shortName": "Diop",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/issa-diop/profil/spieler/272622",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Diop",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/272622-1780316727.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+                "name": "Ipswich Town"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "51",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "401320",
+        "name": "Dara O'Shea",
+        "shortName": "O'Shea",
+        "captain": "x",
+        "number": "26",
+        "profileUrl": "/dara-oshea/profil/spieler/401320",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "596446",
+        "name": "Leif Davis",
+        "shortName": "Davis",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/leif-davis/profil/spieler/596446",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "991487",
+        "name": "Abdoul Ouattara",
+        "shortName": "Ouattara",
+        "captain": "",
+        "number": "42",
+        "profileUrl": "/abdoul-ouattara/profil/spieler/991487",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "357162",
+        "name": "Florentino",
+        "shortName": "Florentino",
+        "captain": "",
+        "number": "12",
+        "profileUrl": "/florentino/profil/spieler/357162",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Matusiwa",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/315145-1784821644.jpg?lm=4711",
+            "playerOut": "Florentino",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/357162-1701295561.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "85",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "401578",
+        "name": "Exequiel Palacios",
+        "shortName": "Palacios",
+        "captain": "",
+        "number": "25",
+        "profileUrl": "/exequiel-palacios/profil/spieler/401578",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "660867",
+        "name": "Julio Enciso",
+        "shortName": "Enciso",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/julio-enciso/profil/spieler/660867",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Akpom",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/197642-1678463529.jpg?lm=4711",
+            "playerOut": "Enciso",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/660867-1782800837.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "86",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:1",
+              "player": "Enciso",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/660867-1782800837.jpg?lm=4711",
+              "goalType": "",
+              "action": "Linksschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+                "name": "Ipswich Town"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "41",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "665390",
+        "name": "Jaden Philogene",
+        "shortName": "Philogene",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/jaden-philogene/profil/spieler/665390",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Clarke",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/559794-1708003059.jpg?lm=4711",
+            "playerOut": "Philogene",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/665390-1737014900.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "61",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "864121",
+        "name": "Abdul Fatawu",
+        "shortName": "Fatawu",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/abdul-fatawu/profil/spieler/864121",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Maeda",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/420931-1780324672.jpg?lm=4711",
+            "playerOut": "Fatawu",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/864121-1780562246.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "73",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "743599",
+        "name": "Emersonn",
+        "shortName": "Emersonn",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/emersonn/profil/spieler/743599",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Flemming",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/411537-1741273915.jpg?lm=4711",
+            "playerOut": "Emersonn",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/743599-1744294419.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "60",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "463527",
+        "name": "Kjell Scherpen",
+        "shortName": "Scherpen",
+        "captain": "",
+        "number": "37",
+        "profileUrl": "/kjell-scherpen/profil/spieler/463527",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "693095",
+        "name": "Jacob Greaves",
+        "shortName": "Greaves",
+        "captain": "",
+        "number": "24",
+        "profileUrl": "/jacob-greaves/profil/spieler/693095",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "351755",
+        "name": "Darnell Furlong",
+        "shortName": "Furlong",
+        "captain": "",
+        "number": "2",
+        "profileUrl": "/darnell-furlong/profil/spieler/351755",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "315145",
+        "name": "Azor Matusiwa",
+        "shortName": "Matusiwa",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/azor-matusiwa/profil/spieler/315145",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Matusiwa",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/315145-1784821644.jpg?lm=4711",
+            "playerOut": "Florentino",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/357162-1701295561.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "85",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "715558",
+        "name": "Marcelino N\u00fa\u00f1ez",
+        "shortName": "N\u00fa\u00f1ez",
+        "captain": "",
+        "number": "32",
+        "profileUrl": "/marcelino-nunez/profil/spieler/715558",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "559794",
+        "name": "Jack Clarke",
+        "shortName": "Clarke",
+        "captain": "",
+        "number": "47",
+        "profileUrl": "/jack-clarke/profil/spieler/559794",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Clarke",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/559794-1708003059.jpg?lm=4711",
+            "playerOut": "Philogene",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/665390-1737014900.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "61",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "420931",
+        "name": "Daizen Maeda",
+        "shortName": "Maeda",
+        "captain": "",
+        "number": "38",
+        "profileUrl": "/daizen-maeda/profil/spieler/420931",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Maeda",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/420931-1780324672.jpg?lm=4711",
+            "playerOut": "Fatawu",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/864121-1780562246.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "73",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "411537",
+        "name": "Zian Flemming",
+        "shortName": "Flemming",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/zian-flemming/profil/spieler/411537",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Flemming",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/411537-1741273915.jpg?lm=4711",
+            "playerOut": "Emersonn",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/743599-1744294419.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "60",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "197642",
+        "name": "Chuba Akpom",
+        "shortName": "Akpom",
+        "captain": "",
+        "number": "29",
+        "profileUrl": "/chuba-akpom/profil/spieler/197642",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Akpom",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/197642-1678463529.jpg?lm=4711",
+            "playerOut": "Enciso",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/660867-1782800837.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/677.png?lm=1789459206",
+              "name": "Ipswich Town"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "86",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "8",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/8"
+    },
+    "date": "Fri, 23/10/2026 - 8:00 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "4899331",
+    "url": "/spielbericht/index/spielbericht/4899331",
+    "result": "1:1 "
+  },
+  "teams": {
+    "team1": {
+      "id": "677",
+      "name": "Ipswich",
+      "url": "/ipswich-town/startseite/verein/677",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/677.png?lm=1789459206",
+      "rank": "10"
+    },
+    "team2": {
+      "id": "703",
+      "name": "Nott'm Forest",
+      "url": "/nottingham-forest/startseite/verein/703",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/703.png?lm=1789459206",
+      "rank": "19"
+    }
+  },
+  "trainer": {
+    "id": "82647",
+    "name": "Gary O'Neil",
+    "profileUrl": "/gary-oneil/profil/trainer/82647"
+  },
+  "url": "/spielbericht/index/spielbericht/4899331"
+}

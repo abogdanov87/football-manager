@@ -5,7 +5,14 @@ from typing import Iterable
 from django.db import transaction
 
 from .formations import formation_position_counts
-from .match_engine import ENGINE_VERSION, MatchSimulationResult, simulate_match, squad_strength
+from .match_engine import (
+    ENGINE_VERSION,
+    MatchPlayer,
+    MatchSimulationResult,
+    designate_set_piece_takers,
+    simulate_match,
+    squad_strength,
+)
 from .models import Club, Fixture, Match, Player, Season, Standing
 
 
@@ -34,19 +41,61 @@ def lineup_players(club: Club) -> list[Player]:
     return players
 
 
+def bench_players(club: Club) -> list[Player]:
+    lineup_ids = set(default_lineup(club))
+    return list(
+        Player.objects.filter(club=club)
+        .exclude(id__in=lineup_ids)
+        .order_by("-overall", "name")
+    )
+
+
+def _match_player(p: Player) -> MatchPlayer:
+    return MatchPlayer(
+        name=p.name,
+        position=p.position,
+        player_id=p.id,
+        form=p.form,
+        overall=p.overall,
+        sho=p.sho,
+        pac=p.pac,
+        dri=p.dri,
+        pas=p.pas,
+        defending=p.defending,
+        phy=p.phy,
+        aerial=p.aerial,
+        mentality=p.mentality,
+        injury_resistance=p.injury_resistance,
+    )
+
+
 def _snapshot(club: Club, is_home: bool):
     from .match_engine import SquadSnapshot
 
     players = lineup_players(club)
+    bench = bench_players(club)
+    match_players = [_match_player(p) for p in players]
+    bench_match = [_match_player(p) for p in bench]
+    pen_player = club.penalty_taker_player
+    fk_player = club.free_kick_taker_player
+    penalty_taker, free_kick_taker = designate_set_piece_takers(
+        match_players,
+        penalty_name=pen_player.name if pen_player else None,
+        free_kick_name=fk_player.name if fk_player else None,
+    )
     overalls = [p.overall * p.form for p in players]
     attack, defense = squad_strength(overalls, club.formation, is_home)
     return SquadSnapshot(
         club_id=club.id,
         club_name=club.name,
         formation=club.formation,
+        players=match_players,
         player_names=[p.name for p in players],
         attack_strength=attack,
         defense_strength=defense,
+        penalty_taker=penalty_taker,
+        free_kick_taker=free_kick_taker,
+        bench_players=bench_match,
     )
 
 
@@ -111,7 +160,97 @@ def simulate_fixture(fixture: Fixture) -> Match:
             result.home_score,
             result.away_score,
         )
+        _persist_match_player_stats(fixture, match, result)
     return match
+
+
+def _lineup_with_positions(club: Club) -> list[tuple[Player, str]]:
+    from .player_stats import position_code_for_player
+
+    players = lineup_players(club)
+    return [(p, position_code_for_player(p)) for p in players]
+
+
+def _name_maps(
+    club: Club, scorers: dict[str, int] | None, assisters: dict[str, int] | None
+) -> tuple[dict[int, int], dict[int, int]]:
+    by_name = {p.name: p for p in club.players.all()}
+    goals: dict[int, int] = {}
+    assists: dict[int, int] = {}
+    for name, count in (scorers or {}).items():
+        pl = by_name.get(name)
+        if pl:
+            goals[pl.id] = count
+    for name, count in (assisters or {}).items():
+        pl = by_name.get(name)
+        if pl:
+            assists[pl.id] = count
+    return goals, assists
+
+
+def _discipline_maps(
+    club: Club,
+    yellows: dict[str, int] | None,
+    reds: dict[str, int] | None,
+    injury_days: dict[str, int] | None,
+) -> tuple[dict[int, int], dict[int, int], dict[int, int]]:
+    by_name = {p.name: p for p in club.players.all()}
+    y: dict[int, int] = {}
+    r: dict[int, int] = {}
+    inj: dict[int, int] = {}
+    for name, count in (yellows or {}).items():
+        pl = by_name.get(name)
+        if pl:
+            y[pl.id] = count
+    for name, count in (reds or {}).items():
+        pl = by_name.get(name)
+        if pl:
+            r[pl.id] = count
+    for name, count in (injury_days or {}).items():
+        pl = by_name.get(name)
+        if pl:
+            inj[pl.id] = count
+    return y, r, inj
+
+
+def _persist_match_player_stats(
+    fixture: Fixture, match: Match, result: MatchSimulationResult
+) -> None:
+    from .player_stats import record_club_match_stats
+
+    season = fixture.season
+    home = fixture.home_club
+    away = fixture.away_club
+    home_goals, home_assists = _name_maps(home, result.home_scorers, result.home_assisters)
+    away_goals, away_assists = _name_maps(away, result.away_scorers, result.away_assisters)
+    home_y, home_r, home_inj = _discipline_maps(
+        home, result.home_yellow_cards, result.home_red_cards, result.home_injury_days
+    )
+    away_y, away_r, away_inj = _discipline_maps(
+        away, result.away_yellow_cards, result.away_red_cards, result.away_injury_days
+    )
+    record_club_match_stats(
+        season=season,
+        match=match,
+        club_id=home.id,
+        lineup=_lineup_with_positions(home),
+        goals_by_player_id=home_goals,
+        assists_by_player_id=home_assists,
+        yellow_cards_by_player_id=home_y,
+        red_cards_by_player_id=home_r,
+        injury_days_by_player_id=home_inj,
+    )
+    record_club_match_stats(
+        season=season,
+        match=match,
+        club_id=away.id,
+        lineup=_lineup_with_positions(away),
+        goals_by_player_id=away_goals,
+        assists_by_player_id=away_assists,
+        yellow_cards_by_player_id=away_y,
+        red_cards_by_player_id=away_r,
+        injury_days_by_player_id=away_inj,
+    )
 
 
 def simulate_matchday(season: Season, matchday: int | None = None) -> list[Match]:

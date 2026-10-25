@@ -1,0 +1,679 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "105470",
+        "name": "Alisson",
+        "shortName": "Alisson",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/alisson/profil/spieler/105470",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1004301",
+        "name": "J\u00e9r\u00e9my Jacquet",
+        "shortName": "Jacquet",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/jeremy-jacquet/profil/spieler/1004301",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Gomez",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/256178-1746645094.jpg?lm=4711",
+            "playerOut": "Jacquet",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1004301-1714503850.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "480267",
+        "name": "Ronald Ara\u00fajo",
+        "shortName": "Ara\u00fajo",
+        "captain": "",
+        "number": "33",
+        "profileUrl": "/ronald-araujo/profil/spieler/480267",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Wirtz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/598577-1781163178.jpg?lm=4711",
+            "playerOut": "Ara\u00fajo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/480267-1788427734.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "2:2",
+              "player": "Ara\u00fajo",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/480267-1788427734.jpg?lm=4711",
+              "goalType": "Pass",
+              "action": "Kopfball",
+              "assist": "Assist:",
+              "assistByPlayer": "Ngumoha",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Liverpool FC"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "45",
+                "addedTime": "2"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "139208",
+        "name": "Virgil van Dijk",
+        "shortName": "van Dijk",
+        "captain": "x",
+        "number": "4",
+        "profileUrl": "/virgil-van-dijk/profil/spieler/139208",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "338070",
+        "name": "Konstantinos Tsimikas",
+        "shortName": "Tsimikas",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/konstantinos-tsimikas/profil/spieler/338070",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "478573",
+        "name": "Ryan Gravenberch",
+        "shortName": "Gravenberch",
+        "captain": "",
+        "number": "38",
+        "profileUrl": "/ryan-gravenberch/profil/spieler/478573",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1045123",
+        "name": "Trey Nyoni",
+        "shortName": "Nyoni",
+        "captain": "",
+        "number": "42",
+        "profileUrl": "/trey-nyoni/profil/spieler/1045123",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "McConnell",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/845289-1698353591.jpg?lm=4711",
+            "playerOut": "Nyoni",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1045123-1708933240.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "81",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "534033",
+        "name": "Alexis Mac Allister",
+        "shortName": "Mac Allister",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/alexis-mac-allister/profil/spieler/534033",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:2",
+              "player": "Mac Allister",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/534033-1669835342.jpg?lm=4711",
+              "goalType": "Corner",
+              "action": "Kopfball",
+              "assist": "Assist:",
+              "assistByPlayer": "Tsimikas",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Liverpool FC"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "36",
+                "addedTime": null
+              }
+            },
+            {
+              "description": "GOAL!",
+              "score": "3:2",
+              "player": "Mac Allister",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/534033-1669835342.jpg?lm=4711",
+              "goalType": "Pass",
+              "action": "Rechtsschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "Ngumoha",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Liverpool FC"
+              },
+              "offset": -10,
+              "type": "tor",
+              "time": {
+                "minute": "65",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "434675",
+        "name": "Cody Gakpo",
+        "shortName": "Gakpo",
+        "captain": "",
+        "number": "18",
+        "profileUrl": "/cody-gakpo/profil/spieler/434675",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1108466",
+        "name": "Rio Ngumoha",
+        "shortName": "Ngumoha",
+        "captain": "",
+        "number": "73",
+        "profileUrl": "/rio-ngumoha/profil/spieler/1108466",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Barcola",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/708265-1780989250.jpg?lm=4711",
+            "playerOut": "Ngumoha",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1108466-1792007527.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "922462",
+        "name": "Lewis Koumas",
+        "shortName": "Koumas",
+        "captain": "",
+        "number": "67",
+        "profileUrl": "/lewis-koumas/profil/spieler/922462",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Isak",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/349066-1680791339.jpg?lm=4711",
+            "playerOut": "Koumas",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/922462-1708346761.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "66",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "226049",
+        "name": "Freddie Woodman",
+        "shortName": "Woodman",
+        "captain": "",
+        "number": "28",
+        "profileUrl": "/freddie-woodman/profil/spieler/226049",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "502676",
+        "name": "Giorgi Mamardashvili",
+        "shortName": "Mamardashvili",
+        "captain": "",
+        "number": "25",
+        "profileUrl": "/giorgi-mamardashvili/profil/spieler/502676",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "256178",
+        "name": "Joe Gomez",
+        "shortName": "Gomez",
+        "captain": "",
+        "number": "2",
+        "profileUrl": "/joe-gomez/profil/spieler/256178",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Gomez",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/256178-1746645094.jpg?lm=4711",
+            "playerOut": "Jacquet",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1004301-1714503850.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "670861",
+        "name": "Luke Chambers",
+        "shortName": "Chambers",
+        "captain": "",
+        "number": "44",
+        "profileUrl": "/luke-chambers/profil/spieler/670861",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "730861",
+        "name": "Milos Kerkez",
+        "shortName": "Kerkez",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/milos-kerkez/profil/spieler/730861",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "845289",
+        "name": "James McConnell",
+        "shortName": "McConnell",
+        "captain": "",
+        "number": "53",
+        "profileUrl": "/james-mcconnell/profil/spieler/845289",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "McConnell",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/845289-1698353591.jpg?lm=4711",
+            "playerOut": "Nyoni",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1045123-1708933240.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "81",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "947407",
+        "name": "Michael Laffey",
+        "shortName": "Laffey",
+        "captain": "",
+        "number": "94",
+        "profileUrl": "/michael-laffey/profil/spieler/947407",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "598577",
+        "name": "Florian Wirtz",
+        "shortName": "Wirtz",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/florian-wirtz/profil/spieler/598577",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Wirtz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/598577-1781163178.jpg?lm=4711",
+            "playerOut": "Ara\u00fajo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/480267-1788427734.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "4:2",
+              "player": "Wirtz",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/598577-1781163178.jpg?lm=4711",
+              "goalType": "Pass",
+              "action": "Kontertor",
+              "assist": "Assist:",
+              "assistByPlayer": "Gakpo",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Liverpool FC"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "68",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "708265",
+        "name": "Bradley Barcola",
+        "shortName": "Barcola",
+        "captain": "",
+        "number": "29",
+        "profileUrl": "/bradley-barcola/profil/spieler/708265",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Barcola",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/708265-1780989250.jpg?lm=4711",
+            "playerOut": "Ngumoha",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1108466-1792007527.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "349066",
+        "name": "Alexander Isak",
+        "shortName": "Isak",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/alexander-isak/profil/spieler/349066",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Isak",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/349066-1680791339.jpg?lm=4711",
+            "playerOut": "Koumas",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/922462-1708346761.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Liverpool FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "66",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "939290",
+        "name": "Jayden Danns",
+        "shortName": "Danns",
+        "captain": "",
+        "number": "76",
+        "profileUrl": "/jayden-danns/profil/spieler/939290",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "CL",
+      "name": "UEFA Champions League",
+      "url": "/uefa-champions-league/startseite/pokalwettbewerb/CL"
+    },
+    "matchday": {
+      "day": "3",
+      "url": "/bundesliga/spieltag/pokalwettbewerb/CL/saison_id/2026/spieltag/3"
+    },
+    "date": "Tue, 20/10/2026 - 8:00 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "5035870",
+    "url": "/spielbericht/index/spielbericht/5035870",
+    "result": "4:3 "
+  },
+  "teams": {
+    "team1": {
+      "id": "31",
+      "name": "Liverpool",
+      "url": "/fc-liverpool/startseite/verein/31",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/31.png?lm=1789459168",
+      "rank": ""
+    },
+    "team2": {
+      "id": "1050",
+      "name": "Villarreal",
+      "url": "/fc-villarreal/startseite/verein/1050",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/1050.png?lm=1789459228",
+      "rank": ""
+    }
+  },
+  "trainer": {
+    "id": "60677",
+    "name": "Andoni Iraola",
+    "profileUrl": "/andoni-iraola/profil/trainer/60677"
+  },
+  "url": "/spielbericht/index/spielbericht/5035870"
+}

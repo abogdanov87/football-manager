@@ -5,17 +5,40 @@ from __future__ import annotations
 import html
 import re
 from dataclasses import dataclass
+from datetime import date
 from typing import Iterable
+
+from .profile import parse_squad_row_details
+
+_PORTRAIT_RE = re.compile(
+    r'data-src="(https://img\.a\.transfermarkt\.technology/portrait/[^"]+)"'
+)
 
 _ROW_RE = re.compile(
     r'<tr class="(?:odd|even)">\s*'
     r'<td class="zentriert rueckennummer[^"]*"[^>]*>.*?'
-    r'<a href="(?P<path>/[^"]+/profil/spieler/(?P<tm_id>\d+))">\s*(?P<name>[^<]+?)\s*</a>.*?'
+    r'<a href="(?P<path>/[^"]+/profil/spieler/(?P<tm_id>\d+))">\s*(?P<name_inner>.*?)\s*</a>.*?'
     r'<tr>\s*<td>\s*(?P<tm_position>[^<]+?)\s*</td>.*?'
     r'<td class="zentriert">(?P<dob_age>[^<]+)</td>.*?'
     r'<td class="rechts[^"]*">(?:<a[^>]*>)?(?P<market_value>[^<]+)',
     re.S,
 )
+
+
+def _player_name_from_anchor_inner(inner_html: str) -> str:
+    text = re.sub(r"<[^>]+>", "", inner_html)
+    return html.unescape(text).strip()
+
+
+def _portrait_url_for_player(row_html: str, transfermarkt_id: int) -> str:
+    """Pick the portrait whose CDN path matches this player's TM id."""
+    needle = f"/{transfermarkt_id}-"
+    for m in _PORTRAIT_RE.finditer(row_html):
+        url = m.group(1).strip()
+        if needle in url:
+            return url
+    portrait_m = _PORTRAIT_RE.search(row_html)
+    return portrait_m.group(1).strip() if portrait_m else ""
 
 _CLUB_KADER_RE = re.compile(
     r'href="/(?P<slug>[^/]+)/kader/verein/(?P<verein_id>\d+)/saison_id/(?P<season>\d+)"',
@@ -39,6 +62,10 @@ class TMPlayerRow:
     tm_position: str
     age: int
     market_value_raw: str
+    portrait_url: str = ""
+    date_of_birth: date | None = None
+    nationalities: list[dict[str, str]] | None = None
+    contract_end_date: date | None = None
 
     @property
     def market_value_eur(self) -> int:
@@ -77,14 +104,23 @@ def parse_squad_page(html_text: str) -> list[TMPlayerRow]:
         slug = m.group("path").split("/")[1]
         age_m = _DOB_AGE_RE.search(m.group("dob_age"))
         age = int(age_m.group(1)) if age_m else 25
+        row_html = m.group(0)
+        portrait = _portrait_url_for_player(row_html, int(m.group("tm_id")))
+        details = parse_squad_row_details(
+            row_html, dob_age_cell=m.group("dob_age")
+        )
         players.append(
             TMPlayerRow(
                 transfermarkt_id=int(m.group("tm_id")),
                 transfermarkt_slug=slug,
-                name_latin=html.unescape(m.group("name").strip()),
+                name_latin=_player_name_from_anchor_inner(m.group("name_inner")),
                 tm_position=html.unescape(m.group("tm_position").strip()),
                 age=age,
                 market_value_raw=html.unescape(m.group("market_value").strip()),
+                portrait_url=portrait,
+                date_of_birth=details.date_of_birth,
+                nationalities=details.nationalities,
+                contract_end_date=details.contract_end_date,
             )
         )
     return players

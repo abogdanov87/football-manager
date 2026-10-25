@@ -15,6 +15,35 @@ python manage.py runserver 8001
 
 API: `http://127.0.0.1:8001/api/`
 
+После `seed_league` войдите через фронтенд: запросите OTP на email (в dev код печатается в консоль `runserver`), выберите свободный клуб.
+
+## Авторизация (email OTP)
+
+| Переменная | По умолчанию | Описание |
+|------------|--------------|----------|
+| `EMAIL_BACKEND` | `django.core.mail.backends.console.EmailBackend` | В dev письма в консоль; для SMTP укажите `django.core.mail.backends.smtp.EmailBackend` |
+| `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD` | — | Параметры SMTP |
+| `DEFAULT_FROM_EMAIL` | `noreply@footballmanager.local` | Отправитель OTP |
+| `DJANGO_SECRET_KEY` | (dev placeholder) | Обязательно сменить в production |
+
+Для локальной отладки почты удобен [Mailpit](https://github.com/axllent/mailpit): SMTP на `1025`, веб-интерфейс на `8025`, тогда `EMAIL_BACKEND=smtp` и `EMAIL_HOST=localhost`.
+
+Сессионный токен после входа действует **7 дней**; OTP в письме — **10 минут**.
+
+## Рейтинги FC 27 (fcratings.com)
+
+Обновить PAC/SHO/PAS/DRI/DEF/PHY и OVR всех игроков по [FC Ratings](https://www.fcratings.com/):
+
+```bash
+# PAC/SHO/PAS/DRI/DEF/PHY + OVR с карточки игрока (~10 мин, ~1 запрос/с)
+python manage.py sync_fcratings_stats
+
+# Только OVR из индекса fcratings (быстро; лица — оценка по позиции)
+python manage.py sync_fcratings_stats --index-only
+```
+
+Сопоставление по `transfermarkt_slug` (slug в URL fcratings). Кэш индекса: `game/fixtures/fcratings/search-index.json` (скачивается при первом запуске).
+
 ## Ежедневная симуляция тура (cron)
 
 Тур лиги симулируется **по расписанию**, не кнопкой игрока. Игрок меняет тактику между турами.

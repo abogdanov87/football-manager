@@ -1,0 +1,623 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "296802",
+        "name": "Walter Ben\u00edtez",
+        "shortName": "Ben\u00edtez",
+        "captain": "",
+        "number": "44",
+        "profileUrl": "/walter-benitez/profil/spieler/296802",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "386047",
+        "name": "Axel Disasi",
+        "shortName": "Disasi",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/axel-disasi/profil/spieler/386047",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 62,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "578539",
+        "name": "Chris Richards",
+        "shortName": "Richards",
+        "captain": "",
+        "number": "26",
+        "profileUrl": "/chris-richards/profil/spieler/578539",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 61,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1006411",
+        "name": "Jaydee Canvot",
+        "shortName": "Canvot",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/jaydee-canvot/profil/spieler/1006411",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 61,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "730893",
+        "name": "Tyrick Mitchell",
+        "shortName": "Mitchell",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/tyrick-mitchell/profil/spieler/730893",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 34,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "945021",
+        "name": "Anan Khalaili",
+        "shortName": "Khalaili",
+        "captain": "",
+        "number": "25",
+        "profileUrl": "/anan-khalaili/profil/spieler/945021",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 34,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "356141",
+        "name": "Daichi Kamada",
+        "shortName": "Kamada",
+        "captain": "",
+        "number": "18",
+        "profileUrl": "/daichi-kamada/profil/spieler/356141",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 30,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "744149",
+        "name": "Adam Wharton",
+        "shortName": "Wharton",
+        "captain": "x",
+        "number": "20",
+        "profileUrl": "/adam-wharton/profil/spieler/744149",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "584769",
+        "name": "Dwight McNeil",
+        "shortName": "McNeil",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/dwight-mcneil/profil/spieler/584769",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 20,
+        "styleLeft": 50,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Sarr",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/410225-1765811669.jpg?lm=4711",
+            "playerOut": "McNeil",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/584769-1700651579.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+              "name": "Be\u015fikta\u015f JK"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "61",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "568157",
+        "name": "Y\u00e9remy Pino",
+        "shortName": "Pino",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/yeremy-pino/profil/spieler/568157",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 20,
+        "styleLeft": 30,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Osorio",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/881116-1711546194.jpg?lm=4711",
+            "playerOut": "Pino",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/568157-1686664370.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+              "name": "Be\u015fikta\u015f JK"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "72",
+              "addedTime": "0"
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Pino",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/568157-1686664370.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+                "name": "Be\u015fikta\u015f JK"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "45",
+                "addedTime": "1"
+              }
+            }
+          ],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:1",
+              "player": "Pino",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/568157-1686664370.jpg?lm=4711",
+              "goalType": "Cross",
+              "action": "Linksschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "Khalaili",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+                "name": "Be\u015fikta\u015f JK"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "51",
+                "addedTime": "0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "420002",
+        "name": "Jean-Philippe Mateta",
+        "shortName": "Mateta",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/jean-philippe-mateta/profil/spieler/420002",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Larsen",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/429983-1743541067.jpg?lm=4711",
+            "playerOut": "Mateta",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/420002-1723202650.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+              "name": "Be\u015fikta\u015f JK"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "61",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:2",
+              "player": "Mateta",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/420002-1723202650.jpg?lm=4711",
+              "goalType": "",
+              "action": "Linksschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+                "name": "Be\u015fikta\u015f JK"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "55",
+                "addedTime": "0"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "1407519",
+        "name": "Lucca Benetton",
+        "shortName": "Benetton",
+        "captain": "",
+        "number": "81",
+        "profileUrl": "/lucca-benetton/profil/spieler/1407519",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "196722",
+        "name": "Remi Matthews",
+        "shortName": "Matthews",
+        "captain": "",
+        "number": "31",
+        "profileUrl": "/remi-matthews/profil/spieler/196722",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1045118",
+        "name": "George King",
+        "shortName": "King",
+        "captain": "",
+        "number": "37",
+        "profileUrl": "/george-king/profil/spieler/1045118",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1077175",
+        "name": "Honest Ahanor",
+        "shortName": "Ahanor",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/honest-ahanor/profil/spieler/1077175",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "316125",
+        "name": "Ben Chilwell",
+        "shortName": "Chilwell",
+        "captain": "",
+        "number": "33",
+        "profileUrl": "/ben-chilwell/profil/spieler/316125",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1285021",
+        "name": "Dean Benamar",
+        "shortName": "Benamar",
+        "captain": "",
+        "number": "54",
+        "profileUrl": "/dean-benamar/profil/spieler/1285021",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "331505",
+        "name": "\u00d3scar Mingueza",
+        "shortName": "Mingueza",
+        "captain": "",
+        "number": "30",
+        "profileUrl": "/oscar-mingueza/profil/spieler/331505",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "207014",
+        "name": "Will Hughes",
+        "shortName": "Hughes",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/will-hughes/profil/spieler/207014",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "410225",
+        "name": "Isma\u00efla Sarr",
+        "shortName": "Sarr",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/ismaila-sarr/profil/spieler/410225",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Sarr",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/410225-1765811669.jpg?lm=4711",
+            "playerOut": "McNeil",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/584769-1700651579.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+              "name": "Be\u015fikta\u015f JK"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "61",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "881116",
+        "name": "Dar\u00edo Osorio",
+        "shortName": "Osorio",
+        "captain": "",
+        "number": "24",
+        "profileUrl": "/dario-osorio/profil/spieler/881116",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Osorio",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/881116-1711546194.jpg?lm=4711",
+            "playerOut": "Pino",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/568157-1686664370.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+              "name": "Be\u015fikta\u015f JK"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "72",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "429983",
+        "name": "J\u00f8rgen Strand Larsen",
+        "shortName": "Larsen",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/jorgen-strand-larsen/profil/spieler/429983",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Nketiah",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/340324-1730795033.jpg?lm=4711",
+            "playerOut": "Larsen",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/429983-1743541067.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+              "name": "Be\u015fikta\u015f JK"
+            },
+            "reason": "Injury",
+            "type": "wechsel",
+            "time": {
+              "minute": "85",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "340324",
+        "name": "Eddie Nketiah",
+        "shortName": "Nketiah",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/eddie-nketiah/profil/spieler/340324",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Nketiah",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/340324-1730795033.jpg?lm=4711",
+            "playerOut": "Larsen",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/429983-1743541067.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/873.png?lm=1789459219",
+              "name": "Be\u015fikta\u015f JK"
+            },
+            "reason": "Injury",
+            "type": "wechsel",
+            "time": {
+              "minute": "85",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "EL",
+      "name": "UEFA Europa League",
+      "url": "/europa-league/startseite/pokalwettbewerb/EL"
+    },
+    "matchday": {
+      "day": "3",
+      "url": "/bundesliga/spieltag/pokalwettbewerb/EL/saison_id/2026/spieltag/3"
+    },
+    "date": "Thu, 22/10/2026 - 8:00 PM hours",
+    "tactic": "3-4-2-1"
+  },
+  "matchReport": {
+    "id": "5037463",
+    "url": "/spielbericht/index/spielbericht/5037463",
+    "result": "2:2 "
+  },
+  "teams": {
+    "team1": {
+      "id": "114",
+      "name": "Be\u015fikta\u015f",
+      "url": "/besiktas-istanbul/startseite/verein/114",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/114.png?lm=1789459174",
+      "rank": ""
+    },
+    "team2": {
+      "id": "873",
+      "name": "Crystal Palace",
+      "url": "/crystal-palace/startseite/verein/873",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/873.png?lm=1789459219",
+      "rank": ""
+    }
+  },
+  "trainer": {
+    "id": "110443",
+    "name": "Pierre Sage",
+    "profileUrl": "/pierre-sage/profil/trainer/110443"
+  },
+  "url": "/spielbericht/index/spielbericht/5037463"
+}

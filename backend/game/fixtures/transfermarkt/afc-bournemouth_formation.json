@@ -1,0 +1,661 @@
+{
+  "list": {
+    "substitutes": [
+      {
+        "id": "465555",
+        "name": "Djordje Petrovi\u0107",
+        "shortName": "Petrovi\u0107",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/djordje-petrovic/profil/spieler/465555",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1089799",
+        "name": "Mack Allan",
+        "shortName": "Allan",
+        "captain": "",
+        "number": "55",
+        "profileUrl": "/mack-allan/profil/spieler/1089799",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1009658",
+        "name": "Julio Soler",
+        "shortName": "Soler",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/julio-soler/profil/spieler/1009658",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "61841",
+        "name": "Adam Smith",
+        "shortName": "Smith",
+        "captain": "",
+        "number": "15",
+        "profileUrl": "/adam-smith/profil/spieler/61841",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "249089",
+        "name": "Lewis Cook",
+        "shortName": "Cook",
+        "captain": "",
+        "number": "4",
+        "profileUrl": "/lewis-cook/profil/spieler/249089",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Cook",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/249089-1700671190.jpg?lm=4711",
+            "playerOut": "Adams",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/332705-1754244571.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+              "name": "AFC Bournemouth"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "61",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "998101",
+        "name": "Alex T\u00f3th",
+        "shortName": "T\u00f3th",
+        "captain": "",
+        "number": "27",
+        "profileUrl": "/alex-toth/profil/spieler/998101",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Adli",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/532776-1689710574.jpg?lm=4711",
+            "playerOut": "T\u00f3th",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/998101-1763730106.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+              "name": "AFC Bournemouth"
+            },
+            "reason": "Injury",
+            "type": "wechsel",
+            "time": {
+              "minute": "77",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "532776",
+        "name": "Amine Adli",
+        "shortName": "Adli",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/amine-adli/profil/spieler/532776",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Adli",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/532776-1689710574.jpg?lm=4711",
+            "playerOut": "T\u00f3th",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/998101-1763730106.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+              "name": "AFC Bournemouth"
+            },
+            "reason": "Injury",
+            "type": "wechsel",
+            "time": {
+              "minute": "77",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "3:0",
+              "player": "Adli",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/532776-1689710574.jpg?lm=4711",
+              "goalType": "Without assist",
+              "action": "Direkter Freisto\u00df",
+              "assist": "Assist:",
+              "assistByPlayer": "",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+                "name": "AFC Bournemouth"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "84",
+                "addedTime": "0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "277033",
+        "name": "David Brooks",
+        "shortName": "Brooks",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/david-brooks/profil/spieler/277033",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1012564",
+        "name": "Rayan",
+        "shortName": "Rayan",
+        "captain": "",
+        "number": "37",
+        "profileUrl": "/rayan/profil/spieler/1012564",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Rayan",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1012564-1780390891.jpg?lm=4711",
+            "playerOut": "Tavernier",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/399434-1700650360.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+              "name": "AFC Bournemouth"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "62",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "948275",
+        "name": "\u00c1lvaro Rodr\u00edguez",
+        "shortName": "Rodr\u00edguez",
+        "captain": "",
+        "number": "30",
+        "profileUrl": "/alvaro-rodriguez/profil/spieler/948275",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Rodr\u00edguez",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/948275-1660124773.jpg?lm=4711",
+            "playerOut": "Evanilson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/711337-1737452098.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+              "name": "AFC Bournemouth"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "66",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "players": [
+      {
+        "id": "301238",
+        "name": "Michele Di Gregorio",
+        "shortName": "Di Gregorio",
+        "captain": "",
+        "number": "20",
+        "profileUrl": "/michele-di-gregorio/profil/spieler/301238",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "650568",
+        "name": "Ant\u00f3nio Silva",
+        "shortName": "Silva",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/antonio-silva/profil/spieler/650568",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "463605",
+        "name": "Bafod\u00e9 Diakit\u00e9",
+        "shortName": "Diakit\u00e9",
+        "captain": "",
+        "number": "18",
+        "profileUrl": "/bafode-diakite/profil/spieler/463605",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Diakit\u00e9",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/463605-1666691072.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+                "name": "AFC Bournemouth"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "16",
+                "addedTime": "0"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "611793",
+        "name": "James Hill",
+        "shortName": "Hill",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/james-hill/profil/spieler/611793",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "654539",
+        "name": "Adrien Truffert",
+        "shortName": "Truffert",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/adrien-truffert/profil/spieler/654539",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "188077",
+        "name": "Ryan Christie",
+        "shortName": "Christie",
+        "captain": "x",
+        "number": "10",
+        "profileUrl": "/ryan-christie/profil/spieler/188077",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 35,
+        "styleLeft": 53,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "332705",
+        "name": "Tyler Adams",
+        "shortName": "Adams",
+        "captain": "",
+        "number": "12",
+        "profileUrl": "/tyler-adams/profil/spieler/332705",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 35,
+        "styleLeft": 27,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Cook",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/249089-1700671190.jpg?lm=4711",
+            "playerOut": "Adams",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/332705-1754244571.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+              "name": "AFC Bournemouth"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "61",
+              "addedTime": "0"
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Adams",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/332705-1754244571.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+                "name": "AFC Bournemouth"
+              },
+              "reason": "Unsporting behaviour",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "29",
+                "addedTime": "0"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "330659",
+        "name": "Justin Kluivert",
+        "shortName": "Kluivert",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/justin-kluivert/profil/spieler/330659",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 2,
+        "styleLeft": 50,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "T\u00f3th",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/998101-1763730106.jpg?lm=4711",
+            "playerOut": "Kluivert",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/330659-1779893085.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+              "name": "AFC Bournemouth"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "62",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:0",
+              "player": "Kluivert",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/330659-1779893085.jpg?lm=4711",
+              "goalType": "Handball by",
+              "action": "Elfmeter",
+              "assist": "",
+              "assistByPlayer": "De Winter",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+                "name": "AFC Bournemouth"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "8",
+                "addedTime": "0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "399434",
+        "name": "Marcus Tavernier",
+        "shortName": "Tavernier",
+        "captain": "",
+        "number": "16",
+        "profileUrl": "/marcus-tavernier/profil/spieler/399434",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 25,
+        "styleLeft": 12,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Rayan",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1012564-1780390891.jpg?lm=4711",
+            "playerOut": "Tavernier",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/399434-1700650360.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+              "name": "AFC Bournemouth"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "62",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "2:0",
+              "player": "Tavernier",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/399434-1700650360.jpg?lm=4711",
+              "goalType": "Penalty: Fouled player",
+              "action": "Elfmeter",
+              "assist": "Assist:",
+              "assistByPlayer": "Adams",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+                "name": "AFC Bournemouth"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "32",
+                "addedTime": "0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "719673",
+        "name": "Ben Gannon-Doak",
+        "shortName": "Gannon-Doak",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/ben-gannon-doak/profil/spieler/719673",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 25,
+        "styleLeft": 68,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "711337",
+        "name": "Evanilson",
+        "shortName": "Evanilson",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/evanilson/profil/spieler/711337",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 2,
+        "styleLeft": 30,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Rodr\u00edguez",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/948275-1660124773.jpg?lm=4711",
+            "playerOut": "Evanilson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/711337-1737452098.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/5.png?lm=1789459167",
+              "name": "AFC Bournemouth"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "66",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "EL",
+      "name": "UEFA Europa League",
+      "url": "/europa-league/startseite/pokalwettbewerb/EL"
+    },
+    "matchday": {
+      "day": "3",
+      "url": "/bundesliga/spieltag/pokalwettbewerb/EL/saison_id/2026/spieltag/3"
+    },
+    "date": "Thu, 22/10/2026 - 8:00 PM hours",
+    "tactic": "4-4-2"
+  },
+  "matchReport": {
+    "id": "5037433",
+    "url": "/spielbericht/index/spielbericht/5037433",
+    "result": "3:0 "
+  },
+  "teams": {
+    "team1": {
+      "id": "989",
+      "name": "Bournemouth",
+      "url": "/afc-bournemouth/startseite/verein/989",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/989.png?lm=1791205195",
+      "rank": ""
+    },
+    "team2": {
+      "id": "5",
+      "name": "AC Milan",
+      "url": "/ac-mailand/startseite/verein/5",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/5.png?lm=1789459167",
+      "rank": ""
+    }
+  },
+  "trainer": {
+    "id": "24197",
+    "name": "Marco Rose",
+    "profileUrl": "/marco-rose/profil/trainer/24197"
+  },
+  "url": "/spielbericht/index/spielbericht/5037433"
+}

@@ -1,0 +1,669 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "340918",
+        "name": "Caoimh\u00edn Kelleher",
+        "shortName": "Kelleher",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/caoimhin-kelleher/profil/spieler/340918",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "328658",
+        "name": "Kristoffer Ajer",
+        "shortName": "Ajer",
+        "captain": "",
+        "number": "20",
+        "profileUrl": "/kristoffer-ajer/profil/spieler/328658",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "541231",
+        "name": "Sepp van den Berg",
+        "shortName": "van den Berg",
+        "captain": "",
+        "number": "4",
+        "profileUrl": "/sepp-van-den-berg/profil/spieler/541231",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Hickey",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/591949-1780070754.jpg?lm=4711",
+            "playerOut": "van den Berg",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/541231-1692000386.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "71",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "644401",
+        "name": "Keane Lewis-Potter",
+        "shortName": "Lewis-Potter",
+        "captain": "",
+        "number": "23",
+        "profileUrl": "/keane-lewis-potter/profil/spieler/644401",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Diouf",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1111589-1768815059.jpg?lm=4711",
+            "playerOut": "Lewis-Potter",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/644401-1767003558.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "77",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:0",
+              "player": "Lewis-Potter",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/644401-1767003558.jpg?lm=4711",
+              "goalType": "Pass",
+              "action": "Kopfball",
+              "assist": "Assist:",
+              "assistByPlayer": "Igor Thiago",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Brentford FC"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "44",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "823486",
+        "name": "Michael Kayode",
+        "shortName": "Kayode",
+        "captain": "",
+        "number": "33",
+        "profileUrl": "/michael-kayode/profil/spieler/823486",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "270171",
+        "name": "Vitaly Janelt",
+        "shortName": "Janelt",
+        "captain": "x",
+        "number": "27",
+        "profileUrl": "/vitaly-janelt/profil/spieler/270171",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Janelt",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/270171-1790318102.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Brentford FC"
+              },
+              "reason": "Dissent",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "63",
+                "addedTime": null
+              }
+            },
+            {
+              "description": "gelb-rote Karte",
+              "player": "Janelt",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/270171-1790318102.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Brentford FC"
+              },
+              "reason": "Foul",
+              "type": "gelbrot",
+              "offset": -3,
+              "time": {
+                "minute": "90",
+                "addedTime": "2"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "717411",
+        "name": "Yegor Yarmolyuk",
+        "shortName": "Yarmolyuk",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/yegor-yarmolyuk/profil/spieler/717411",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "rote Karte",
+              "player": "Yarmolyuk",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/717411-1740606151.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Brentford FC"
+              },
+              "reason": "Violent conduct",
+              "type": "rot",
+              "offset": 16,
+              "time": {
+                "minute": "45",
+                "addedTime": "8"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "319859",
+        "name": "Mathias Jensen",
+        "shortName": "Jensen",
+        "captain": "",
+        "number": "8",
+        "profileUrl": "/mathias-jensen/profil/spieler/319859",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Sangar\u00e9",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/808348-1726049980.jpg?lm=4711",
+            "playerOut": "Jensen",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/319859-1684771732.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "684210",
+        "name": "Jaidon Anthony",
+        "shortName": "Anthony",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/jaidon-anthony/profil/spieler/684210",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Damsgaard",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/540941-1668183899.jpg?lm=4711",
+            "playerOut": "Anthony",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/684210-1784821258.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "77",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "823231",
+        "name": "Dango Ouattara",
+        "shortName": "Ouattara",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/dango-ouattara/profil/spieler/823231",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Schade",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/473050-1700560328.jpg?lm=4711",
+            "playerOut": "Ouattara",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/823231-1737452292.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "739443",
+        "name": "Igor Thiago",
+        "shortName": "Igor Thiago",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/igor-thiago/profil/spieler/739443",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Igor Thiago",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/739443-1770372295.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Brentford FC"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "46",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "488935",
+        "name": "H\u00e1kon Valdimarsson",
+        "shortName": "Valdimarsson",
+        "captain": "",
+        "number": "12",
+        "profileUrl": "/hakon-valdimarsson/profil/spieler/488935",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "469050",
+        "name": "Nathan Collins",
+        "shortName": "Collins",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/nathan-collins/profil/spieler/469050",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1111589",
+        "name": "El Hadji Malick Diouf",
+        "shortName": "Diouf",
+        "captain": "",
+        "number": "25",
+        "profileUrl": "/el-hadji-malick-diouf/profil/spieler/1111589",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Diouf",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1111589-1768815059.jpg?lm=4711",
+            "playerOut": "Lewis-Potter",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/644401-1767003558.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "77",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "591949",
+        "name": "Aaron Hickey",
+        "shortName": "Hickey",
+        "captain": "",
+        "number": "2",
+        "profileUrl": "/aaron-hickey/profil/spieler/591949",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Hickey",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/591949-1780070754.jpg?lm=4711",
+            "playerOut": "van den Berg",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/541231-1692000386.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "71",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "808348",
+        "name": "Mamadou Sangar\u00e9",
+        "shortName": "Sangar\u00e9",
+        "captain": "",
+        "number": "18",
+        "profileUrl": "/mamadou-sangare/profil/spieler/808348",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Sangar\u00e9",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/808348-1726049980.jpg?lm=4711",
+            "playerOut": "Jensen",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/319859-1684771732.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "540941",
+        "name": "Mikkel Damsgaard",
+        "shortName": "Damsgaard",
+        "captain": "",
+        "number": "24",
+        "profileUrl": "/mikkel-damsgaard/profil/spieler/540941",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Damsgaard",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/540941-1668183899.jpg?lm=4711",
+            "playerOut": "Anthony",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/684210-1784821258.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "77",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "559263",
+        "name": "F\u00e1bio Carvalho",
+        "shortName": "Carvalho",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/fabio-carvalho/profil/spieler/559263",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "473050",
+        "name": "Kevin Schade",
+        "shortName": "Schade",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/kevin-schade/profil/spieler/473050",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Schade",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/473050-1700560328.jpg?lm=4711",
+            "playerOut": "Ouattara",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/823231-1737452292.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+              "name": "Brentford FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Schade",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/473050-1700560328.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/31.png?lm=1789459168",
+                "name": "Brentford FC"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "60",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "123682",
+        "name": "Callum Wilson",
+        "shortName": "Wilson",
+        "captain": "",
+        "number": "13",
+        "profileUrl": "/callum-wilson/profil/spieler/123682",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "7",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/7"
+    },
+    "date": "Sat, 17/10/2026 - 3:00 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "4899308",
+    "url": "/spielbericht/index/spielbericht/4899308",
+    "result": "1:2 "
+  },
+  "teams": {
+    "team1": {
+      "id": "1148",
+      "name": "Brentford",
+      "url": "/fc-brentford/startseite/verein/1148",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/1148.png?lm=1789459235",
+      "rank": "4"
+    },
+    "team2": {
+      "id": "31",
+      "name": "Liverpool",
+      "url": "/fc-liverpool/startseite/verein/31",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/31.png?lm=1789459168",
+      "rank": "9"
+    }
+  },
+  "trainer": {
+    "id": "68347",
+    "name": "Keith Andrews",
+    "profileUrl": "/keith-andrews/profil/trainer/68347"
+  },
+  "url": "/spielbericht/index/spielbericht/4899308"
+}

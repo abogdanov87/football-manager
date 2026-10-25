@@ -1,0 +1,619 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "72476",
+        "name": "Bernd Leno",
+        "shortName": "Leno",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/bernd-leno/profil/spieler/72476",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "461883",
+        "name": "Calvin Bassey",
+        "shortName": "Bassey",
+        "captain": "x",
+        "number": "3",
+        "profileUrl": "/calvin-bassey/profil/spieler/461883",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "452483",
+        "name": "David Affengruber",
+        "shortName": "Affengruber",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/david-affengruber/profil/spieler/452483",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "349701",
+        "name": "Antonee Robinson",
+        "shortName": "Robinson",
+        "captain": "",
+        "number": "33",
+        "profileUrl": "/antonee-robinson/profil/spieler/349701",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Robinson",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/349701-1703926612.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+                "name": "Coventry City"
+              },
+              "reason": "",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "82",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "262226",
+        "name": "Timothy Castagne",
+        "shortName": "Castagne",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/timothy-castagne/profil/spieler/262226",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "747951",
+        "name": "Shea Charles",
+        "shortName": "Charles",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/shea-charles/profil/spieler/747951",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Charles",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/747951-1709112622.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+                "name": "Coventry City"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "36",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "242631",
+        "name": "Alex Iwobi",
+        "shortName": "Iwobi",
+        "captain": "",
+        "number": "17",
+        "profileUrl": "/alex-iwobi/profil/spieler/242631",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Palacios",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/948272-1707907926.jpg?lm=4711",
+            "playerOut": "Iwobi",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/242631-1679652866.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "931838",
+        "name": "Hugo Larsson",
+        "shortName": "Larsson",
+        "captain": "",
+        "number": "15",
+        "profileUrl": "/hugo-larsson/profil/spieler/931838",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Berge",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/333014-1780049344.jpg?lm=4711",
+            "playerOut": "Larsson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/931838-1778600897.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1011131",
+        "name": "Josh King",
+        "shortName": "King",
+        "captain": "",
+        "number": "24",
+        "profileUrl": "/josh-king/profil/spieler/1011131",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Cairney",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/123275-1651652849.jpg?lm=4711",
+            "playerOut": "King",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1011131-1752773470.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "81",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "661207",
+        "name": "Oscar Bobb",
+        "shortName": "Bobb",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/oscar-bobb/profil/spieler/661207",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Tete",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/206746-1746645948.jpg?lm=4711",
+            "playerOut": "Bobb",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/661207-1770716679.png?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "81",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "0:1",
+              "player": "Bobb",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/661207-1770716679.png?lm=4711",
+              "goalType": "Pass",
+              "action": "Linksschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "King",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+                "name": "Coventry City"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "80",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "935230",
+        "name": "Gonzalo Garc\u00eda",
+        "shortName": "Garc\u00eda",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/gonzalo-garcia/profil/spieler/935230",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Rodrigo Muniz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/735571-1657802369.jpg?lm=4711",
+            "playerOut": "Garc\u00eda",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/935230-1780664637.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "127181",
+        "name": "Benjamin Lecomte",
+        "shortName": "Lecomte",
+        "captain": "",
+        "number": "23",
+        "profileUrl": "/benjamin-lecomte/profil/spieler/127181",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "260827",
+        "name": "Joachim Andersen",
+        "shortName": "Andersen",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/joachim-andersen/profil/spieler/260827",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "206746",
+        "name": "Kenny Tete",
+        "shortName": "Tete",
+        "captain": "",
+        "number": "2",
+        "profileUrl": "/kenny-tete/profil/spieler/206746",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Tete",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/206746-1746645948.jpg?lm=4711",
+            "playerOut": "Bobb",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/661207-1770716679.png?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "81",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "333014",
+        "name": "Sander Berge",
+        "shortName": "Berge",
+        "captain": "",
+        "number": "16",
+        "profileUrl": "/sander-berge/profil/spieler/333014",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Berge",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/333014-1780049344.jpg?lm=4711",
+            "playerOut": "Larsson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/931838-1778600897.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "123275",
+        "name": "Tom Cairney",
+        "shortName": "Cairney",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/tom-cairney/profil/spieler/123275",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Cairney",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/123275-1651652849.jpg?lm=4711",
+            "playerOut": "King",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1011131-1752773470.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "81",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "646824",
+        "name": "Manuel \u00c1ngel",
+        "shortName": "Manuel \u00c1ngel",
+        "captain": "",
+        "number": "20",
+        "profileUrl": "/manuel-angel/profil/spieler/646824",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "948272",
+        "name": "C\u00e9sar Palacios",
+        "shortName": "Palacios",
+        "captain": "",
+        "number": "8",
+        "profileUrl": "/cesar-palacios/profil/spieler/948272",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Palacios",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/948272-1707907926.jpg?lm=4711",
+            "playerOut": "Iwobi",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/242631-1679652866.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "900195",
+        "name": "Kevin",
+        "shortName": "Kevin",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/kevin/profil/spieler/900195",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "735571",
+        "name": "Rodrigo Muniz",
+        "shortName": "Rodrigo Muniz",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/rodrigo-muniz/profil/spieler/735571",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Rodrigo Muniz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/735571-1657802369.jpg?lm=4711",
+            "playerOut": "Garc\u00eda",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/935230-1780664637.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/990.png?lm=1789459227",
+              "name": "Coventry City"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "8",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/8"
+    },
+    "date": "Sat, 24/10/2026 - 3:00 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "4899328",
+    "url": "/spielbericht/index/spielbericht/4899328",
+    "result": "0:1 "
+  },
+  "teams": {
+    "team1": {
+      "id": "990",
+      "name": "Coventry",
+      "url": "/coventry-city/startseite/verein/990",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/990.png?lm=1789459227",
+      "rank": "17"
+    },
+    "team2": {
+      "id": "931",
+      "name": "Fulham",
+      "url": "/fc-fulham/startseite/verein/931",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/931.png?lm=1789459221",
+      "rank": "18"
+    }
+  },
+  "trainer": {
+    "id": "87908",
+    "name": "\u00c1lvaro Arbeloa",
+    "profileUrl": "/alvaro-arbeloa/profil/trainer/87908"
+  },
+  "url": "/spielbericht/index/spielbericht/4899328"
+}

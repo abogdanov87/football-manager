@@ -1,0 +1,623 @@
+{
+  "list": {
+    "substitutes": [
+      {
+        "id": "192279",
+        "name": "Kepa Arrizabalaga",
+        "shortName": "Arrizabalaga",
+        "captain": "",
+        "number": "13",
+        "profileUrl": "/kepa-arrizabalaga/profil/spieler/192279",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "646750",
+        "name": "Cristhian Mosquera",
+        "shortName": "Mosquera",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/cristhian-mosquera/profil/spieler/646750",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "659813",
+        "name": "Piero Hincapi\u00e9",
+        "shortName": "Hincapi\u00e9",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/piero-hincapie/profil/spieler/659813",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "502821",
+        "name": "Riccardo Calafiori",
+        "shortName": "Calafiori",
+        "captain": "",
+        "number": "33",
+        "profileUrl": "/riccardo-calafiori/profil/spieler/502821",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Calafiori",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/502821-1727382174.jpg?lm=4711",
+            "playerOut": "Lewis-Skelly",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/890721-1758053582.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "420243",
+        "name": "Jurri\u00ebn Timber",
+        "shortName": "Timber",
+        "captain": "",
+        "number": "12",
+        "profileUrl": "/jurrien-timber/profil/spieler/420243",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "423440",
+        "name": "Mart\u00edn Zubimendi",
+        "shortName": "Zubimendi",
+        "captain": "",
+        "number": "36",
+        "profileUrl": "/martin-zubimendi/profil/spieler/423440",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Zubimendi",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/423440-1684149419.jpg?lm=4711",
+            "playerOut": "Rice",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/357662-1687962936.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "80",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "520624",
+        "name": "Bruno Guimar\u00e3es",
+        "shortName": "Guimar\u00e3es",
+        "captain": "",
+        "number": "39",
+        "profileUrl": "/bruno-guimaraes/profil/spieler/520624",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Guimar\u00e3es",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/520624-1780929894.jpg?lm=4711",
+            "playerOut": "Merino",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/338424-1716803831.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1187629",
+        "name": "Max Dowman",
+        "shortName": "Dowman",
+        "captain": "",
+        "number": "56",
+        "profileUrl": "/max-dowman/profil/spieler/1187629",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Dowman",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1187629-1773914587.jpg?lm=4711",
+            "playerOut": "Eze",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/479999-1761083931.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "80",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "309400",
+        "name": "Kai Havertz",
+        "shortName": "Havertz",
+        "captain": "",
+        "number": "29",
+        "profileUrl": "/kai-havertz/profil/spieler/309400",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Havertz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/309400-1782889722.jpg?lm=4711",
+            "playerOut": "Gy\u00f6keres",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/325443-1737581896.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "players": [
+      {
+        "id": "262749",
+        "name": "David Raya",
+        "shortName": "Raya",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/david-raya/profil/spieler/262749",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "435338",
+        "name": "Gabriel",
+        "shortName": "Gabriel",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/gabriel/profil/spieler/435338",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "2:0",
+              "player": "Gabriel",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/435338-1684162833.jpg?lm=4711",
+              "goalType": "Not reported",
+              "action": "Ohne weitere Angaben",
+              "assist": "Assist:",
+              "assistByPlayer": "White",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+                "name": "Arsenal FC"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "68",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "413403",
+        "name": "Ezri Konsa",
+        "shortName": "Konsa",
+        "captain": "",
+        "number": "15",
+        "profileUrl": "/ezri-konsa/profil/spieler/413403",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:0",
+              "player": "Konsa",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/413403-1700651779.jpg?lm=4711",
+              "goalType": "Not reported",
+              "action": "Ohne weitere Angaben",
+              "assist": "Assist:",
+              "assistByPlayer": "Gy\u00f6keres",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+                "name": "Arsenal FC"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "7",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "335721",
+        "name": "Ben White",
+        "shortName": "White",
+        "captain": "",
+        "number": "4",
+        "profileUrl": "/ben-white/profil/spieler/335721",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "890721",
+        "name": "Myles Lewis-Skelly",
+        "shortName": "Lewis-Skelly",
+        "captain": "",
+        "number": "49",
+        "profileUrl": "/myles-lewis-skelly/profil/spieler/890721",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Calafiori",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/502821-1727382174.jpg?lm=4711",
+            "playerOut": "Lewis-Skelly",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/890721-1758053582.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Lewis-Skelly",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/890721-1758053582.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+                "name": "Arsenal FC"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "58",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "338424",
+        "name": "Mikel Merino",
+        "shortName": "Merino",
+        "captain": "",
+        "number": "23",
+        "profileUrl": "/mikel-merino/profil/spieler/338424",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Guimar\u00e3es",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/520624-1780929894.jpg?lm=4711",
+            "playerOut": "Merino",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/338424-1716803831.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "357662",
+        "name": "Declan Rice",
+        "shortName": "Rice",
+        "captain": "",
+        "number": "41",
+        "profileUrl": "/declan-rice/profil/spieler/357662",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Zubimendi",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/423440-1684149419.jpg?lm=4711",
+            "playerOut": "Rice",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/357662-1687962936.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "80",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "479999",
+        "name": "Eberechi Eze",
+        "shortName": "Eze",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/eberechi-eze/profil/spieler/479999",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Dowman",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1187629-1773914587.jpg?lm=4711",
+            "playerOut": "Eze",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/479999-1761083931.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "80",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "316264",
+        "name": "Martin \u00d8degaard",
+        "shortName": "\u00d8degaard",
+        "captain": "x",
+        "number": "8",
+        "profileUrl": "/martin-odegaard/profil/spieler/316264",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "503987",
+        "name": "Noni Madueke",
+        "shortName": "Madueke",
+        "captain": "",
+        "number": "20",
+        "profileUrl": "/noni-madueke/profil/spieler/503987",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "325443",
+        "name": "Viktor Gy\u00f6keres",
+        "shortName": "Gy\u00f6keres",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/viktor-gyokeres/profil/spieler/325443",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Havertz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/309400-1782889722.jpg?lm=4711",
+            "playerOut": "Gy\u00f6keres",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/325443-1737581896.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/11.png?lm=1789459167",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "8",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/8"
+    },
+    "date": "Sat, 24/10/2026 - 3:00 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "4899325",
+    "url": "/spielbericht/index/spielbericht/4899325",
+    "result": "2:0 "
+  },
+  "teams": {
+    "team1": {
+      "id": "11",
+      "name": "Arsenal",
+      "url": "/fc-arsenal/startseite/verein/11",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/11.png?lm=1789459167",
+      "rank": "2"
+    },
+    "team2": {
+      "id": "29",
+      "name": "Everton",
+      "url": "/fc-everton/startseite/verein/29",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/29.png?lm=1789459168",
+      "rank": "8"
+    }
+  },
+  "trainer": {
+    "id": "47620",
+    "name": "Mikel Arteta",
+    "profileUrl": "/mikel-arteta/profil/trainer/47620"
+  },
+  "url": "/spielbericht/index/spielbericht/4899325"
+}

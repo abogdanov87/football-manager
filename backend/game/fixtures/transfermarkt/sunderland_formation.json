@@ -1,0 +1,650 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "646991",
+        "name": "Robin Roefs",
+        "shortName": "Roefs",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/robin-roefs/profil/spieler/646991",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "263236",
+        "name": "Kevin Danso",
+        "shortName": "Danso",
+        "captain": "",
+        "number": "4",
+        "profileUrl": "/kevin-danso/profil/spieler/263236",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Danso",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/263236-1691217955.png?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+                "name": "Lech Pozna\u0144"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "41",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "282939",
+        "name": "Luke O'Nien",
+        "shortName": "O'Nien",
+        "captain": "",
+        "number": "13",
+        "profileUrl": "/luke-onien/profil/spieler/282939",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1191444",
+        "name": "Dayann M\u00e9thalie",
+        "shortName": "M\u00e9thalie",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/dayann-methalie/profil/spieler/1191444",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "348026",
+        "name": "Nordi Mukiele",
+        "shortName": "Mukiele",
+        "captain": "",
+        "number": "20",
+        "profileUrl": "/nordi-mukiele/profil/spieler/348026",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Hume",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/515544-1748348258.jpg?lm=4711",
+            "playerOut": "Mukiele",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/348026-1727378130.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "111455",
+        "name": "Granit Xhaka",
+        "shortName": "Xhaka",
+        "captain": "x",
+        "number": "34",
+        "profileUrl": "/granit-xhaka/profil/spieler/111455",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Sadiki",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/727089-1767005980.jpg?lm=4711",
+            "playerOut": "Xhaka",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/111455-1689711080.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1401779",
+        "name": "Jules Ahoka",
+        "shortName": "Ahoka",
+        "captain": "",
+        "number": "29",
+        "profileUrl": "/jules-ahoka/profil/spieler/1401779",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "876631",
+        "name": "Habib Diarra",
+        "shortName": "Diarra",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/habib-diarra/profil/spieler/876631",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Le F\u00e9e",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/633992-1764837815.jpg?lm=4711",
+            "playerOut": "Diarra",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/876631-1765811931.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1079078",
+        "name": "Timur Tuterov",
+        "shortName": "Tuterov",
+        "captain": "",
+        "number": "57",
+        "profileUrl": "/timur-tuterov/profil/spieler/1079078",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Mandava",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/240692-1666818500.jpg?lm=4711",
+            "playerOut": "Tuterov",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1079078-1668373863.png?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "85",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "0:1",
+              "player": "Tuterov",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1079078-1668373863.png?lm=4711",
+              "goalType": "Cross",
+              "action": "Kopfball",
+              "assist": "Assist:",
+              "assistByPlayer": "Angulo",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+                "name": "Lech Pozna\u0144"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "2",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "743386",
+        "name": "Malick Fofana",
+        "shortName": "Fofana",
+        "captain": "",
+        "number": "39",
+        "profileUrl": "/malick-fofana/profil/spieler/743386",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "903611",
+        "name": "Nilson Angulo",
+        "shortName": "Angulo",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/nilson-angulo/profil/spieler/903611",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Rigg",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/947411-1789656119.jpg?lm=4711",
+            "playerOut": "Angulo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/903611-1789656031.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "123536",
+        "name": "Simon Moore",
+        "shortName": "Moore",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/simon-moore/profil/spieler/123536",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "353032",
+        "name": "Omar Alderete",
+        "shortName": "Alderete",
+        "captain": "",
+        "number": "15",
+        "profileUrl": "/omar-alderete/profil/spieler/353032",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "240692",
+        "name": "Reinildo Mandava",
+        "shortName": "Mandava",
+        "captain": "",
+        "number": "17",
+        "profileUrl": "/reinildo-mandava/profil/spieler/240692",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Mandava",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/240692-1666818500.jpg?lm=4711",
+            "playerOut": "Tuterov",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1079078-1668373863.png?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "85",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "990997",
+        "name": "Jenson Jones",
+        "shortName": "Jones",
+        "captain": "",
+        "number": "48",
+        "profileUrl": "/jenson-jones/profil/spieler/990997",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "515544",
+        "name": "Trai Hume",
+        "shortName": "Hume",
+        "captain": "",
+        "number": "32",
+        "profileUrl": "/trai-hume/profil/spieler/515544",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Hume",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/515544-1748348258.jpg?lm=4711",
+            "playerOut": "Mukiele",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/348026-1727378130.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "633992",
+        "name": "Enzo Le F\u00e9e",
+        "shortName": "Le F\u00e9e",
+        "captain": "",
+        "number": "28",
+        "profileUrl": "/enzo-le-fee/profil/spieler/633992",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Le F\u00e9e",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/633992-1764837815.jpg?lm=4711",
+            "playerOut": "Diarra",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/876631-1765811931.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "727089",
+        "name": "Noah Sadiki",
+        "shortName": "Sadiki",
+        "captain": "",
+        "number": "27",
+        "profileUrl": "/noah-sadiki/profil/spieler/727089",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Sadiki",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/727089-1767005980.jpg?lm=4711",
+            "playerOut": "Xhaka",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/111455-1689711080.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1262875",
+        "name": "Tom Proctor",
+        "shortName": "Proctor",
+        "captain": "",
+        "number": "77",
+        "profileUrl": "/tom-proctor/profil/spieler/1262875",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "947411",
+        "name": "Chris Rigg",
+        "shortName": "Rigg",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/chris-rigg/profil/spieler/947411",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Rigg",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/947411-1789656119.jpg?lm=4711",
+            "playerOut": "Angulo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/903611-1789656031.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/289.png?lm=1789459183",
+              "name": "Lech Pozna\u0144"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "63",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1018830",
+        "name": "Jack Whittaker",
+        "shortName": "Whittaker",
+        "captain": "",
+        "number": "40",
+        "profileUrl": "/jack-whittaker/profil/spieler/1018830",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1240345",
+        "name": "Felix Scott",
+        "shortName": "Scott",
+        "captain": "",
+        "number": "49",
+        "profileUrl": "/felix-scott/profil/spieler/1240345",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1081159",
+        "name": "Trey Samuel-Ogunsuyi",
+        "shortName": "Samuel-Ogunsuyi",
+        "captain": "",
+        "number": "47",
+        "profileUrl": "/trey-samuel-ogunsuyi/profil/spieler/1081159",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "EL",
+      "name": "UEFA Europa League",
+      "url": "/europa-league/startseite/pokalwettbewerb/EL"
+    },
+    "matchday": {
+      "day": "3",
+      "url": "/bundesliga/spieltag/pokalwettbewerb/EL/saison_id/2026/spieltag/3"
+    },
+    "date": "Thu, 22/10/2026 - 5:45 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "5037427",
+    "url": "/spielbericht/index/spielbericht/5037427",
+    "result": "1:1 "
+  },
+  "teams": {
+    "team1": {
+      "id": "238",
+      "name": "Lech Pozna\u0144",
+      "url": "/lech-posen/startseite/verein/238",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/238.png?lm=1789459182",
+      "rank": ""
+    },
+    "team2": {
+      "id": "289",
+      "name": "Sunderland",
+      "url": "/afc-sunderland/startseite/verein/289",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/289.png?lm=1789459183",
+      "rank": ""
+    }
+  },
+  "trainer": {
+    "id": "40910",
+    "name": "R\u00e9gis Le Bris",
+    "profileUrl": "/regis-le-bris/profil/trainer/40910"
+  },
+  "url": "/spielbericht/index/spielbericht/5037427"
+}

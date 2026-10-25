@@ -1,0 +1,673 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "432298",
+        "name": "Zion Suzuki",
+        "shortName": "Suzuki",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/zion-suzuki/profil/spieler/432298",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "399776",
+        "name": "Pau Torres",
+        "shortName": "Torres",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/pau-torres/profil/spieler/399776",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "184573",
+        "name": "Victor Lindel\u00f6f",
+        "shortName": "Lindel\u00f6f",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/victor-lindelof/profil/spieler/184573",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "485585",
+        "name": "Ian Maatsen",
+        "shortName": "Maatsen",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/ian-maatsen/profil/spieler/485585",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "425334",
+        "name": "Matty Cash",
+        "shortName": "Cash",
+        "captain": "",
+        "number": "2",
+        "profileUrl": "/matty-cash/profil/spieler/425334",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Cash",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/425334-1668091733.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+                "name": "Aston Villa"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "55",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "394327",
+        "name": "Boubacar Kamara",
+        "shortName": "Kamara",
+        "captain": "",
+        "number": "8",
+        "profileUrl": "/boubacar-kamara/profil/spieler/394327",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "735570",
+        "name": "Jo\u00e3o Gomes",
+        "shortName": "Gomes",
+        "captain": "",
+        "number": "35",
+        "profileUrl": "/joao-gomes/profil/spieler/735570",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Goretzka",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/153084-1700040179.jpg?lm=4711",
+            "playerOut": "Gomes",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/735570-1675092223.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "82",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "193116",
+        "name": "John McGinn",
+        "shortName": "McGinn",
+        "captain": "x",
+        "number": "7",
+        "profileUrl": "/john-mcginn/profil/spieler/193116",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "RM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Barkley",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/131978-1662368517.jpg?lm=4711",
+            "playerOut": "McGinn",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/193116-1689172405.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "66",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "927353",
+        "name": "Johan Manzambi",
+        "shortName": "Manzambi",
+        "captain": "",
+        "number": "44",
+        "profileUrl": "/johan-manzambi/profil/spieler/927353",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Buend\u00eda",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/321247-1696604099.jpg?lm=4711",
+            "playerOut": "Manzambi",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/927353-1753954939.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "66",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Manzambi",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/927353-1753954939.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+                "name": "Aston Villa"
+              },
+              "reason": "Time wasting",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "54",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "1005583",
+        "name": "Alysson",
+        "shortName": "Alysson",
+        "captain": "",
+        "number": "47",
+        "profileUrl": "/alysson/profil/spieler/1005583",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Mbaye",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1185888-1759430450.jpg?lm=4711",
+            "playerOut": "Alysson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1005583-1788427541.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "59",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "776890",
+        "name": "Nicolas Jackson",
+        "shortName": "Jackson",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/nicolas-jackson/profil/spieler/776890",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Madjo",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1226357-1788428162.jpg?lm=4711",
+            "playerOut": "Jackson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/776890-1757939139.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "82",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:0",
+              "player": "Jackson",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/776890-1757939139.jpg?lm=4711",
+              "goalType": "Pass",
+              "action": "Rechtsschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "McGinn",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+                "name": "Aston Villa"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "6",
+                "addedTime": null
+              }
+            },
+            {
+              "description": "GOAL!",
+              "score": "2:1",
+              "player": "Jackson",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/776890-1757939139.jpg?lm=4711",
+              "goalType": "Pass",
+              "action": "Rechtsschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "Mbaye",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+                "name": "Aston Villa"
+              },
+              "offset": -10,
+              "type": "tor",
+              "time": {
+                "minute": "60",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "124884",
+        "name": "Marco Bizot",
+        "shortName": "Bizot",
+        "captain": "",
+        "number": "40",
+        "profileUrl": "/marco-bizot/profil/spieler/124884",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "253677",
+        "name": "Tyrone Mings",
+        "shortName": "Mings",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/tyrone-mings/profil/spieler/253677",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "645686",
+        "name": "Lamare Bogarde",
+        "shortName": "Bogarde",
+        "captain": "",
+        "number": "26",
+        "profileUrl": "/lamare-bogarde/profil/spieler/645686",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "131978",
+        "name": "Ross Barkley",
+        "shortName": "Barkley",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/ross-barkley/profil/spieler/131978",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Barkley",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/131978-1662368517.jpg?lm=4711",
+            "playerOut": "McGinn",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/193116-1689172405.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "66",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "153084",
+        "name": "Leon Goretzka",
+        "shortName": "Goretzka",
+        "captain": "",
+        "number": "27",
+        "profileUrl": "/leon-goretzka/profil/spieler/153084",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Goretzka",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/153084-1700040179.jpg?lm=4711",
+            "playerOut": "Gomes",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/735570-1675092223.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "82",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "321247",
+        "name": "Emiliano Buend\u00eda",
+        "shortName": "Buend\u00eda",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/emiliano-buendia/profil/spieler/321247",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Buend\u00eda",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/321247-1696604099.jpg?lm=4711",
+            "playerOut": "Manzambi",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/927353-1753954939.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "66",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Buend\u00eda",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/321247-1696604099.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+                "name": "Aston Villa"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "90",
+                "addedTime": "5"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "1023191",
+        "name": "George Hemmings",
+        "shortName": "Hemmings",
+        "captain": "",
+        "number": "53",
+        "profileUrl": "/george-hemmings/profil/spieler/1023191",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1185888",
+        "name": "Ibrahim Mbaye",
+        "shortName": "Mbaye",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/ibrahim-mbaye/profil/spieler/1185888",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Mbaye",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1185888-1759430450.jpg?lm=4711",
+            "playerOut": "Alysson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1005583-1788427541.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "59",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1226357",
+        "name": "Brian Madjo",
+        "shortName": "Madjo",
+        "captain": "",
+        "number": "39",
+        "profileUrl": "/brian-madjo/profil/spieler/1226357",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Madjo",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1226357-1788428162.jpg?lm=4711",
+            "playerOut": "Jackson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/776890-1757939139.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "82",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Madjo",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1226357-1788428162.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/281.png?lm=1789459183",
+                "name": "Aston Villa"
+              },
+              "reason": "Dissent",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "83",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "8",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/8"
+    },
+    "date": "Sat, 24/10/2026 - 12:30 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "4899326",
+    "url": "/spielbericht/index/spielbericht/4899326",
+    "result": "2:1 "
+  },
+  "teams": {
+    "team1": {
+      "id": "405",
+      "name": "Aston Villa",
+      "url": "/aston-villa/startseite/verein/405",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/405.png?lm=1789459190",
+      "rank": "12"
+    },
+    "team2": {
+      "id": "281",
+      "name": "Man City",
+      "url": "/manchester-city/startseite/verein/281",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/281.png?lm=1789459183",
+      "rank": "1"
+    }
+  },
+  "trainer": {
+    "id": "5075",
+    "name": "Unai Emery",
+    "profileUrl": "/unai-emery/profil/trainer/5075"
+  },
+  "url": "/spielbericht/index/spielbericht/4899326"
+}

@@ -1,0 +1,589 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "315858",
+        "name": "Gianluigi Donnarumma",
+        "shortName": "Donnarumma",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/gianluigi-donnarumma/profil/spieler/315858",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "258004",
+        "name": "R\u00faben Dias",
+        "shortName": "Dias",
+        "captain": "x",
+        "number": "3",
+        "profileUrl": "/ruben-dias/profil/spieler/258004",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "392757",
+        "name": "Marc Gu\u00e9hi",
+        "shortName": "Gu\u00e9hi",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/marc-guehi/profil/spieler/392757",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Lewis",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/701057-1788354425.jpg?lm=4711",
+            "playerOut": "Gu\u00e9hi",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/392757-1683030598.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Gu\u00e9hi",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/392757-1683030598.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Aston Villa"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "32",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "763079",
+        "name": "Abdukodir Khusanov",
+        "shortName": "Khusanov",
+        "captain": "",
+        "number": "45",
+        "profileUrl": "/abdukodir-khusanov/profil/spieler/763079",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "475959",
+        "name": "Josko Gvardiol",
+        "shortName": "Gvardiol",
+        "captain": "",
+        "number": "24",
+        "profileUrl": "/josko-gvardiol/profil/spieler/475959",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "567576",
+        "name": "Elliot Anderson",
+        "shortName": "Anderson",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/elliot-anderson/profil/spieler/567576",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Anderson",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/567576-1696453772.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Aston Villa"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "74",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "648195",
+        "name": "Enzo Fern\u00e1ndez",
+        "shortName": "Fern\u00e1ndez",
+        "captain": "",
+        "number": "17",
+        "profileUrl": "/enzo-fernandez/profil/spieler/648195",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "607223",
+        "name": "Rayan Cherki",
+        "shortName": "Cherki",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/rayan-cherki/profil/spieler/607223",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Foden",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/406635-1668524492.jpg?lm=4711",
+            "playerOut": "Cherki",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/607223-1773302431.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Cherki",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/607223-1773302431.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Aston Villa"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "38",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "486049",
+        "name": "J\u00e9r\u00e9my Doku",
+        "shortName": "Doku",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/jeremy-doku/profil/spieler/486049",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "623570",
+        "name": "Iliman Ndiaye",
+        "shortName": "Ndiaye",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/iliman-ndiaye/profil/spieler/623570",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "McAidoo",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1187640-1788354267.jpg?lm=4711",
+            "playerOut": "Ndiaye",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/623570-1765811829.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "69",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "418560",
+        "name": "Erling Haaland",
+        "shortName": "Haaland",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/erling-haaland/profil/spieler/418560",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:1",
+              "player": "Haaland",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/418560-1788115885.jpg?lm=4711",
+              "goalType": "Cross",
+              "action": "Kopfball",
+              "assist": "Assist:",
+              "assistByPlayer": "Ndiaye",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Aston Villa"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "52",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "229604",
+        "name": "Ger\u00f3nimo Rulli",
+        "shortName": "Rulli",
+        "captain": "",
+        "number": "28",
+        "profileUrl": "/geronimo-rulli/profil/spieler/229604",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1005575",
+        "name": "Vitor Reis",
+        "shortName": "Reis",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/vitor-reis/profil/spieler/1005575",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "743413",
+        "name": "Nico O'Reilly",
+        "shortName": "O'Reilly",
+        "captain": "",
+        "number": "33",
+        "profileUrl": "/nico-oreilly/profil/spieler/743413",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "578391",
+        "name": "Rayan A\u00eft-Nouri",
+        "shortName": "A\u00eft-Nouri",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/rayan-ait-nouri/profil/spieler/578391",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "701057",
+        "name": "Rico Lewis",
+        "shortName": "Lewis",
+        "captain": "",
+        "number": "82",
+        "profileUrl": "/rico-lewis/profil/spieler/701057",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Lewis",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/701057-1788354425.jpg?lm=4711",
+            "playerOut": "Gu\u00e9hi",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/392757-1683030598.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1097139",
+        "name": "Ayyoub Bouaddi",
+        "shortName": "Bouaddi",
+        "captain": "",
+        "number": "32",
+        "profileUrl": "/ayyoub-bouaddi/profil/spieler/1097139",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "51471",
+        "name": "Mateo Kovacic",
+        "shortName": "Kovacic",
+        "captain": "",
+        "number": "8",
+        "profileUrl": "/mateo-kovacic/profil/spieler/51471",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "406635",
+        "name": "Phil Foden",
+        "shortName": "Foden",
+        "captain": "",
+        "number": "47",
+        "profileUrl": "/phil-foden/profil/spieler/406635",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Foden",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/406635-1668524492.jpg?lm=4711",
+            "playerOut": "Cherki",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/607223-1773302431.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1187640",
+        "name": "Ryan McAidoo",
+        "shortName": "McAidoo",
+        "captain": "",
+        "number": "56",
+        "profileUrl": "/ryan-mcaidoo/profil/spieler/1187640",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "McAidoo",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1187640-1788354267.jpg?lm=4711",
+            "playerOut": "Ndiaye",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/623570-1765811829.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Aston Villa"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "69",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "McAidoo",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1187640-1788354267.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Aston Villa"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "76",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "8",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/8"
+    },
+    "date": "Sat, 24/10/2026 - 12:30 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "4899326",
+    "url": "/spielbericht/index/spielbericht/4899326",
+    "result": "2:1 "
+  },
+  "teams": {
+    "team1": {
+      "id": "405",
+      "name": "Aston Villa",
+      "url": "/aston-villa/startseite/verein/405",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/405.png?lm=1789459190",
+      "rank": "12"
+    },
+    "team2": {
+      "id": "281",
+      "name": "Man City",
+      "url": "/manchester-city/startseite/verein/281",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/281.png?lm=1789459183",
+      "rank": "1"
+    }
+  },
+  "trainer": {
+    "id": "53749",
+    "name": "Enzo Maresca",
+    "profileUrl": "/enzo-maresca/profil/trainer/53749"
+  },
+  "url": "/spielbericht/index/spielbericht/4899326"
+}

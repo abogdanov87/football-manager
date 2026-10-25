@@ -1,0 +1,598 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "554389",
+        "name": "Konstantinos Tzolakis",
+        "shortName": "Tzolakis",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/konstantinos-tzolakis/profil/spieler/554389",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "121324",
+        "name": "John Egan",
+        "shortName": "Egan",
+        "captain": "",
+        "number": "15",
+        "profileUrl": "/john-egan/profil/spieler/121324",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 61,
+        "styleLeft": 56.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "251912",
+        "name": "Semi Ajayi",
+        "shortName": "Ajayi",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/semi-ajayi/profil/spieler/251912",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1279984",
+        "name": "Lucas Herrington",
+        "shortName": "Herrington",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/lucas-herrington/profil/spieler/1279984",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 61,
+        "styleLeft": 23.5,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Iroegbunam",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/696589-1650877564.jpg?lm=4711",
+            "playerOut": "Herrington",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1279984-1771673292.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Herrington",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1279984-1771673292.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+                "name": "Fulham FC"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "22",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "728733",
+        "name": "Brooke Norton-Cuffy",
+        "shortName": "Norton-Cuffy",
+        "captain": "",
+        "number": "18",
+        "profileUrl": "/brooke-norton-cuffy/profil/spieler/728733",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 59,
+        "styleLeft": 7,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Giles",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/504581-1784821523.jpg?lm=4711",
+            "playerOut": "Norton-Cuffy",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/728733-1736498622.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "413402",
+        "name": "Lewie Coyle",
+        "shortName": "Coyle",
+        "captain": "x",
+        "number": "2",
+        "profileUrl": "/lewie-coyle/profil/spieler/413402",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 59,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "473080",
+        "name": "Regan Slater",
+        "shortName": "Slater",
+        "captain": "",
+        "number": "27",
+        "profileUrl": "/regan-slater/profil/spieler/473080",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Morita",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/524315-1765307094.jpg?lm=4711",
+            "playerOut": "Slater",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/473080-1643280542.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "75",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Slater",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/473080-1643280542.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+                "name": "Fulham FC"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "27",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "169416",
+        "name": "Matt Crooks",
+        "shortName": "Crooks",
+        "captain": "",
+        "number": "25",
+        "profileUrl": "/matt-crooks/profil/spieler/169416",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Vaz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1131161-1761232363.jpg?lm=4711",
+            "playerOut": "Crooks",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/169416-1711315979.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "475416",
+        "name": "Sorba Thomas",
+        "shortName": "Thomas",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/sorba-thomas/profil/spieler/475416",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 23,
+        "styleLeft": 12,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Gelhardt",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/503980-1695109020.jpg?lm=4711",
+            "playerOut": "Thomas",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/475416-1668520548.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "857079",
+        "name": "Mohamed Belloumi",
+        "shortName": "Belloumi",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/mohamed-belloumi/profil/spieler/857079",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 23,
+        "styleLeft": 68,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "298477",
+        "name": "Oli McBurnie",
+        "shortName": "McBurnie",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/oli-mcburnie/profil/spieler/298477",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "308431",
+        "name": "Dillon Phillips",
+        "shortName": "Phillips",
+        "captain": "",
+        "number": "12",
+        "profileUrl": "/dillon-phillips/profil/spieler/308431",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "167268",
+        "name": "Paddy McNair",
+        "shortName": "McNair",
+        "captain": "",
+        "number": "17",
+        "profileUrl": "/paddy-mcnair/profil/spieler/167268",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "504581",
+        "name": "Ryan Giles",
+        "shortName": "Giles",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/ryan-giles/profil/spieler/504581",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Giles",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/504581-1784821523.jpg?lm=4711",
+            "playerOut": "Norton-Cuffy",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/728733-1736498622.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "524315",
+        "name": "Hidemasa Morita",
+        "shortName": "Morita",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/hidemasa-morita/profil/spieler/524315",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Morita",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/524315-1765307094.jpg?lm=4711",
+            "playerOut": "Slater",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/473080-1643280542.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "75",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "696589",
+        "name": "Tim Iroegbunam",
+        "shortName": "Iroegbunam",
+        "captain": "",
+        "number": "42",
+        "profileUrl": "/tim-iroegbunam/profil/spieler/696589",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Iroegbunam",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/696589-1650877564.jpg?lm=4711",
+            "playerOut": "Herrington",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/1279984-1771673292.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "923535",
+        "name": "Jens Hjert\u00f8-Dahl",
+        "shortName": "Hjert\u00f8-Dahl",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/jens-hjerto-dahl/profil/spieler/923535",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "687622",
+        "name": "Elliot Stroud",
+        "shortName": "Stroud",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/elliot-stroud/profil/spieler/687622",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "503980",
+        "name": "Joe Gelhardt",
+        "shortName": "Gelhardt",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/joe-gelhardt/profil/spieler/503980",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Gelhardt",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/503980-1695109020.jpg?lm=4711",
+            "playerOut": "Thomas",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/475416-1668520548.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1131161",
+        "name": "Robinio Vaz",
+        "shortName": "Vaz",
+        "captain": "",
+        "number": "47",
+        "profileUrl": "/robinio-vaz/profil/spieler/1131161",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Vaz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1131161-1761232363.jpg?lm=4711",
+            "playerOut": "Crooks",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/169416-1711315979.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/3008.png?lm=1789459328",
+              "name": "Fulham FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "68",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "7",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/7"
+    },
+    "date": "Sat, 17/10/2026 - 3:00 PM hours",
+    "tactic": "5-4-1"
+  },
+  "matchReport": {
+    "id": "4899311",
+    "url": "/spielbericht/index/spielbericht/4899311",
+    "result": "1:0 "
+  },
+  "teams": {
+    "team1": {
+      "id": "931",
+      "name": "Fulham",
+      "url": "/fc-fulham/startseite/verein/931",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/931.png?lm=1789459221",
+      "rank": "20"
+    },
+    "team2": {
+      "id": "3008",
+      "name": "Hull City",
+      "url": "/hull-city/startseite/verein/3008",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/3008.png?lm=1789459328",
+      "rank": "8"
+    }
+  },
+  "trainer": {
+    "id": "55762",
+    "name": "Sergej Jakirovi\u0107",
+    "profileUrl": "/sergej-jakirovic/profil/trainer/55762"
+  },
+  "url": "/spielbericht/index/spielbericht/4899311"
+}

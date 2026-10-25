@@ -1,0 +1,684 @@
+{
+  "list": {
+    "substitutes": [
+      {
+        "id": "99397",
+        "name": "Karl Darlow",
+        "shortName": "Darlow",
+        "captain": "",
+        "number": "12",
+        "profileUrl": "/karl-darlow/profil/spieler/99397",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "34130",
+        "name": "Tom Heaton",
+        "shortName": "Heaton",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/tom-heaton/profil/spieler/34130",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1107977",
+        "name": "Daniel Armer",
+        "shortName": "Armer",
+        "captain": "",
+        "number": "57",
+        "profileUrl": "/daniel-armer/profil/spieler/1107977",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1011738",
+        "name": "Harry Amass",
+        "shortName": "Amass",
+        "captain": "",
+        "number": "41",
+        "profileUrl": "/harry-amass/profil/spieler/1011738",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Amass",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1011738-1712585934.jpg?lm=4711",
+            "playerOut": "de Ligt",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/326031-1700659567.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "79",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1052892",
+        "name": "Jaydan Kamason",
+        "shortName": "Kamason",
+        "captain": "",
+        "number": "56",
+        "profileUrl": "/jaydan-kamason/profil/spieler/1052892",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "973085",
+        "name": "Carlos Baleba",
+        "shortName": "Baleba",
+        "captain": "",
+        "number": "20",
+        "profileUrl": "/carlos-baleba/profil/spieler/973085",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Baleba",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/973085-1666690662.jpg?lm=4711",
+            "playerOut": "Santos",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/743600-1788427034.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": "0"
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Baleba",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/973085-1666690662.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+                "name": "Como 1907"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "50",
+                "addedTime": "0"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "1049911",
+        "name": "Tyler Fletcher",
+        "shortName": "Fletcher",
+        "captain": "",
+        "number": "39",
+        "profileUrl": "/tyler-fletcher/profil/spieler/1049911",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1011140",
+        "name": "Jack Fletcher",
+        "shortName": "Fletcher",
+        "captain": "",
+        "number": "38",
+        "profileUrl": "/jack-fletcher/profil/spieler/1011140",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1255575",
+        "name": "Tynan Thompson",
+        "shortName": "Thompson",
+        "captain": "",
+        "number": "27",
+        "profileUrl": "/tynan-thompson/profil/spieler/1255575",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "926309",
+        "name": "Shea Lacey",
+        "shortName": "Lacey",
+        "captain": "",
+        "number": "31",
+        "profileUrl": "/shea-lacey/profil/spieler/926309",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Lacey",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/926309-1767956214.jpg?lm=4711",
+            "playerOut": "Mbeumo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/413039-1769532496.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "86",
+              "addedTime": "0"
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Lacey",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/926309-1767956214.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+                "name": "Como 1907"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "86",
+                "addedTime": "0"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "536835",
+        "name": "Amad Diallo",
+        "shortName": "Diallo",
+        "captain": "",
+        "number": "16",
+        "profileUrl": "/amad-diallo/profil/spieler/536835",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Diallo",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/536835-1747857754.jpg?lm=4711",
+            "playerOut": "Cunha",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/517894-1780390711.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "435648",
+        "name": "Joshua Zirkzee",
+        "shortName": "Zirkzee",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/joshua-zirkzee/profil/spieler/435648",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Zirkzee",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/435648-1775738266.jpg?lm=4711",
+            "playerOut": "Fernandes",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/240306-1683882766.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "67",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "4:1",
+              "player": "Zirkzee",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/435648-1775738266.jpg?lm=4711",
+              "goalType": "Cross",
+              "action": "Rechtsschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "Diallo",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+                "name": "Como 1907"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "90",
+                "addedTime": "1"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "players": [
+      {
+        "id": "503883",
+        "name": "Senne Lammens",
+        "shortName": "Lammens",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/senne-lammens/profil/spieler/503883",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "326031",
+        "name": "Matthijs de Ligt",
+        "shortName": "de Ligt",
+        "captain": "",
+        "number": "4",
+        "profileUrl": "/matthijs-de-ligt/profil/spieler/326031",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Amass",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1011738-1712585934.jpg?lm=4711",
+            "playerOut": "de Ligt",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/326031-1700659567.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "79",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "177907",
+        "name": "Harry Maguire",
+        "shortName": "Maguire",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/harry-maguire/profil/spieler/177907",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "357147",
+        "name": "Diogo Dalot",
+        "shortName": "Dalot",
+        "captain": "",
+        "number": "2",
+        "profileUrl": "/diogo-dalot/profil/spieler/357147",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "340456",
+        "name": "Noussair Mazraoui",
+        "shortName": "Mazraoui",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/noussair-mazraoui/profil/spieler/340456",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "743600",
+        "name": "Andrey Santos",
+        "shortName": "Santos",
+        "captain": "",
+        "number": "17",
+        "profileUrl": "/andrey-santos/profil/spieler/743600",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Baleba",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/973085-1666690662.jpg?lm=4711",
+            "playerOut": "Santos",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/743600-1788427034.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": "0"
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Santos",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/743600-1788427034.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+                "name": "Como 1907"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "25",
+                "addedTime": "0"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "249565",
+        "name": "Youri Tielemans",
+        "shortName": "Tielemans",
+        "captain": "",
+        "number": "18",
+        "profileUrl": "/youri-tielemans/profil/spieler/249565",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "240306",
+        "name": "Bruno Fernandes",
+        "shortName": "Fernandes",
+        "captain": "x",
+        "number": "8",
+        "profileUrl": "/bruno-fernandes/profil/spieler/240306",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Zirkzee",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/435648-1775738266.jpg?lm=4711",
+            "playerOut": "Fernandes",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/240306-1683882766.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "67",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "346483",
+        "name": "Mason Mount",
+        "shortName": "Mount",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/mason-mount/profil/spieler/346483",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "413039",
+        "name": "Bryan Mbeumo",
+        "shortName": "Mbeumo",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/bryan-mbeumo/profil/spieler/413039",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Lacey",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/926309-1767956214.jpg?lm=4711",
+            "playerOut": "Mbeumo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/413039-1769532496.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "86",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "517894",
+        "name": "Matheus Cunha",
+        "shortName": "Cunha",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/matheus-cunha/profil/spieler/517894",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Diallo",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/536835-1747857754.jpg?lm=4711",
+            "playerOut": "Cunha",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/517894-1780390711.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/1047.png?lm=1789459228",
+              "name": "Como 1907"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "46",
+              "addedTime": "0"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "CL",
+      "name": "UEFA Champions League",
+      "url": "/uefa-champions-league/startseite/pokalwettbewerb/CL"
+    },
+    "matchday": {
+      "day": "3",
+      "url": "/bundesliga/spieltag/pokalwettbewerb/CL/saison_id/2026/spieltag/3"
+    },
+    "date": "Wed, 21/10/2026 - 5:45 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "5035984",
+    "url": "/spielbericht/index/spielbericht/5035984",
+    "result": "4:1 "
+  },
+  "teams": {
+    "team1": {
+      "id": "1047",
+      "name": "Como",
+      "url": "/como-1907/startseite/verein/1047",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/1047.png?lm=1789459228",
+      "rank": ""
+    },
+    "team2": {
+      "id": "985",
+      "name": "Man Utd",
+      "url": "/manchester-united/startseite/verein/985",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/985.png?lm=1789459227",
+      "rank": ""
+    }
+  },
+  "trainer": {
+    "id": "65647",
+    "name": "Michael Carrick",
+    "profileUrl": "/michael-carrick/profil/trainer/65647"
+  },
+  "url": "/spielbericht/index/spielbericht/5035984"
+}

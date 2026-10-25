@@ -1,0 +1,551 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "130164",
+        "name": "Jordan Pickford",
+        "shortName": "Pickford",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/jordan-pickford/profil/spieler/130164",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "173504",
+        "name": "James Tarkowski",
+        "shortName": "Tarkowski",
+        "captain": "x",
+        "number": "6",
+        "profileUrl": "/james-tarkowski/profil/spieler/173504",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Tarkowski",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/173504-1655979328.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/29.png?lm=1789459168",
+                "name": "Arsenal FC"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "79",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "404842",
+        "name": "Vitaliy Mykolenko",
+        "shortName": "Mykolenko",
+        "captain": "",
+        "number": "16",
+        "profileUrl": "/vitaliy-mykolenko/profil/spieler/404842",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Hackney",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/538216-1679665183.jpg?lm=4711",
+            "playerOut": "Mykolenko",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/404842-1708012303.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/29.png?lm=1789459168",
+              "name": "Arsenal FC"
+            },
+            "reason": "Injury",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Mykolenko",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/404842-1708012303.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/29.png?lm=1789459168",
+                "name": "Arsenal FC"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "45",
+                "addedTime": "2"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "711544",
+        "name": "Jake O'Brien",
+        "shortName": "O'Brien",
+        "captain": "",
+        "number": "15",
+        "profileUrl": "/jake-obrien/profil/spieler/711544",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "505219",
+        "name": "James Garner",
+        "shortName": "Garner",
+        "captain": "",
+        "number": "37",
+        "profileUrl": "/james-garner/profil/spieler/505219",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Garner",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/505219-1662067244.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/29.png?lm=1789459168",
+                "name": "Arsenal FC"
+              },
+              "reason": "",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "66",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "1107733",
+        "name": "Harrison Armstrong",
+        "shortName": "Armstrong",
+        "captain": "",
+        "number": "45",
+        "profileUrl": "/harrison-armstrong/profil/spieler/1107733",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "608832",
+        "name": "Merlin R\u00f6hl",
+        "shortName": "R\u00f6hl",
+        "captain": "",
+        "number": "34",
+        "profileUrl": "/merlin-rohl/profil/spieler/608832",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "475188",
+        "name": "Kiernan Dewsbury-Hall",
+        "shortName": "Dewsbury-Hall",
+        "captain": "",
+        "number": "8",
+        "profileUrl": "/kiernan-dewsbury-hall/profil/spieler/475188",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Alcaraz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/748319-1694617058.jpg?lm=4711",
+            "playerOut": "Dewsbury-Hall",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/475188-1774470020.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/29.png?lm=1789459168",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "86",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "936874",
+        "name": "Tyrique George",
+        "shortName": "George",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/tyrique-george/profil/spieler/936874",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "470607",
+        "name": "Brennan Johnson",
+        "shortName": "Johnson",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/brennan-johnson/profil/spieler/470607",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Dibling",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/866655-1724485194.jpg?lm=4711",
+            "playerOut": "Johnson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/470607-1692959021.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/29.png?lm=1789459168",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "72",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "937941",
+        "name": "Thierno Barry",
+        "shortName": "Barry",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/thierno-barry/profil/spieler/937941",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "215810",
+        "name": "Tom King",
+        "shortName": "King",
+        "captain": "",
+        "number": "31",
+        "profileUrl": "/tom-king/profil/spieler/215810",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "357658",
+        "name": "Mark Travers",
+        "shortName": "Travers",
+        "captain": "",
+        "number": "12",
+        "profileUrl": "/mark-travers/profil/spieler/357658",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "118534",
+        "name": "Michael Keane",
+        "shortName": "Keane",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/michael-keane/profil/spieler/118534",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "285845",
+        "name": "Ainsley Maitland-Niles",
+        "shortName": "Maitland-Niles",
+        "captain": "",
+        "number": "2",
+        "profileUrl": "/ainsley-maitland-niles/profil/spieler/285845",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "538216",
+        "name": "Hayden Hackney",
+        "shortName": "Hackney",
+        "captain": "",
+        "number": "30",
+        "profileUrl": "/hayden-hackney/profil/spieler/538216",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Hackney",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/538216-1679665183.jpg?lm=4711",
+            "playerOut": "Mykolenko",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/404842-1708012303.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/29.png?lm=1789459168",
+              "name": "Arsenal FC"
+            },
+            "reason": "Injury",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "148367",
+        "name": "Christian N\u00f8rgaard",
+        "shortName": "N\u00f8rgaard",
+        "captain": "",
+        "number": "23",
+        "profileUrl": "/christian-norgaard/profil/spieler/148367",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "748319",
+        "name": "Charly Alcaraz",
+        "shortName": "Alcaraz",
+        "captain": "",
+        "number": "24",
+        "profileUrl": "/charly-alcaraz/profil/spieler/748319",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Alcaraz",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/748319-1694617058.jpg?lm=4711",
+            "playerOut": "Dewsbury-Hall",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/475188-1774470020.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/29.png?lm=1789459168",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "86",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "866655",
+        "name": "Tyler Dibling",
+        "shortName": "Dibling",
+        "captain": "",
+        "number": "20",
+        "profileUrl": "/tyler-dibling/profil/spieler/866655",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Dibling",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/866655-1724485194.jpg?lm=4711",
+            "playerOut": "Johnson",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/470607-1692959021.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/29.png?lm=1789459168",
+              "name": "Arsenal FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "72",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1122712",
+        "name": "Braiden Graham",
+        "shortName": "Graham",
+        "captain": "",
+        "number": "58",
+        "profileUrl": "/braiden-graham/profil/spieler/1122712",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "8",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/8"
+    },
+    "date": "Sat, 24/10/2026 - 3:00 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "4899325",
+    "url": "/spielbericht/index/spielbericht/4899325",
+    "result": "2:0 "
+  },
+  "teams": {
+    "team1": {
+      "id": "11",
+      "name": "Arsenal",
+      "url": "/fc-arsenal/startseite/verein/11",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/11.png?lm=1789459167",
+      "rank": "2"
+    },
+    "team2": {
+      "id": "29",
+      "name": "Everton",
+      "url": "/fc-everton/startseite/verein/29",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/29.png?lm=1789459168",
+      "rank": "8"
+    }
+  },
+  "trainer": {
+    "id": "450",
+    "name": "David Moyes",
+    "profileUrl": "/david-moyes/profil/trainer/450"
+  },
+  "url": "/spielbericht/index/spielbericht/4899325"
+}

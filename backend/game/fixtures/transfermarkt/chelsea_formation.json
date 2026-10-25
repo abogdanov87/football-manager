@@ -1,0 +1,673 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "111873",
+        "name": "Emiliano Mart\u00ednez",
+        "shortName": "Mart\u00ednez",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/emiliano-martinez/profil/spieler/111873",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Penders",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/834397-1782074650.jpg?lm=4711",
+            "playerOut": "Mart\u00ednez",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/111873-1668180824.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Injury",
+            "type": "wechsel",
+            "time": {
+              "minute": "75",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "614258",
+        "name": "Levi Colwill",
+        "shortName": "Colwill",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/levi-colwill/profil/spieler/614258",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "434224",
+        "name": "Maxence Lacroix",
+        "shortName": "Lacroix",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/maxence-lacroix/profil/spieler/434224",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1004708",
+        "name": "Josh Acheampong",
+        "shortName": "Acheampong",
+        "captain": "",
+        "number": "34",
+        "profileUrl": "/josh-acheampong/profil/spieler/1004708",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Acheampong",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1004708-1715156243.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+                "name": "Everton FC"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "32",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "904802",
+        "name": "Jorrel Hato",
+        "shortName": "Hato",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/jorrel-hato/profil/spieler/904802",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Palestra",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/895937-1704902310.jpg?lm=4711",
+            "playerOut": "Hato",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/904802-1701361717.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": "2"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "687626",
+        "name": "Mois\u00e9s Caicedo",
+        "shortName": "Caicedo",
+        "captain": "x",
+        "number": "25",
+        "profileUrl": "/moises-caicedo/profil/spieler/687626",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Lavia",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/628451-1683898478.jpg?lm=4711",
+            "playerOut": "Caicedo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/687626-1660729724.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": "2"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "61651",
+        "name": "Jordan Henderson",
+        "shortName": "Henderson",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/jordan-henderson/profil/spieler/61651",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "568177",
+        "name": "Cole Palmer",
+        "shortName": "Palmer",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/cole-palmer/profil/spieler/568177",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Palmer",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/568177-1712320986.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+                "name": "Everton FC"
+              },
+              "reason": "Dissent",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "65",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "503743",
+        "name": "Morgan Rogers",
+        "shortName": "Rogers",
+        "captain": "",
+        "number": "17",
+        "profileUrl": "/morgan-rogers/profil/spieler/503743",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Rogers",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/503743-1706786450.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+                "name": "Everton FC"
+              },
+              "reason": "",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "34",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "487465",
+        "name": "Pedro Neto",
+        "shortName": "Neto",
+        "captain": "",
+        "number": "7",
+        "profileUrl": "/pedro-neto/profil/spieler/487465",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Quenda",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1138758-1761232238.jpg?lm=4711",
+            "playerOut": "Neto",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/487465-1763106447.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": "12"
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Neto",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/487465-1763106447.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+                "name": "Everton FC"
+              },
+              "reason": "Dissent",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "27",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "0:1",
+              "player": "Neto",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/487465-1763106447.jpg?lm=4711",
+              "goalType": "",
+              "action": "Linksschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+                "name": "Everton FC"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "46",
+                "addedTime": null
+              }
+            },
+            {
+              "description": "GOAL!",
+              "score": "0:2",
+              "player": "Neto",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/487465-1763106447.jpg?lm=4711",
+              "goalType": "",
+              "action": "Linksschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+                "name": "Everton FC"
+              },
+              "offset": -10,
+              "type": "tor",
+              "time": {
+                "minute": "90",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "626724",
+        "name": "Jo\u00e3o Pedro",
+        "shortName": "Jo\u00e3o Pedro",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/joao-pedro/profil/spieler/626724",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Welbeck",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/67063-1746437656.jpg?lm=4711",
+            "playerOut": "Jo\u00e3o Pedro",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/626724-1724792744.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": "2"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "834397",
+        "name": "Mike Penders",
+        "shortName": "Penders",
+        "captain": "",
+        "number": "39",
+        "profileUrl": "/mike-penders/profil/spieler/834397",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Penders",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/834397-1782074650.jpg?lm=4711",
+            "playerOut": "Mart\u00ednez",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/111873-1668180824.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Injury",
+            "type": "wechsel",
+            "time": {
+              "minute": "75",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "475411",
+        "name": "Wesley Fofana",
+        "shortName": "Fofana",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/wesley-fofana/profil/spieler/475411",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "895937",
+        "name": "Marco Palestra",
+        "shortName": "Palestra",
+        "captain": "",
+        "number": "2",
+        "profileUrl": "/marco-palestra/profil/spieler/895937",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Palestra",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/895937-1704902310.jpg?lm=4711",
+            "playerOut": "Hato",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/904802-1701361717.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": "2"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "628451",
+        "name": "Rom\u00e9o Lavia",
+        "shortName": "Lavia",
+        "captain": "",
+        "number": "45",
+        "profileUrl": "/romeo-lavia/profil/spieler/628451",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Lavia",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/628451-1683898478.jpg?lm=4711",
+            "playerOut": "Caicedo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/687626-1660729724.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": "2"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "849410",
+        "name": "Valent\u00edn Barco",
+        "shortName": "Barco",
+        "captain": "",
+        "number": "4",
+        "profileUrl": "/valentin-barco/profil/spieler/849410",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1353008",
+        "name": "Mahdi Nicoll-Jazuli",
+        "shortName": "Nicoll-Jazuli",
+        "captain": "",
+        "number": "32",
+        "profileUrl": "/mahdi-nicoll-jazuli/profil/spieler/1353008",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1056993",
+        "name": "Est\u00eav\u00e3o",
+        "shortName": "Est\u00eav\u00e3o",
+        "captain": "",
+        "number": "41",
+        "profileUrl": "/estevao/profil/spieler/1056993",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1138758",
+        "name": "Geovany Quenda",
+        "shortName": "Quenda",
+        "captain": "",
+        "number": "23",
+        "profileUrl": "/geovany-quenda/profil/spieler/1138758",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Quenda",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1138758-1761232238.jpg?lm=4711",
+            "playerOut": "Neto",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/487465-1763106447.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": "12"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "67063",
+        "name": "Danny Welbeck",
+        "shortName": "Welbeck",
+        "captain": "",
+        "number": "18",
+        "profileUrl": "/danny-welbeck/profil/spieler/67063",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Welbeck",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/67063-1746437656.jpg?lm=4711",
+            "playerOut": "Jo\u00e3o Pedro",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/626724-1724792744.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/631.png?lm=1789459205",
+              "name": "Everton FC"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": "2"
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "7",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/7"
+    },
+    "date": "Sat, 17/10/2026 - 12:30 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "4899310",
+    "url": "/spielbericht/index/spielbericht/4899310",
+    "result": "0:2 "
+  },
+  "teams": {
+    "team1": {
+      "id": "29",
+      "name": "Everton",
+      "url": "/fc-everton/startseite/verein/29",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/29.png?lm=1789459168",
+      "rank": "5"
+    },
+    "team2": {
+      "id": "631",
+      "name": "Chelsea",
+      "url": "/fc-chelsea/startseite/verein/631",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/631.png?lm=1789459205",
+      "rank": "6"
+    }
+  },
+  "trainer": {
+    "id": "63052",
+    "name": "Xabi Alonso",
+    "profileUrl": "/xabi-alonso/profil/trainer/63052"
+  },
+  "url": "/spielbericht/index/spielbericht/4899310"
+}

@@ -6,7 +6,6 @@ from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
 from game.models import Club, Player
-from game.services import default_lineup
 from game.transfermarkt.attributes import (
     EUR_TO_USD_RATE,
     compute_player_attributes,
@@ -16,8 +15,15 @@ from game.transfermarkt.attributes import (
 from game.transfermarkt.client import (
     DEFAULT_BASE_URL,
     competition_url,
+    fetch_json,
     fetch_url,
+    final_formation_url,
     squad_url,
+)
+from game.transfermarkt.lineup import (
+    apply_tm_lineup_to_club,
+    formation_for_db,
+    parse_final_formation_payload,
 )
 from game.transfermarkt.parser import (
     crest_slug_from_tm,
@@ -25,6 +31,9 @@ from game.transfermarkt.parser import (
     parse_competition_clubs,
     parse_squad_page,
 )
+from game.transfermarkt.photos import save_portrait
+from game.transfermarkt.player_details import apply_tm_details_to_player
+from game.transfermarkt.profile import TMPlayerDetails
 from game.transfermarkt.transliterate import transliterate_name
 
 FIXTURES_DIR = Path(__file__).resolve().parents[2] / "fixtures" / "transfermarkt"
@@ -46,7 +55,7 @@ class Command(BaseCommand):
         parser.add_argument(
             "--base-url",
             default=DEFAULT_BASE_URL,
-            help="Transfermarkt base URL (default: transfermarkt.co.uk)",
+            help="Transfermarkt base URL (default: transfermarkt.world)",
         )
         parser.add_argument(
             "--eur-usd",
@@ -166,14 +175,20 @@ class Command(BaseCommand):
                     mv_eur,
                     seed=row.transfermarkt_id,
                 )
+                photo_url = ""
+                if row.portrait_url:
+                    photo_url = save_portrait(row.transfermarkt_id, row.portrait_url) or ""
                 player = Player(
                     club=club,
                     name=transliterate_name(row.name_latin),
                     position=tm_position_to_game_position(row.tm_position),
                     age=row.age,
+                    date_of_birth=row.date_of_birth,
+                    nationality_countries=row.nationalities or [],
                     form=1.0,
                     transfermarkt_id=row.transfermarkt_id,
                     transfermarkt_slug=row.transfermarkt_slug,
+                    photo_url=photo_url,
                     tm_position=row.tm_position,
                     market_value_usd=mv_usd,
                     pac=attrs["pac"],
@@ -187,13 +202,23 @@ class Command(BaseCommand):
                     injury_resistance=attrs["injury_resistance"],
                     overall=attrs["overall"],
                 )
+                apply_tm_details_to_player(
+                    player,
+                    TMPlayerDetails(
+                        date_of_birth=row.date_of_birth,
+                        nationalities=row.nationalities or [],
+                        contract_end_date=row.contract_end_date,
+                    ),
+                    transfermarkt_id=row.transfermarkt_id,
+                )
                 player.save()
 
-            club.lineup_player_ids = default_lineup(club)
-            club.save(update_fields=["lineup_player_ids"])
+            lineup_note = self._apply_default_lineup(
+                club, crest_slug, tm.slug, tm.verein_id, base_url, fixture_dir
+            )
             imported_clubs += 1
             total_players += len(rows)
-            self.stdout.write(f"{club.name}: {len(rows)} players")
+            self.stdout.write(f"{club.name}: {len(rows)} players{lineup_note}")
 
         if skipped:
             self.stdout.write(self.style.WARNING("Unmapped TM clubs: " + ", ".join(skipped)))
@@ -209,3 +234,65 @@ class Command(BaseCommand):
         if not path.is_file():
             raise CommandError(f"Fixture not found: {path}")
         return path.read_text(encoding="utf-8")
+
+    def _apply_default_lineup(
+        self,
+        club: Club,
+        crest_slug: str,
+        club_slug: str,
+        verein_id: int,
+        base_url: str,
+        fixture_dir: str,
+    ) -> str:
+        from game.services import default_lineup
+
+        import json
+
+        payload: dict | None = None
+        formation_paths = []
+        if fixture_dir:
+            formation_paths.append(Path(fixture_dir) / f"{crest_slug}_formation.json")
+        formation_paths.append(FIXTURES_DIR / f"{crest_slug}_formation.json")
+
+        if not fixture_dir:
+            from game.transfermarkt.client import club_start_url
+
+            url = final_formation_url(verein_id, base=base_url)
+            referer = club_start_url(club_slug, verein_id, base=base_url)
+            try:
+                payload = fetch_json(url, referer=referer)
+            except RuntimeError:
+                payload = None
+
+        if payload is None:
+            for path in formation_paths:
+                if path.is_file():
+                    payload = json.loads(path.read_text(encoding="utf-8"))
+                    break
+            if payload is None and not fixture_dir:
+                self.stdout.write(
+                    self.style.WARNING(
+                        f"{club.name}: lineup API unavailable, no {crest_slug}_formation.json fixture"
+                    )
+                )
+
+        if payload:
+            lineup = parse_final_formation_payload(payload)
+            if lineup:
+                starters = (payload.get("list") or {}).get("players") or []
+                tactic = (payload.get("matchInfo") or {}).get("tactic") or ""
+                _, slot_key = formation_for_db(str(tactic))
+                apply_tm_lineup_to_club(
+                    club,
+                    lineup,
+                    starter_rows=starters,
+                    slot_formation=slot_key,
+                )
+                return f", formation {club.formation}, lineup from TM"
+            self.stdout.write(
+                self.style.WARNING(f"{club.name}: could not parse FinalFormation JSON")
+            )
+
+        club.lineup_player_ids = default_lineup(club)
+        club.save(update_fields=["lineup_player_ids"])
+        return ", lineup auto-picked"

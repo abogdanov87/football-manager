@@ -1,7 +1,19 @@
 from rest_framework import serializers
 
 from .formations import FORMATION_CHOICES
-from .models import Club, Competition, Fixture, Match, Player, Season, Standing
+from .models import (
+    Club,
+    Competition,
+    Fixture,
+    Match,
+    Player,
+    PlayerCareerEntry,
+    PlayerSeasonStat,
+    Season,
+    Standing,
+)
+from .player_contract import compute_contract_meta
+from .player_stats import bootstrap_position_minutes, favorite_positions_top3
 
 
 class PlayerSerializer(serializers.ModelSerializer):
@@ -12,10 +24,14 @@ class PlayerSerializer(serializers.ModelSerializer):
             "name",
             "position",
             "age",
+            "date_of_birth",
+            "nationality_countries",
+            "contract_end_date",
             "overall",
             "form",
             "transfermarkt_id",
             "transfermarkt_slug",
+            "photo_url",
             "tm_position",
             "market_value_usd",
             "pac",
@@ -49,6 +65,9 @@ class ClubSerializer(serializers.ModelSerializer):
             "is_player_controlled",
             "formation",
             "lineup_player_ids",
+            "captain_player_id",
+            "penalty_taker_player_id",
+            "free_kick_taker_player_id",
         ]
 
 
@@ -136,7 +155,12 @@ class SeasonOverviewSerializer(serializers.ModelSerializer):
         ]
 
     def get_player_club_id(self, obj: Season) -> int | None:
-        club = Club.objects.filter(is_player_controlled=True).first()
+        from .club_access import owned_club_for_user
+
+        request = self.context.get("request")
+        if request is None or not request.user.is_authenticated:
+            return None
+        club = owned_club_for_user(request.user)
         return club.id if club else None
 
     def get_recent_matches(self, obj: Season) -> list:
@@ -159,6 +183,110 @@ class SeasonOverviewSerializer(serializers.ModelSerializer):
         from django.conf import settings
 
         return bool(settings.ALLOW_MANUAL_MATCHDAY_SIMULATION)
+
+
+class PlayerCareerEntrySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PlayerCareerEntry
+        fields = ["club_name", "from_date", "to_date", "source"]
+
+
+class PlayerSeasonStatSerializer(serializers.ModelSerializer):
+    season_name = serializers.CharField(source="season.name", read_only=True)
+
+    class Meta:
+        model = PlayerSeasonStat
+        fields = [
+            "season_name",
+            "appearances",
+            "minutes",
+            "goals",
+            "assists",
+            "yellow_cards",
+            "red_cards",
+            "injury_days",
+        ]
+
+
+class PlayerDetailSerializer(PlayerSerializer):
+    club = ClubSerializer(read_only=True)
+    favorite_positions = serializers.SerializerMethodField()
+    contract = serializers.SerializerMethodField()
+    career = serializers.SerializerMethodField()
+    season_stats = serializers.SerializerMethodField()
+    roles = serializers.SerializerMethodField()
+    can_edit_roles = serializers.SerializerMethodField()
+
+    class Meta(PlayerSerializer.Meta):
+        fields = PlayerSerializer.Meta.fields + [
+            "club",
+            "favorite_positions",
+            "contract",
+            "career",
+            "season_stats",
+            "roles",
+            "can_edit_roles",
+        ]
+
+    def get_favorite_positions(self, obj: Player) -> list:
+        bootstrap_position_minutes(obj)
+        return favorite_positions_top3(obj.id)
+
+    def get_contract(self, obj: Player) -> dict:
+        season = self.context.get("season")
+        season_goals = season_assists = 0
+        if season:
+            stat = PlayerSeasonStat.objects.filter(season=season, player=obj).first()
+            if stat:
+                season_goals = stat.goals
+                season_assists = stat.assists
+        meta = compute_contract_meta(
+            obj, season_goals=season_goals, season_assists=season_assists
+        )
+        return {
+            "contract_end_date": meta["contract_end_date"],
+            "years_remaining": meta["years_remaining"],
+            "months_remaining": meta["months_remaining"],
+            "renewal_status": meta["renewal_status"],
+            "weekly_wage_usd": meta["weekly_wage_usd"],
+            "yearly_wage_usd": meta["yearly_wage_usd"],
+        }
+
+    def get_career(self, obj: Player) -> list:
+        qs = obj.career_entries.all()
+        if not qs.exists() and obj.club_id:
+            return [
+                {
+                    "club_name": obj.club.name,
+                    "from_date": None,
+                    "to_date": None,
+                    "source": "game",
+                }
+            ]
+        return PlayerCareerEntrySerializer(qs, many=True).data
+
+    def get_season_stats(self, obj: Player) -> list:
+        return PlayerSeasonStatSerializer(
+            obj.season_stats.select_related("season").order_by("-season_id"), many=True
+        ).data
+
+    def get_roles(self, obj: Player) -> dict:
+        club = obj.club
+        return {
+            "is_captain": club.captain_player_id == obj.id,
+            "is_penalty_taker": club.penalty_taker_player_id == obj.id,
+            "is_free_kick_taker": club.free_kick_taker_player_id == obj.id,
+        }
+
+    def get_can_edit_roles(self, obj: Player) -> bool:
+        player_club_id = self.context.get("player_club_id")
+        return bool(player_club_id and obj.club_id == player_club_id)
+
+
+class ClubPlayerRolesSerializer(serializers.Serializer):
+    captain_player_id = serializers.IntegerField(required=False, allow_null=True)
+    penalty_taker_player_id = serializers.IntegerField(required=False, allow_null=True)
+    free_kick_taker_player_id = serializers.IntegerField(required=False, allow_null=True)
 
 
 class TacticsUpdateSerializer(serializers.Serializer):

@@ -22,8 +22,17 @@ import { api } from '../api/client'
 import type { Player } from '../api/client'
 import { PageHeading } from '../components/PageHeading'
 import { PlayerAvatar } from '../components/PlayerAvatar'
-import { PlayerMiniStatStrip, PlayerStatsPopover } from '../components/PlayerFifaStats'
-import { FORMATIONS, FORMATION_PITCH_SLOTS, formationSlotCount } from '../formations'
+import { PlayerOverallWithStats } from '../components/PlayerFifaStats'
+import { PlayerProfileLink } from '../components/PlayerProfileLink'
+import {
+  FORMATIONS,
+  FORMATION_PITCH_SLOTS,
+  formationSlotCount,
+  formationSlotRoles,
+  pitchSlotDisplayY,
+  POSITION_FILTER_OPTIONS,
+  type GamePosition,
+} from '../formations'
 
 const { Text } = Typography
 
@@ -42,9 +51,43 @@ function parseSlotIndex(id: string): number | null {
   return Number.isFinite(n) ? n : null
 }
 
-function shortName(name: string): string {
+function surnameOnly(name: string): string {
   const parts = name.trim().split(/\s+/)
   return parts.length > 1 ? (parts[parts.length - 1] ?? name) : name
+}
+
+function remapLineupToFormation(players: Player[], lineupIds: number[], formation: string): number[] {
+  const roles = formationSlotRoles(formation)
+  const inLineup = lineupIds.filter(Boolean)
+  const byPos: Record<GamePosition, Player[]> = { GK: [], DEF: [], MID: [], FWD: [] }
+
+  for (const id of inLineup) {
+    const p = players.find((pl) => pl.id === id)
+    if (p && p.position in byPos) {
+      byPos[p.position as GamePosition].push(p)
+    }
+  }
+  for (const pos of Object.keys(byPos) as GamePosition[]) {
+    byPos[pos].sort((a, b) => b.overall - a.overall)
+  }
+
+  const used = new Set<number>()
+  const remaining = [...inLineup]
+
+  return roles.map((role) => {
+    const pool = byPos[role as GamePosition]
+    const fromRole = pool.find((p) => !used.has(p.id))
+    if (fromRole) {
+      used.add(fromRole.id)
+      return fromRole.id
+    }
+    const fallback = remaining.find((id) => id && !used.has(id))
+    if (fallback) {
+      used.add(fallback)
+      return fallback
+    }
+    return 0
+  })
 }
 
 type Props = { clubId: number | null; currentMatchday: number }
@@ -55,12 +98,14 @@ function PitchSlot({
   y,
   player,
   isOver,
+  captainPlayerId,
 }: {
   index: number
   x: number
   y: number
   player: Player | null
   isOver: boolean
+  captainPlayerId: number | null
 }) {
   const { setNodeRef, isOver: dropOver } = useDroppable({ id: slotDndId(index) })
   const highlighted = isOver || dropOver
@@ -72,7 +117,11 @@ function PitchSlot({
       style={{ left: `${x}%`, top: `${y}%` }}
     >
       {player ? (
-        <PitchPlayerChip player={player} slotIndex={index} />
+        <PitchPlayerChip
+          player={player}
+          slotIndex={index}
+          isCaptain={captainPlayerId === player.id}
+        />
       ) : (
         <div className="fm-slot-empty">
           <span className="fm-slot-empty-icon">+</span>
@@ -83,38 +132,50 @@ function PitchSlot({
   )
 }
 
-function PitchPlayerChip({ player, slotIndex }: { player: Player; slotIndex: number }) {
+function PitchPlayerChip({
+  player,
+  slotIndex,
+  isCaptain,
+}: {
+  player: Player
+  slotIndex: number
+  isCaptain: boolean
+}) {
   const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
     id: playerDndId(player.id),
     data: { type: 'pitch', slotIndex, playerId: player.id },
   })
   const style = {
     transform: CSS.Translate.toString(transform),
-    opacity: isDragging ? 0.35 : 1,
+    opacity: isDragging ? 0 : 1,
   }
 
   return (
-    <PlayerStatsPopover player={player}>
-      <div
-        ref={setNodeRef}
-        style={style}
-        className="fm-pitch-player"
-        {...listeners}
-        {...attributes}
-      >
-        <span className="fm-slot-ovr">{player.overall}</span>
-        <PlayerAvatar name={player.name} size={44} />
-        <Text className="fm-slot-name" ellipsis title={player.name}>
-          {shortName(player.name)}
-        </Text>
-        <Text type="secondary" className="fm-slot-pos">{player.position}</Text>
-        <PlayerMiniStatStrip player={player} compact />
+    <div
+      ref={setNodeRef}
+      style={style}
+      className="fm-pitch-player"
+      {...listeners}
+      {...attributes}
+    >
+      <div className="fm-pitch-avatar-wrap">
+        <PlayerOverallWithStats player={player} className="fm-slot-ovr" />
+        <PlayerAvatar name={player.name} photoUrl={player.photo_url} size={44} />
       </div>
-    </PlayerStatsPopover>
+      <PlayerProfileLink
+        playerId={player.id}
+        className="fm-slot-name fm-player-profile-link"
+        title={`${player.name} (${player.position})`}
+      >
+        {isCaptain ? <span className="fm-captain-badge">C</span> : null}
+        {surnameOnly(player.name)}
+        <span className="fm-slot-pos-inline">{player.position}</span>
+      </PlayerProfileLink>
+    </div>
   )
 }
 
-function BenchRow({ player }: { player: Player }) {
+function BenchRow({ player, isCaptain }: { player: Player; isCaptain: boolean }) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
     id: playerDndId(player.id),
     data: { type: 'bench', playerId: player.id },
@@ -132,21 +193,17 @@ function BenchRow({ player }: { player: Player }) {
       {...attributes}
     >
       <span className="fm-bench-grip" aria-hidden>⋮⋮</span>
-      <PlayerAvatar name={player.name} size={32} />
+      <PlayerAvatar name={player.name} photoUrl={player.photo_url} size={32} />
       <div className="fm-bench-meta">
-        <PlayerStatsPopover player={player}>
-          <div>
-            <Text strong className="fm-bench-name" ellipsis>
-              {player.name}
-            </Text>
-            <Text type="secondary" className="fm-bench-sub">
-              {player.position}
-            </Text>
-            <PlayerMiniStatStrip player={player} />
-          </div>
-        </PlayerStatsPopover>
+        <Text className="fm-bench-name" ellipsis title={`${player.name} (${player.position})`}>
+          <PlayerProfileLink playerId={player.id} className="fm-player-profile-link fm-bench-name-link">
+            {isCaptain ? <span className="fm-captain-badge">C</span> : null}
+            <Text strong>{player.name}</Text>
+          </PlayerProfileLink>
+          <Text type="secondary" className="fm-bench-sub">{player.position}</Text>
+        </Text>
       </div>
-      <em className="fm-bench-ovr">{player.overall}</em>
+      <PlayerOverallWithStats player={player} className="fm-bench-ovr" />
       <Tag className="fm-bench-ready">Готов</Tag>
     </div>
   )
@@ -155,9 +212,11 @@ function BenchRow({ player }: { player: Player }) {
 function DragPreview({ player }: { player: Player }) {
   return (
     <div className="fm-pitch-player fm-pitch-player--overlay">
-      <span className="fm-slot-ovr">{player.overall}</span>
-      <PlayerAvatar name={player.name} size={44} />
-      <Text className="fm-slot-name">{shortName(player.name)}</Text>
+      <div className="fm-pitch-avatar-wrap">
+        <span className="fm-slot-ovr">{player.overall}</span>
+        <PlayerAvatar name={player.name} photoUrl={player.photo_url} size={44} />
+      </div>
+      <Text className="fm-slot-name">{surnameOnly(player.name)}</Text>
     </div>
   )
 }
@@ -174,6 +233,8 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
   const [savedFlash, setSavedFlash] = useState(false)
   const [activeDragId, setActiveDragId] = useState<string | null>(null)
   const [overId, setOverId] = useState<string | null>(null)
+  const [benchPositionFilter, setBenchPositionFilter] = useState<'ALL' | GamePosition>('ALL')
+  const [captainPlayerId, setCaptainPlayerId] = useState<number | null>(null)
 
   const playerById = useMemo(() => new Map(players.map((p) => [p.id, p])), [players])
 
@@ -190,6 +251,7 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
       .getSquad(clubId)
       .then((data) => {
         setClubName(data.club.name)
+        setCaptainPlayerId(data.club.captain_player_id ?? null)
         setPlayers(data.players)
         setFormation(data.club.formation)
         setInitialFormation(data.club.formation)
@@ -208,14 +270,12 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
   const slotCount = pitchSlots.length
 
   const onFormationChange = (value: string) => {
+    setActiveDragId(null)
+    setOverId(null)
+    const remapped = remapLineupToFormation(players, slotIds, value)
     setFormation(value)
-    const nextCount = formationSlotCount(value)
-    setSlotIds((prev) => {
-      const next = prev.slice(0, nextCount)
-      while (next.length < nextCount) next.push(0)
-      syncBenchOrder(players, next)
-      return next
-    })
+    setSlotIds(remapped)
+    syncBenchOrder(players, remapped)
   }
 
   const resetLineup = () => {
@@ -321,6 +381,11 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
     [benchOrder, playerById],
   )
 
+  const filteredBenchPlayers = useMemo(() => {
+    if (benchPositionFilter === 'ALL') return benchPlayers
+    return benchPlayers.filter((p) => p.position === benchPositionFilter)
+  }, [benchPlayers, benchPositionFilter])
+
   const avgOverall = useMemo(() => {
     const picked = slotIds.map((id) => playerById.get(id)?.overall).filter(Boolean) as number[]
     if (!picked.length) return '—'
@@ -338,9 +403,10 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
         key={`${formation}-${slot.id}`}
         index={idx}
         x={slot.x}
-        y={slot.y}
+        y={pitchSlotDisplayY(slot)}
         player={player}
         isOver={slotOver}
+        captainPlayerId={captainPlayerId}
       />
     )
   })
@@ -380,8 +446,8 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
           setOverId(null)
         }}
       >
-        <Row gutter={[18, 18]}>
-          <Col xs={24} lg={16}>
+        <Row gutter={[18, 18]} className="fm-squad-row" align="stretch">
+          <Col xs={24} lg={16} className="fm-squad-col">
             <Card loading={loading} className="fm-pitch-card">
               <Space style={{ marginBottom: 16, width: '100%', justifyContent: 'space-between' }} wrap>
                 <Space>
@@ -401,11 +467,11 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
               <div className="fm-pitch">
                 <div className="fm-pitch-halfway" aria-hidden="true" />
                 <div className="fm-pitch-circle" aria-hidden="true" />
-                <div className="fm-pitch-slots">{pitchMarkers}</div>
+                <div className="fm-pitch-slots" key={formation}>{pitchMarkers}</div>
               </div>
             </Card>
           </Col>
-          <Col xs={24} lg={8}>
+          <Col xs={24} lg={8} className="fm-squad-col">
             <Card
               className="fm-bench-card"
               title={
@@ -419,12 +485,24 @@ export function SquadTactics({ clubId, currentMatchday }: Props) {
               <Text type="secondary" className="fm-bench-hint">
                 Перетащите на поле или меняйте порядок в списке
               </Text>
+              <Select
+                size="small"
+                value={benchPositionFilter}
+                options={POSITION_FILTER_OPTIONS}
+                onChange={setBenchPositionFilter}
+                style={{ width: '100%', marginBottom: 10 }}
+                disabled={benchPlayers.length === 0}
+              />
               <SortableContext items={benchOrder.map(playerDndId)} strategy={verticalListSortingStrategy}>
                 <div className="fm-bench-list">
                   {benchPlayers.length === 0 ? (
                     <Text type="secondary" style={{ fontSize: 12 }}>Все игроки в стартовом составе</Text>
+                  ) : filteredBenchPlayers.length === 0 ? (
+                    <Text type="secondary" style={{ fontSize: 12 }}>Нет игроков на этой позиции</Text>
                   ) : (
-                    benchPlayers.map((p) => <BenchRow key={p.id} player={p} />)
+                    filteredBenchPlayers.map((p) => (
+                      <BenchRow key={p.id} player={p} isCaptain={captainPlayerId === p.id} />
+                    ))
                   )}
                 </div>
               </SortableContext>

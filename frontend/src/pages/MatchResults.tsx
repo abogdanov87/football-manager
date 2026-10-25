@@ -5,7 +5,9 @@ import type { SeasonOverview } from '../api/client'
 import { ClubCrest } from '../components/ClubCrest'
 import { MatchReportModal } from '../components/MatchReportModal'
 import { PageHeading } from '../components/PageHeading'
+import { MatchResultTag } from '../components/MatchResultTag'
 import { clubMapFromStandings, resolveCrestUrl } from '../utils/clubs'
+import { playerMatchOutcome } from '../utils/matchResult'
 
 const { Text } = Typography
 
@@ -80,27 +82,37 @@ export function MatchResults({
             Матчи этого тура ещё не в ленте. Сыграйте тур или выберите другой.
           </Text>
         ) : (
-          dayMatches.map((m) => (
+          dayMatches.map((m) => {
+            const outcome = playerMatchOutcome(m, playerClubId, clubMap)
+            const playerRow = isPlayerMatch(m)
+            return (
             <div
               key={m.id}
-              className={`fm-fixture-row ${isPlayerMatch(m) ? 'club-match' : ''}`}
+              className={`fm-fixture-row${playerRow ? ' club-match' : ''}${outcome ? ` fm-fixture-row--${outcome}` : ''}`}
             >
-              {isPlayerMatch(m) && <span className="fm-club-match-label">ВАШ МАТЧ</span>}
+              {playerRow && <span className="fm-club-match-label">ВАШ МАТЧ</span>}
               <span className="fm-fixture-status">ЗАВЕРШЁН</span>
               <div className="fm-fixture-home">
                 <Text>{m.home_club}</Text>
                 <ClubCrest src={resolveCrestUrl(m.home_club, clubMap)} alt={m.home_club} size="small" />
               </div>
-              <Text strong className="fm-fixture-score">
-                {m.home_score} <i style={{ color: '#6e7e87', fontStyle: 'normal' }}>:</i> {m.away_score}
-              </Text>
+              <div className="fm-fixture-score-wrap">
+                <Text
+                  strong
+                  className={`fm-fixture-score${outcome ? ` fm-fixture-score--${outcome}` : ''}`}
+                >
+                  {m.home_score} <i className="fm-fixture-score-sep">:</i> {m.away_score}
+                </Text>
+                {outcome ? <MatchResultTag outcome={outcome} /> : null}
+              </div>
               <div className="fm-fixture-away">
                 <ClubCrest src={resolveCrestUrl(m.away_club, clubMap)} alt={m.away_club} size="small" />
                 <Text>{m.away_club}</Text>
               </div>
               <Button type="link" onClick={() => setReport(m)}>Отчёт →</Button>
             </div>
-          ))
+            )
+          })
         )}
       </Card>
 

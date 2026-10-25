@@ -18,7 +18,7 @@ type Props = {
 export function ClubCrest({ src, alt, size = 'medium' }: Props) {
   if (size === 'match') {
     return (
-      <div className="fm-crest-box fm-crest-box--match" title={alt}>
+      <div className="fm-crest-box fm-crest-box--match fm-crest-glow" title={alt}>
         {src ? (
           <img src={src} alt={alt} className="fm-crest-box__img" />
         ) : (
@@ -30,18 +30,21 @@ export function ClubCrest({ src, alt, size = 'medium' }: Props) {
 
   const px = SIZE_MAP[size]
   return (
-    <Avatar
-      shape="square"
-      src={src ?? undefined}
-      alt={alt}
-      size={px}
-      style={{
-        borderRadius: size === 'large' ? 10 : 6,
-        background: '#1b272f',
-        flexShrink: 0,
-      }}
-    >
-      {alt.slice(0, 1)}
-    </Avatar>
+    <span className={`fm-crest-wrap fm-crest-wrap--${size}`}>
+      <Avatar
+        shape="square"
+        className="fm-crest-glow"
+        src={src ?? undefined}
+        alt={alt}
+        size={px}
+        style={{
+          borderRadius: size === 'large' ? 10 : 6,
+          background: '#2a3540',
+          flexShrink: 0,
+        }}
+      >
+        {alt.slice(0, 1)}
+      </Avatar>
+    </span>
   )
 }

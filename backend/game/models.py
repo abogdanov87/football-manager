@@ -41,6 +41,27 @@ class Club(models.Model):
         max_length=12, choices=FORMATION_CHOICES, default="4-4-2"
     )
     lineup_player_ids = models.JSONField(default=list, blank=True)
+    captain_player = models.ForeignKey(
+        "Player",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="captain_of_clubs",
+    )
+    penalty_taker_player = models.ForeignKey(
+        "Player",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="penalty_taker_of_clubs",
+    )
+    free_kick_taker_player = models.ForeignKey(
+        "Player",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="free_kick_taker_of_clubs",
+    )
 
     class Meta:
         ordering = ["name"]
@@ -54,10 +75,14 @@ class Player(models.Model):
     name = models.CharField(max_length=120)
     position = models.CharField(max_length=3, choices=Position.choices)
     age = models.PositiveSmallIntegerField(default=25)
+    date_of_birth = models.DateField(null=True, blank=True)
+    nationality_countries = models.JSONField(default=list, blank=True)
+    contract_end_date = models.DateField(null=True, blank=True)
     overall = models.PositiveSmallIntegerField(default=70)
     form = models.FloatField(default=1.0)
     transfermarkt_id = models.PositiveIntegerField(null=True, blank=True, unique=True)
     transfermarkt_slug = models.SlugField(max_length=120, blank=True)
+    photo_url = models.CharField(max_length=255, blank=True)
     tm_position = models.CharField(max_length=64, blank=True)
     market_value_usd = models.PositiveIntegerField(default=0)
     pac = models.PositiveSmallIntegerField(default=50)
@@ -69,6 +94,7 @@ class Player(models.Model):
     aerial = models.PositiveSmallIntegerField(default=50)
     mentality = models.PositiveSmallIntegerField(default=50)
     injury_resistance = models.PositiveSmallIntegerField(default=50)
+    position_minutes_bootstrapped = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["-overall", "name"]
@@ -170,6 +196,112 @@ class Match(models.Model):
 
     def __str__(self) -> str:
         return f"{self.home_score}:{self.away_score}"
+
+
+class PlayerMatchAppearance(models.Model):
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="appearances")
+    match = models.ForeignKey(Match, on_delete=models.CASCADE, related_name="appearances")
+    minutes = models.PositiveSmallIntegerField(default=90)
+    position_code = models.CharField(max_length=32)
+    goals = models.PositiveSmallIntegerField(default=0)
+    assists = models.PositiveSmallIntegerField(default=0)
+    yellow_cards = models.PositiveSmallIntegerField(default=0)
+    red_cards = models.PositiveSmallIntegerField(default=0)
+    injury_days = models.PositiveSmallIntegerField(default=0)
+    started = models.BooleanField(default=True)
+
+    class Meta:
+        unique_together = [("player", "match")]
+        ordering = ["-match_id"]
+
+
+class PlayerSeasonStat(models.Model):
+    season = models.ForeignKey(Season, on_delete=models.CASCADE, related_name="player_stats")
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="season_stats")
+    appearances = models.PositiveSmallIntegerField(default=0)
+    minutes = models.PositiveIntegerField(default=0)
+    goals = models.PositiveSmallIntegerField(default=0)
+    assists = models.PositiveSmallIntegerField(default=0)
+    yellow_cards = models.PositiveSmallIntegerField(default=0)
+    red_cards = models.PositiveSmallIntegerField(default=0)
+    injury_days = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        unique_together = [("season", "player")]
+        ordering = ["-minutes"]
+
+
+class PlayerCareerEntry(models.Model):
+    class Source(models.TextChoices):
+        TRANSFERMARKT = "transfermarkt", "Transfermarkt"
+        GAME = "game", "Game"
+
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="career_entries")
+    club_name = models.CharField(max_length=160)
+    club = models.ForeignKey(
+        Club, null=True, blank=True, on_delete=models.SET_NULL, related_name="career_entries"
+    )
+    from_date = models.DateField(null=True, blank=True)
+    to_date = models.DateField(null=True, blank=True)
+    source = models.CharField(max_length=20, choices=Source.choices, default=Source.GAME)
+
+    class Meta:
+        ordering = ["from_date", "id"]
+
+
+class PlayerPositionMinuteLedger(models.Model):
+    """Minutes by position for rolling favorite-position window (incl. bootstrap)."""
+
+    class Source(models.TextChoices):
+        BOOTSTRAP = "bootstrap", "Bootstrap"
+        MATCH = "match", "Match"
+
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="position_minutes")
+    position_code = models.CharField(max_length=32)
+    minutes = models.PositiveIntegerField()
+    source = models.CharField(max_length=16, choices=Source.choices)
+    match = models.ForeignKey(
+        Match, null=True, blank=True, on_delete=models.CASCADE, related_name="position_minute_rows"
+    )
+    recorded_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["recorded_at", "id"]
+
+
+class EmailOtpChallenge(models.Model):
+    email = models.EmailField(db_index=True)
+    code_hash = models.CharField(max_length=128)
+    expires_at = models.DateTimeField()
+    attempts = models.PositiveSmallIntegerField(default=0)
+    used_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    request_ip = models.GenericIPAddressField(null=True, blank=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+
+
+class AuthToken(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="auth_tokens"
+    )
+    key_hash = models.CharField(max_length=128, unique=True)
+    expires_at = models.DateTimeField()
+    revoked_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_used_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+
+    @property
+    def is_active(self) -> bool:
+        from django.utils import timezone
+
+        if self.revoked_at:
+            return False
+        return self.expires_at > timezone.now()
 
 
 class Standing(models.Model):

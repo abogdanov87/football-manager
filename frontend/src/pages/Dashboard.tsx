@@ -4,7 +4,7 @@ import {
   StarOutlined,
   TrophyOutlined,
 } from '@ant-design/icons'
-import { Alert, Button, Card, Col, Row, Space, Statistic, Table, Tag, Typography } from 'antd'
+import { Alert, Button, Card, Col, Row, Space, Statistic, Table, Typography } from 'antd'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/ru'
@@ -14,7 +14,9 @@ import { api } from '../api/client'
 import type { Club, MatchResult, SeasonOverview, StandingRow } from '../api/client'
 import { ClubCrest } from '../components/ClubCrest'
 import { MatchReportModal } from '../components/MatchReportModal'
+import { MatchResultTag } from '../components/MatchResultTag'
 import { clubMapFromStandings, playerStanding, resolveCrestUrl } from '../utils/clubs'
+import { playerMatchOutcome } from '../utils/matchResult'
 
 dayjs.extend(relativeTime)
 dayjs.locale('ru')
@@ -74,15 +76,10 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
       m.away_short === playerClub?.short_name,
   )
 
-  const lastResultTag = () => {
-    if (!lastMatch || !playerClub) return null
-    const isHome = lastMatch.home_club === playerClub.name || lastMatch.home_short === playerClub.short_name
-    const us = isHome ? lastMatch.home_score : lastMatch.away_score
-    const them = isHome ? lastMatch.away_score : lastMatch.home_score
-    if (us > them) return <Tag color="success">ПОБЕДА</Tag>
-    if (us < them) return <Tag color="error">ПОРАЖЕНИЕ</Tag>
-    return <Tag>НИЧЬЯ</Tag>
-  }
+  const lastOutcome =
+    lastMatch && season?.player_club_id != null
+      ? playerMatchOutcome(lastMatch, season.player_club_id, clubMap)
+      : null
 
   const topFive = standings.slice(0, 5)
 
@@ -209,30 +206,39 @@ export function Dashboard({ season, standings, playerClub, loading, onRefresh, o
                 </Space>
               }
               loading={loading}
+              className="fm-next-match fm-last-match"
             >
               {lastMatch ? (
-                <div className="fm-last-result">
-                  <div className="fm-last-result-team">
-                    <ClubCrest
-                      src={resolveCrestUrl(lastMatch.home_club, clubMap)}
-                      alt={lastMatch.home_club}
-                      size="match"
-                    />
-                    <Text>{lastMatch.home_club}</Text>
+                <>
+                  <div className="fm-match-teams">
+                    <div className="fm-match-team fm-match-team--home">
+                      <ClubCrest
+                        src={resolveCrestUrl(lastMatch.home_club, clubMap)}
+                        alt={lastMatch.home_club}
+                        size="match"
+                      />
+                      <Text strong className="fm-match-club-name">{lastMatch.home_club}</Text>
+                    </div>
+                    <div className={`fm-versus fm-versus--result${lastOutcome ? ` fm-versus--${lastOutcome}` : ''}`}>
+                      <Text strong className="fm-versus-score">
+                        {lastMatch.home_score} : {lastMatch.away_score}
+                      </Text>
+                      {lastOutcome ? (
+                        <span className="fm-win-tag">
+                          <MatchResultTag outcome={lastOutcome} />
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="fm-match-team fm-match-team--away">
+                      <ClubCrest
+                        src={resolveCrestUrl(lastMatch.away_club, clubMap)}
+                        alt={lastMatch.away_club}
+                        size="match"
+                      />
+                      <Text strong className="fm-match-club-name">{lastMatch.away_club}</Text>
+                    </div>
                   </div>
-                  <Text className="fm-last-result-score">
-                    {lastMatch.home_score} : {lastMatch.away_score}
-                  </Text>
-                  <div className="fm-last-result-team">
-                    <ClubCrest
-                      src={resolveCrestUrl(lastMatch.away_club, clubMap)}
-                      alt={lastMatch.away_club}
-                      size="match"
-                    />
-                    <Text>{lastMatch.away_club}</Text>
-                  </div>
-                  <span className="fm-win-tag">{lastResultTag()}</span>
-                </div>
+                </>
               ) : (
                 <Alert type="info" message="Результатов пока нет — дождитесь первого матч-дня." />
               )}

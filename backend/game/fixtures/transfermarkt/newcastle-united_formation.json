@@ -1,0 +1,602 @@
+{
+  "list": {
+    "players": [
+      {
+        "id": "629773",
+        "name": "Lukas Hornicek",
+        "shortName": "Hornicek",
+        "captain": "",
+        "number": "21",
+        "profileUrl": "/lukas-hornicek/profil/spieler/629773",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "361093",
+        "name": "Sven Botman",
+        "shortName": "Botman",
+        "captain": "",
+        "number": "4",
+        "profileUrl": "/sven-botman/profil/spieler/361093",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Botman",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/361093-1683290679.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Newcastle United"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "18",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "521964",
+        "name": "Malick Thiaw",
+        "shortName": "Thiaw",
+        "captain": "",
+        "number": "12",
+        "profileUrl": "/malick-thiaw/profil/spieler/521964",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 63,
+        "styleLeft": 52.5,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Thiaw",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/521964-1682063635.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Newcastle United"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "86",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "670858",
+        "name": "Lewis Hall",
+        "shortName": "Hall",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/lewis-hall/profil/spieler/670858",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 61,
+        "styleLeft": 7.5,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "466805",
+        "name": "Nico Gonz\u00e1lez",
+        "shortName": "Gonz\u00e1lez",
+        "captain": "",
+        "number": "6",
+        "profileUrl": "/nico-gonzalez/profil/spieler/466805",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Gonz\u00e1lez",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/466805-1743669968.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Newcastle United"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "53",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "340329",
+        "name": "Joe Willock",
+        "shortName": "Willock",
+        "captain": "",
+        "number": "28",
+        "profileUrl": "/joe-willock/profil/spieler/340329",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 23,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Osula",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/609556-1693217416.jpg?lm=4711",
+            "playerOut": "Willock",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/340329-1761077592.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Newcastle United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "56",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "333241",
+        "name": "Joelinton",
+        "shortName": "Joelinton",
+        "captain": "x",
+        "number": "7",
+        "profileUrl": "/joelinton/profil/spieler/333241",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 28,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Burn",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/134270-1682340860.jpg?lm=4711",
+            "playerOut": "Joelinton",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/333241-1674210135.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Newcastle United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Joelinton",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/333241-1674210135.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Newcastle United"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "18",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "922769",
+        "name": "Lewis Miley",
+        "shortName": "Miley",
+        "captain": "",
+        "number": "67",
+        "profileUrl": "/lewis-miley/profil/spieler/922769",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 61,
+        "styleLeft": 73,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "398065",
+        "name": "Harvey Barnes",
+        "shortName": "Barnes",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/harvey-barnes/profil/spieler/398065",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 18,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "388165",
+        "name": "Yoane Wissa",
+        "shortName": "Wissa",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/yoane-wissa/profil/spieler/388165",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Wissa",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/388165-1740646948.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Newcastle United"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "55",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "724129",
+        "name": "Matias Fernandez-Pardo",
+        "shortName": "Fernandez-Pardo",
+        "captain": "",
+        "number": "20",
+        "profileUrl": "/matias-fernandez-pardo/profil/spieler/724129",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 18,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Tour\u00e9",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1067904-1755092124.jpg?lm=4711",
+            "playerOut": "Fernandez-Pardo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/724129-1780057362.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Newcastle United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "56",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "id": "192080",
+        "name": "Nick Pope",
+        "shortName": "Pope",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/nick-pope/profil/spieler/192080",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "135343",
+        "name": "Fabian Sch\u00e4r",
+        "shortName": "Sch\u00e4r",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/fabian-schar/profil/spieler/135343",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "134270",
+        "name": "Dan Burn",
+        "shortName": "Burn",
+        "captain": "",
+        "number": "33",
+        "profileUrl": "/dan-burn/profil/spieler/134270",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Burn",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/134270-1682340860.jpg?lm=4711",
+            "playerOut": "Joelinton",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/333241-1674210135.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Newcastle United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "90",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "519184",
+        "name": "Amar Dedic",
+        "shortName": "Dedic",
+        "captain": "",
+        "number": "37",
+        "profileUrl": "/amar-dedic/profil/spieler/519184",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "975347",
+        "name": "Aladji Bamba",
+        "shortName": "Bamba",
+        "captain": "",
+        "number": "8",
+        "profileUrl": "/aladji-bamba/profil/spieler/975347",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1111063",
+        "name": "Sean Steur",
+        "shortName": "Steur",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/sean-steur/profil/spieler/1111063",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "1067904",
+        "name": "Bazoumana Tour\u00e9",
+        "shortName": "Tour\u00e9",
+        "captain": "",
+        "number": "17",
+        "profileUrl": "/bazoumana-toure/profil/spieler/1067904",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Tour\u00e9",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/1067904-1755092124.jpg?lm=4711",
+            "playerOut": "Fernandez-Pardo",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/724129-1780057362.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Newcastle United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "56",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "199527",
+        "name": "Jacob Murphy",
+        "shortName": "Murphy",
+        "captain": "",
+        "number": "23",
+        "profileUrl": "/jacob-murphy/profil/spieler/199527",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "609556",
+        "name": "William Osula",
+        "shortName": "Osula",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/william-osula/profil/spieler/609556",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Osula",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/609556-1693217416.jpg?lm=4711",
+            "playerOut": "Willock",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/340329-1761077592.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+              "name": "Newcastle United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "56",
+              "addedTime": ""
+            }
+          },
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Osula",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/609556-1693217416.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/405.png?lm=1789459190",
+                "name": "Newcastle United"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "78",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "7",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/7"
+    },
+    "date": "Sat, 17/10/2026 - 5:30 PM hours",
+    "tactic": "4-2-3-1"
+  },
+  "matchReport": {
+    "id": "4899314",
+    "url": "/spielbericht/index/spielbericht/4899314",
+    "result": "0:1 "
+  },
+  "teams": {
+    "team1": {
+      "id": "762",
+      "name": "Newcastle",
+      "url": "/newcastle-united/startseite/verein/762",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/762.png?lm=1790843083",
+      "rank": "11"
+    },
+    "team2": {
+      "id": "405",
+      "name": "Aston Villa",
+      "url": "/aston-villa/startseite/verein/405",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/405.png?lm=1789459190",
+      "rank": "16"
+    }
+  },
+  "trainer": {
+    "id": "45555",
+    "name": "Matthias Jaissle",
+    "profileUrl": "/matthias-jaissle/profil/trainer/45555"
+  },
+  "url": "/spielbericht/index/spielbericht/4899314"
+}

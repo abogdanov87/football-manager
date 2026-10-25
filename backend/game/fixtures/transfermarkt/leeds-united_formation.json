@@ -1,0 +1,523 @@
+{
+  "list": {
+    "substitutes": [
+      {
+        "id": "196813",
+        "name": "Michael Zetterer",
+        "shortName": "Zetterer",
+        "captain": "",
+        "number": "16",
+        "profileUrl": "/michael-zetterer/profil/spieler/196813",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "371851",
+        "name": "Jaka Bijol",
+        "shortName": "Bijol",
+        "captain": "",
+        "number": "15",
+        "profileUrl": "/jaka-bijol/profil/spieler/371851",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "532775",
+        "name": "Melvin Bard",
+        "shortName": "Bard",
+        "captain": "",
+        "number": "26",
+        "profileUrl": "/melvin-bard/profil/spieler/532775",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "381753",
+        "name": "Ilia Gruev",
+        "shortName": "Gruev",
+        "captain": "",
+        "number": "44",
+        "profileUrl": "/ilia-gruev/profil/spieler/381753",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "346707",
+        "name": "Sean Longstaff",
+        "shortName": "Longstaff",
+        "captain": "",
+        "number": "8",
+        "profileUrl": "/sean-longstaff/profil/spieler/346707",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Longstaff",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/346707-1682341336.jpg?lm=4711",
+            "playerOut": "Tanaka",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/489359-1780324258.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/399.png?lm=1789459190",
+              "name": "Leeds United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "81",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "393323",
+        "name": "Brenden Aaronson",
+        "shortName": "Aaronson",
+        "captain": "",
+        "number": "11",
+        "profileUrl": "/brenden-aaronson/profil/spieler/393323",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "AM",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "939964",
+        "name": "Jean-Matt\u00e9o Bahoya",
+        "shortName": "Bahoya",
+        "captain": "",
+        "number": "23",
+        "profileUrl": "/jean-matteo-bahoya/profil/spieler/939964",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "279455",
+        "name": "Harry Wilson",
+        "shortName": "Wilson",
+        "captain": "",
+        "number": "10",
+        "profileUrl": "/harry-wilson/profil/spieler/279455",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "RW",
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "314288",
+        "name": "Lukas Nmecha",
+        "shortName": "Nmecha",
+        "captain": "",
+        "number": "14",
+        "profileUrl": "/lukas-nmecha/profil/spieler/314288",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Nmecha",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/314288-1657203640.jpg?lm=4711",
+            "playerOut": "Okafor",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/346890-1692879855.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/399.png?lm=1789459190",
+              "name": "Leeds United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      }
+    ],
+    "players": [
+      {
+        "id": "566799",
+        "name": "James Trafford",
+        "shortName": "Trafford",
+        "captain": "",
+        "number": "1",
+        "profileUrl": "/james-trafford/profil/spieler/566799",
+        "position": "Torwart",
+        "positionMain": "Goalkeeper",
+        "positionShort": "GK",
+        "styleTop": 80,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "679423",
+        "name": "Tarik Muharemovi\u0107",
+        "shortName": "Muharemovi\u0107",
+        "captain": "",
+        "number": "5",
+        "profileUrl": "/tarik-muharemovic/profil/spieler/679423",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 62,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "192635",
+        "name": "Nico Elvedi",
+        "shortName": "Elvedi",
+        "captain": "",
+        "number": "30",
+        "profileUrl": "/nico-elvedi/profil/spieler/192635",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "CB",
+        "styleTop": 61,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "362108",
+        "name": "Gabriel Gudmundsson",
+        "shortName": "Gudmundsson",
+        "captain": "",
+        "number": "3",
+        "profileUrl": "/gabriel-gudmundsson/profil/spieler/362108",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "LB",
+        "styleTop": 34,
+        "styleLeft": 15,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Gudmundsson",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/362108-1666691160.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/399.png?lm=1789459190",
+                "name": "Leeds United"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "19",
+                "addedTime": null
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "413220",
+        "name": "James Justin",
+        "shortName": "Justin",
+        "captain": "",
+        "number": "24",
+        "profileUrl": "/james-justin/profil/spieler/413220",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 61,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "465717",
+        "name": "Jayden Bogle",
+        "shortName": "Bogle",
+        "captain": "",
+        "number": "2",
+        "profileUrl": "/jayden-bogle/profil/spieler/465717",
+        "position": "Abwehr",
+        "positionMain": "Defender",
+        "positionShort": "RB",
+        "styleTop": 34,
+        "styleLeft": 65,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "344069",
+        "name": "Anton Stach",
+        "shortName": "Stach",
+        "captain": "",
+        "number": "18",
+        "profileUrl": "/anton-stach/profil/spieler/344069",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 20,
+        "styleLeft": 50,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "392771",
+        "name": "Ethan Ampadu",
+        "shortName": "Ampadu",
+        "captain": "x",
+        "number": "4",
+        "profileUrl": "/ethan-ampadu/profil/spieler/392771",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "DM",
+        "styleTop": 43,
+        "styleLeft": 52,
+        "actions": {
+          "substitution": [],
+          "cards": [
+            {
+              "description": "gelbe Karte",
+              "player": "Ampadu",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/392771-1658829697.jpg?lm=4711",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/399.png?lm=1789459190",
+                "name": "Leeds United"
+              },
+              "reason": "Foul",
+              "type": "gelb",
+              "offset": 16,
+              "time": {
+                "minute": "90",
+                "addedTime": "2"
+              }
+            }
+          ],
+          "goals": []
+        }
+      },
+      {
+        "id": "489359",
+        "name": "Ao Tanaka",
+        "shortName": "Tanaka",
+        "captain": "",
+        "number": "22",
+        "profileUrl": "/ao-tanaka/profil/spieler/489359",
+        "position": "Mittelfeld",
+        "positionMain": "Midfield",
+        "positionShort": "CM",
+        "styleTop": 43,
+        "styleLeft": 30,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Longstaff",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/346707-1682341336.jpg?lm=4711",
+            "playerOut": "Tanaka",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/489359-1780324258.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/399.png?lm=1789459190",
+              "name": "Leeds United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "81",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "346890",
+        "name": "Noah Okafor",
+        "shortName": "Okafor",
+        "captain": "",
+        "number": "19",
+        "profileUrl": "/noah-okafor/profil/spieler/346890",
+        "position": "Sturm",
+        "positionMain": "Attack",
+        "positionShort": "LW",
+        "styleTop": 20,
+        "styleLeft": 30,
+        "actions": {
+          "substitution": {
+            "description": "Substitution",
+            "playerIn": "Nmecha",
+            "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/314288-1657203640.jpg?lm=4711",
+            "playerOut": "Okafor",
+            "playerOutImage": "https://img.a.transfermarkt.technology/portrait/small/346890-1692879855.jpg?lm=4711",
+            "club": {
+              "src": "https://img.a.transfermarkt.technology/wappen/promitipp/399.png?lm=1789459190",
+              "name": "Leeds United"
+            },
+            "reason": "Tactical",
+            "type": "wechsel",
+            "time": {
+              "minute": "74",
+              "addedTime": ""
+            }
+          },
+          "cards": [],
+          "goals": []
+        }
+      },
+      {
+        "id": "306024",
+        "name": "Dominic Calvert-Lewin",
+        "shortName": "Calvert-Lewin",
+        "captain": "",
+        "number": "9",
+        "profileUrl": "/dominic-calvert-lewin/profil/spieler/306024",
+        "position": "Sturm",
+        "positionMain": "Centre-Forward",
+        "positionShort": "CF",
+        "styleTop": 3,
+        "styleLeft": 40,
+        "actions": {
+          "substitution": [],
+          "cards": [],
+          "goals": [
+            {
+              "description": "GOAL!",
+              "score": "1:1",
+              "player": "Calvert-Lewin",
+              "playerInImage": "https://img.a.transfermarkt.technology/portrait/small/306024-1685705768.jpg?lm=4711",
+              "goalType": "Not reported",
+              "action": "Rechtsschuss",
+              "assist": "Assist:",
+              "assistByPlayer": "Muharemovi\u0107",
+              "club": {
+                "src": "https://img.a.transfermarkt.technology/wappen/promitipp/399.png?lm=1789459190",
+                "name": "Leeds United"
+              },
+              "offset": 12,
+              "type": "tor",
+              "time": {
+                "minute": "51",
+                "addedTime": null
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "translations": {
+    "widgetTitle": "Most recent formation",
+    "lineup": "Starting Line-up",
+    "substitute": "Substitutes",
+    "coach": "Manager",
+    "linkText": "To the match sheet",
+    "matchdayText": "Matchday",
+    "positions": {
+      "goalkeeper": "Goalkeeper",
+      "defence": "Defender",
+      "midfield": "Midfielder",
+      "forward": "Striker"
+    }
+  },
+  "matchInfo": {
+    "competition": {
+      "id": "GB1",
+      "name": "Premier League",
+      "url": "/premier-league/startseite/wettbewerb/GB1"
+    },
+    "matchday": {
+      "day": "7",
+      "url": "/bundesliga/spieltag/wettbewerb/GB1/saison_id/2026/spieltag/7"
+    },
+    "date": "Sun, 18/10/2026 - 2:00 PM hours",
+    "tactic": "3-4-2-1"
+  },
+  "matchReport": {
+    "id": "4899312",
+    "url": "/spielbericht/index/spielbericht/4899312",
+    "result": "1:1 "
+  },
+  "teams": {
+    "team1": {
+      "id": "399",
+      "name": "Leeds",
+      "url": "/leeds-united/startseite/verein/399",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/399.png?lm=1789459190",
+      "rank": "7"
+    },
+    "team2": {
+      "id": "985",
+      "name": "Man Utd",
+      "url": "/manchester-united/startseite/verein/985",
+      "src": "https://img.a.transfermarkt.technology/wappen/verysmall/985.png?lm=1789459227",
+      "rank": "13"
+    }
+  },
+  "trainer": {
+    "id": "10939",
+    "name": "Daniel Farke",
+    "profileUrl": "/daniel-farke/profil/trainer/10939"
+  },
+  "url": "/spielbericht/index/spielbericht/4899312"
+}

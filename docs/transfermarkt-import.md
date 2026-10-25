@@ -5,7 +5,7 @@ Command: `python manage.py import_transfermarkt_epl`
 ## Source
 
 - Competition: [Premier League GB1](https://www.transfermarkt.co.uk/premier-league/startseite/wettbewerb/GB1)
-- Default host: `transfermarkt.co.uk` (`.world` often blocks automated clients in cloud VMs)
+- Default host: `transfermarkt.world` (use `--base-url https://www.transfermarkt.co.uk` if needed)
 - Squad pages: `/…/kader/verein/{id}/saison_id/{year}/plus/1`
 
 ## Behaviour
@@ -16,6 +16,17 @@ Command: `python manage.py import_transfermarkt_epl`
 4. Sets Russian `name` via deterministic transliteration (`transfermarkt_slug` + `transfermarkt_id` kept for updates).
 5. Stores `market_value_usd` as integer dollars using a **fixed EUR→USD rate** (default **1.08**). Override with `--eur-usd`.
 6. Derives FIFA-style attributes with `compute_player_attributes()` in `game/transfermarkt/attributes.py`.
+7. Downloads squad portraits into `frontend/public/players/{transfermarkt_id}.jpg` and sets `Player.photo_url` (e.g. `/players/262749.jpg`).
+8. Sets `Club.formation` and `Club.lineup_player_ids` from Transfermarkt **FinalFormation** API (`/ceapi/FinalFormation/ClubId/{verein_id}`) — the same “Стартовый состав” as on the club page. Falls back to auto-picked XI if the API is blocked (WAF).
+
+To refresh photos without re-importing squads: `python manage.py sync_transfermarkt_photos` (same `--fixture-dir` / `--base-url` as import; `--force` to re-download files).
+
+Player bio from Transfermarkt (DOB, citizenship + flag URLs, contract end; random contract 1–5y from 01.11.2026 if missing):
+
+```bash
+python manage.py sync_transfermarkt_profiles --fixture-dir game/fixtures/transfermarkt
+# optional: --fetch-profiles for live /profil/spieler/{id} pages
+```
 
 ## Attribute heuristic
 
@@ -32,7 +43,7 @@ Inputs: TM detailed position, age, market value (EUR).
 | Flag | Description |
 |------|-------------|
 | `--dry-run` | Parse only, no DB writes |
-| `--fixture-dir PATH` | Read `epl.html` and `{crest_slug}_kader.html` (offline / CI) |
+| `--fixture-dir PATH` | Read `epl.html`, `{crest_slug}_kader.html`, optional `{crest_slug}_formation.json` |
 | `--base-url` | TM mirror |
 | `--eur-usd` | Conversion rate |
 

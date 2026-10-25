@@ -1,14 +1,19 @@
 import {
+  AccountBookOutlined,
+  BankOutlined,
   HistoryOutlined,
   HomeOutlined,
   MenuOutlined,
+  ReadOutlined,
   SettingOutlined,
+  SnippetsOutlined,
+  SolutionOutlined,
   SwapOutlined,
   TableOutlined,
   TeamOutlined,
   ThunderboltOutlined,
 } from '@ant-design/icons'
-import { Avatar, Layout, Menu, Spin, Statistic, Typography } from 'antd'
+import { Avatar, Dropdown, Layout, Menu, Spin, Statistic, Typography } from 'antd'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { BrowserRouter, Link, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { api } from './api/client'
@@ -18,15 +23,29 @@ import { ComingSoon } from './pages/ComingSoon'
 import { Dashboard } from './pages/Dashboard'
 import { LeagueTable } from './pages/LeagueTable'
 import { MatchResults } from './pages/MatchResults'
+import { PlayerProfile } from './pages/PlayerProfile'
 import { SquadTactics } from './pages/SquadTactics'
+import { Login } from './pages/Login'
+import { ClaimClub } from './pages/ClaimClub'
+import { AuthProvider, useAuth } from './auth/AuthContext'
 import dayjs from 'dayjs'
 
 const { Header, Content, Sider } = Layout
 const { Text } = Typography
 
+function menuSoon(to: string, text: string) {
+  return (
+    <Link to={to} className="fm-menu-link">
+      <span>{text}</span>
+      <span className="fm-soon-tag">СКОРО</span>
+    </Link>
+  )
+}
+
 function Shell() {
   const location = useLocation()
   const navigate = useNavigate()
+  const { user, logout, logoutAll } = useAuth()
   const [season, setSeason] = useState<SeasonOverview | null>(null)
   const [standings, setStandings] = useState<StandingRow[]>([])
   const [playerClub, setPlayerClub] = useState<Club | null>(null)
@@ -68,6 +87,21 @@ function Shell() {
             label: <Link to="/squad">Состав и тактика</Link>,
           },
           {
+            key: '/contracts',
+            icon: <SnippetsOutlined />,
+            label: menuSoon('/contracts', 'Контракты'),
+          },
+          {
+            key: '/training',
+            icon: <ThunderboltOutlined />,
+            label: menuSoon('/training', 'Тренировки'),
+          },
+          {
+            key: '/academy',
+            icon: <ReadOutlined />,
+            label: menuSoon('/academy', 'Академия'),
+          },
+          {
             key: '/table',
             icon: <TableOutlined />,
             label: <Link to="/table">Таблица лиги</Link>,
@@ -81,27 +115,27 @@ function Shell() {
       },
       {
         type: 'group' as const,
-        label: 'РАЗВИТИЕ',
+        label: 'КЛУБ',
         children: [
+          {
+            key: '/staff',
+            icon: <SolutionOutlined />,
+            label: menuSoon('/staff', 'Сотрудники'),
+          },
           {
             key: '/transfers',
             icon: <SwapOutlined />,
-            label: (
-              <Link to="/transfers" className="fm-menu-link">
-                <span>Трансферы</span>
-                <span className="fm-soon-tag">СКОРО</span>
-              </Link>
-            ),
+            label: menuSoon('/transfers', 'Трансферы'),
           },
           {
-            key: '/training',
-            icon: <ThunderboltOutlined />,
-            label: (
-              <Link to="/training" className="fm-menu-link">
-                <span>Тренировки</span>
-                <span className="fm-soon-tag">СКОРО</span>
-              </Link>
-            ),
+            key: '/finances',
+            icon: <AccountBookOutlined />,
+            label: menuSoon('/finances', 'Финансы'),
+          },
+          {
+            key: '/infrastructure',
+            icon: <BankOutlined />,
+            label: menuSoon('/infrastructure', 'Инфраструктура'),
           },
         ],
       },
@@ -115,14 +149,24 @@ function Shell() {
         return 'Обзор клуба'
       case '/squad':
         return 'Команда / Состав и тактика'
+      case '/contracts':
+        return 'Команда / Контракты'
+      case '/training':
+        return 'Команда / Тренировки'
+      case '/academy':
+        return 'Команда / Академия'
+      case '/staff':
+        return 'Клуб / Сотрудники'
+      case '/transfers':
+        return 'Клуб / Трансферы'
+      case '/finances':
+        return 'Клуб / Финансы'
+      case '/infrastructure':
+        return 'Клуб / Инфраструктура'
       case '/table':
         return 'Соревнования / Премьер-лига'
       case '/matches':
         return 'Соревнования / История матчей'
-      case '/transfers':
-        return 'Развитие / Трансферы'
-      case '/training':
-        return 'Развитие / Тренировки'
       default:
         return 'Football Manager'
     }
@@ -146,9 +190,9 @@ function Shell() {
         <div className="fm-sider-inner">
           <div className="fm-sider-head">
             <div className="fm-brand">
-              <span className="fm-sports-word">sports</span>
+              <span className="fm-sports-word">FM</span>
               <span className="fm-brand-divider" />
-              <span className="fm-manager-label">Football Manager</span>
+              <span className="fm-manager-label">Футбольный менеджер</span>
             </div>
             {playerClub && (
               <div className="fm-club-chip">
@@ -179,7 +223,7 @@ function Shell() {
           </div>
         </div>
       </Sider>
-      <Layout style={{ background: 'transparent' }}>
+      <Layout className="fm-main" style={{ background: 'transparent' }}>
         <Header
           className="fm-topbar"
           style={{
@@ -204,9 +248,38 @@ function Shell() {
           <Text className="fm-topbar-season">
             {season?.name ?? 'Сезон'} <span style={{ color: '#6e7d86' }}>⌄</span>
           </Text>
-          <Avatar className="fm-profile-avatar" size={32}>
-            {playerClub?.short_name?.slice(0, 2) ?? 'АМ'}
-          </Avatar>
+          <Dropdown
+            menu={{
+              items: [
+                {
+                  key: 'email',
+                  label: user?.email ?? '',
+                  disabled: true,
+                },
+                {
+                  key: 'logout',
+                  label: 'Выйти',
+                  onClick: async () => {
+                    await logout()
+                    navigate('/login', { replace: true })
+                  },
+                },
+                {
+                  key: 'logout-all',
+                  label: 'Выйти на всех устройствах',
+                  onClick: async () => {
+                    await logoutAll()
+                    navigate('/login', { replace: true })
+                  },
+                },
+              ],
+            }}
+            trigger={['click']}
+          >
+            <Avatar className="fm-profile-avatar" size={32} style={{ cursor: 'pointer' }}>
+              {playerClub?.short_name?.slice(0, 2) ?? 'АМ'}
+            </Avatar>
+          </Dropdown>
         </Header>
         <Content style={{ background: 'transparent' }}>
           <div className="fm-content-wrap">
@@ -237,6 +310,10 @@ function Shell() {
                   }
                 />
                 <Route
+                  path="/players/:playerId"
+                  element={<PlayerProfile playerClubId={season?.player_club_id ?? null} />}
+                />
+                <Route
                   path="/table"
                   element={
                     <LeagueTable
@@ -262,8 +339,14 @@ function Shell() {
                     />
                   }
                 />
+                <Route path="/contracts" element={<ComingSoon title="Контракты игроков" />} />
+                <Route path="/staff" element={<ComingSoon title="Сотрудники клуба" />} />
+                <Route path="/finances" element={<ComingSoon title="Финансы клуба" />} />
+                <Route path="/economy" element={<Navigate to="/finances" replace />} />
+                <Route path="/infrastructure" element={<ComingSoon title="Инфраструктура клуба" />} />
                 <Route path="/transfers" element={<ComingSoon title="Трансферный рынок" />} />
                 <Route path="/training" element={<ComingSoon title="План тренировок" />} />
+                <Route path="/academy" element={<ComingSoon title="Академия" />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             )}
@@ -275,10 +358,50 @@ function Shell() {
   )
 }
 
+function AppRoutes() {
+  const { user, loading } = useAuth()
+
+  if (loading) {
+    return (
+      <div className="fm-auth-loading">
+        <Spin size="large" />
+      </div>
+    )
+  }
+
+  if (!user) {
+    return (
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
+    )
+  }
+
+  if (!user.club_id) {
+    return (
+      <Routes>
+        <Route path="/claim-club" element={<ClaimClub />} />
+        <Route path="*" element={<Navigate to="/claim-club" replace />} />
+      </Routes>
+    )
+  }
+
+  return (
+    <Routes>
+      <Route path="/login" element={<Navigate to="/" replace />} />
+      <Route path="/claim-club" element={<Navigate to="/" replace />} />
+      <Route path="/*" element={<Shell />} />
+    </Routes>
+  )
+}
+
 export default function App() {
   return (
     <BrowserRouter>
-      <Shell />
+      <AuthProvider>
+        <AppRoutes />
+      </AuthProvider>
     </BrowserRouter>
   )
 }

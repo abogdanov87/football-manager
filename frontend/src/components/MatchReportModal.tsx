@@ -1,5 +1,6 @@
 import { Button, Modal, Space, Timeline, Typography } from 'antd'
 import type { MatchResult } from '../api/client'
+import { renderMatchEventLine } from '../utils/matchReportEvent'
 import { ClubCrest } from './ClubCrest'
 
 const { Text } = Typography
@@ -52,7 +53,7 @@ export function MatchReportModal({
       <Timeline
         style={{ marginTop: 16 }}
         items={match.events.map((e) => ({
-          children: <Text style={{ fontSize: 12 }}>{e}</Text>,
+          children: <Text style={{ fontSize: 12 }}>{renderMatchEventLine(e)}</Text>,
         }))}
       />
       <Space style={{ marginTop: 20, width: '100%', justifyContent: 'flex-end' }}>
@@ -69,7 +70,7 @@ export function MatchReportModal({
 
 function TitleScore({ home, away }: { home: number; away: number }) {
   return (
-    <span style={{ fontSize: 35, fontWeight: 700 }}>
+    <span style={{ fontSize: 70, fontWeight: 700, lineHeight: 1.1 }}>
       {home} <span style={{ color: '#6d7b83' }}>:</span> {away}
     </span>
   )

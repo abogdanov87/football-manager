@@ -117,6 +117,7 @@ CORS_ALLOWED_ORIGINS=https://qolibri.ru,https://www.qolibri.ru
 EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
 DEFAULT_FROM_EMAIL=noreply@qolibri.ru
 ALLOW_MANUAL_MATCHDAY_SIMULATION=false
+HOSTING_LEGACY_MYSQL=1
 """
     sftp = client.open_sftp()
     with sftp.file(env_path, "w") as f:
@@ -215,6 +216,11 @@ def main() -> None:
         f"grep -q '^DB_ENGINE=' {SITE_ROOT}/qolibri.env 2>/dev/null || rm -f {SITE_ROOT}/qolibri.env",
     )
     ensure_env_on_server(client, db_user, db_pass, db_name)
+    run(
+        client,
+        f"grep -q '^HOSTING_LEGACY_MYSQL=' {SITE_ROOT}/qolibri.env || "
+        f"echo 'HOSTING_LEGACY_MYSQL=1' >> {SITE_ROOT}/qolibri.env",
+    )
     run(client, f"bash {SITE_ROOT}/remote-update.sh")
 
     sftp = client.open_sftp()

@@ -9,3 +9,4 @@ frontend/public/players/*.jpg
 *.pyc
 __pycache__/
 backend/game/fixtures/fcratings/search-index.json
+.cursor/skills/hosting.env

@@ -18,7 +18,7 @@ fi
 # shellcheck disable=SC1091
 source "$VENV/bin/activate"
 pip install -q --upgrade pip
-pip install -q -r backend/requirements.txt
+pip install -q -r backend/requirements-hosting.txt
 
 cd "$SITE_ROOT/football-manager/backend"
 set -a

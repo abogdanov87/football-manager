@@ -4,14 +4,15 @@ set -euo pipefail
 
 SITE_ROOT="/var/www/u2662691/data/www/qolibri.ru"
 REPO="$SITE_ROOT/football-manager"
-PY="/opt/python/python-3.11/bin/python3"
+PY="/opt/python/python-3.12/bin/python3"
 VENV="$SITE_ROOT/venv"
 
 cd "$REPO"
 git fetch origin main
 git reset --hard origin/main
 
-if [[ ! -d "$VENV" ]]; then
+if [[ ! -x "$VENV/bin/python" ]] || ! "$VENV/bin/python" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 12) else 1)' 2>/dev/null; then
+  rm -rf "$VENV"
   "$PY" -m venv "$VENV"
 fi
 # shellcheck disable=SC1091

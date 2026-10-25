@@ -100,7 +100,7 @@ def ensure_env_on_server(
     secret = run(
         client,
         f"{SITE_ROOT}/venv/bin/python -c \"import secrets; print(secrets.token_urlsafe(48))\" "
-        f"2>/dev/null || /opt/python/python-3.11/bin/python3 -c "
+        f"2>/dev/null || /opt/python/python-3.12/bin/python3 -c "
         f"\"import secrets; print(secrets.token_urlsafe(48))\"",
     ).strip()
     body = f"""DJANGO_DEBUG=false
@@ -163,17 +163,38 @@ def main() -> None:
         == "yes"
     )
     if not has_git:
-        run(client, f"rm -rf {SITE_ROOT}/football-manager && git clone {clone_url} {SITE_ROOT}/football-manager")
+        run(
+            client,
+            f"rm -rf {SITE_ROOT}/football-manager && git clone {clone_url} {SITE_ROOT}/football-manager",
+        )
     else:
         if token:
             run(
                 client,
                 f"cd {SITE_ROOT}/football-manager && git remote set-url origin {clone_url}",
             )
-        run(
-            client,
-            f"cd {SITE_ROOT}/football-manager && git fetch origin main && git reset --hard origin/main",
-        )
+        try:
+            run(
+                client,
+                f"cd {SITE_ROOT}/football-manager && git fetch origin main && git reset --hard origin/main",
+            )
+        except RuntimeError:
+            print("git fetch failed; uploading archive from local checkout", file=sys.stderr)
+            archive = subprocess.check_output(
+                ["git", "archive", "--format=tar", "HEAD"],
+                cwd=ROOT,
+            )
+            sftp = client.open_sftp()
+            remote_tar = f"{SITE_ROOT}/football-manager-sync.tar"
+            with sftp.file(remote_tar, "wb") as remote:
+                remote.write(archive)
+            sftp.close()
+            run(
+                client,
+                f"mkdir -p {SITE_ROOT}/football-manager && "
+                f"tar -xf {SITE_ROOT}/football-manager-sync.tar -C {SITE_ROOT}/football-manager && "
+                f"rm -f {SITE_ROOT}/football-manager-sync.tar",
+            )
 
     # Site wiring files from repo
     run(

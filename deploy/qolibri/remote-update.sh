@@ -28,6 +28,11 @@ set +a
 python manage.py migrate --noinput
 python manage.py collectstatic --noinput
 
+if ! python manage.py shell -c "from game.models import Season; import sys; sys.exit(0 if Season.objects.exists() else 1)"; then
+  python manage.py seed_league
+  python manage.py import_transfermarkt_epl --fixture-dir game/fixtures/transfermarkt || true
+fi
+
 mkdir -p "$SITE_ROOT/tmp"
 touch "$SITE_ROOT/tmp/restart.txt"
 

@@ -103,16 +103,11 @@ def ensure_env_on_server(
         f"2>/dev/null || /opt/python/python-3.12/bin/python3 -c "
         f"\"import secrets; print(secrets.token_urlsafe(48))\"",
     ).strip()
+    # Reg.ru shared MySQL is 5.7; Django 6 needs 8.4+. Use SQLite on this host.
     body = f"""DJANGO_DEBUG=false
 DJANGO_SECRET_KEY={secret}
 DJANGO_ALLOWED_HOSTS=qolibri.ru,www.qolibri.ru
 DJANGO_TIME_ZONE=Europe/Moscow
-DB_ENGINE=mysql
-DB_NAME={db_name}
-DB_USER={db_user}
-DB_PASSWORD={db_pass}
-DB_HOST=localhost
-DB_PORT=3306
 CORS_ALLOWED_ORIGINS=https://qolibri.ru,https://www.qolibri.ru
 EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
 DEFAULT_FROM_EMAIL=noreply@qolibri.ru
@@ -211,6 +206,10 @@ def main() -> None:
     )
 
     ensure_env_on_server(client, db_user, db_pass, db_name)
+    run(
+        client,
+        f"sed -i '/^DB_/d' {SITE_ROOT}/qolibri.env 2>/dev/null || true",
+    )
     run(client, f"bash {SITE_ROOT}/remote-update.sh")
 
     sftp = client.open_sftp()

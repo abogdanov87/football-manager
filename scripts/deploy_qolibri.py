@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-Deploy Football Manager to qolibri.ru from GitHub.
+Deploy Football Manager to qolibri.ru (legacy account).
+
+Prefer: python scripts/deploy_hosting.py --domain mr-manager.ru
+"""
 
 - git pull on the server (football-manager/)
 - pip install, migrate, collectstatic, Passenger restart

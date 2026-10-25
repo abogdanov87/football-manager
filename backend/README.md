@@ -22,7 +22,7 @@ API: `http://127.0.0.1:8001/api/`
 | Переменная | По умолчанию | Описание |
 |------------|--------------|----------|
 | `EMAIL_BACKEND` | `django.core.mail.backends.console.EmailBackend` | В dev письма в консоль; для SMTP укажите `django.core.mail.backends.smtp.EmailBackend` |
-| `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD` | — | Параметры SMTP |
+| `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_USE_TLS`, `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD` | — | Параметры SMTP (на Reg.ru: `mail.hosting.reg.ru:587`) |
 | `DEFAULT_FROM_EMAIL` | `noreply@footballmanager.local` | Отправитель OTP |
 | `DJANGO_SECRET_KEY` | (dev placeholder) | Обязательно сменить в production |
 

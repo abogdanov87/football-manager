@@ -11,9 +11,15 @@ cd "$REPO"
 git fetch origin main
 git reset --hard origin/main
 
-if [[ ! -x "$VENV/bin/python" ]] || ! "$VENV/bin/python" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 12) else 1)' 2>/dev/null; then
+recreate_venv() {
   rm -rf "$VENV"
   "$PY" -m venv "$VENV"
+}
+
+if [[ ! -x "$VENV/bin/python" ]] || ! "$VENV/bin/python" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 12) else 1)' 2>/dev/null; then
+  recreate_venv
+elif ! "$VENV/bin/python" -c 'import django; raise SystemExit(0 if django.VERSION[:2]==(4,2) else 1)' 2>/dev/null; then
+  recreate_venv
 fi
 # shellcheck disable=SC1091
 source "$VENV/bin/activate"

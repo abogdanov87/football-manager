@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+PassengerEnabled on
+PassengerAppRoot /var/www/u2662691/data/www/qolibri.ru
+PassengerPython /opt/python/python-3.11/bin/python3
+PassengerAppType wsgi
+PassengerStartupFile passenger_wsgi.py
+
+# SPA: API and static files first, then index.html for client routes
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^ - [L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^ /index.html [L]

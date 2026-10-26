@@ -288,12 +288,16 @@ def main() -> None:
             )
 
     deploy_path = f"{root}/football-manager/deploy/{deploy_dir}"
-    run(client, f"cp {deploy_path}/passenger_wsgi.py {root}/passenger_wsgi.py")
     run(client, f"cp {deploy_path}/htaccess {root}/.htaccess")
     run(
         client,
         f"cp {deploy_path}/remote-update.sh {root}/remote-update.sh && chmod +x {root}/remote-update.sh",
     )
+    run(
+        client,
+        f"cp {deploy_path}/start_gunicorn.sh {root}/start_gunicorn.sh && chmod +x {root}/start_gunicorn.sh",
+    )
+    run(client, f"cp {deploy_path}/backend-proxy.php {root}/backend-proxy.php")
 
     run(
         client,

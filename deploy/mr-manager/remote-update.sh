@@ -38,6 +38,8 @@ if ! python manage.py shell -c "from game.models import Season; import sys; sys.
   python manage.py import_transfermarkt_epl --fixture-dir game/fixtures/transfermarkt || true
 fi
 
+bash "$SITE_ROOT/start_gunicorn.sh"
+
 mkdir -p "$SITE_ROOT/tmp"
 touch "$SITE_ROOT/tmp/restart.txt"
 

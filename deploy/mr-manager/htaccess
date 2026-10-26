@@ -2,14 +2,8 @@ RewriteEngine On
 RewriteCond %{SERVER_PORT} !^443$
 RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
-PassengerEnabled on
-PassengerAppRoot /var/www/u3540963/data/www/mr-manager.ru
-PassengerPython /opt/python/python-3.12/bin/python3
-PassengerAppType wsgi
-PassengerStartupFile passenger_wsgi.py
-
 RewriteCond %{REQUEST_URI} ^/api/
-RewriteRule ^ - [L]
+RewriteRule ^api/ backend-proxy.php [L]
 
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

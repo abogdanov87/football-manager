@@ -126,6 +126,7 @@ EMAIL_USE_SSL = os.environ.get("EMAIL_USE_SSL", "false").lower() in (
 )
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
+EMAIL_TIMEOUT = int(os.environ.get("EMAIL_TIMEOUT", "15"))
 DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "noreply@footballmanager.local")
 
 CORS_ALLOWED_ORIGINS = [

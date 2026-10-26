@@ -1,3 +1,4 @@
+import time
 from datetime import timedelta
 
 from django.contrib.auth import get_user_model
@@ -21,6 +22,7 @@ class OtpFlowTests(TestCase):
     def test_request_sends_email(self):
         res = self.client.post("/api/auth/otp/request/", {"email": "test@example.com"}, format="json")
         self.assertEqual(res.status_code, 200)
+        time.sleep(0.15)
         self.assertEqual(len(mail.outbox), 1)
         self.assertIn("test@example.com", mail.outbox[0].to)
 

@@ -12,7 +12,10 @@ $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 $body = file_get_contents('php://input');
 
 $headers = ['Host: ' . ($_SERVER['HTTP_HOST'] ?? 'mr-manager.ru')];
-$skip = ['host', 'connection', 'content-length', 'transfer-encoding'];
+if (!empty($_SERVER['CONTENT_TYPE'])) {
+    $headers[] = 'Content-Type: ' . $_SERVER['CONTENT_TYPE'];
+}
+$skip = ['host', 'connection', 'content-length', 'transfer-encoding', 'content-type'];
 foreach ($_SERVER as $key => $value) {
     if (!str_starts_with($key, 'HTTP_')) {
         continue;
@@ -22,6 +25,9 @@ foreach ($_SERVER as $key => $value) {
         continue;
     }
     $headers[] = $name . ': ' . $value;
+}
+if ($body !== '') {
+    $headers[] = 'Content-Length: ' . strlen($body);
 }
 
 $ch = curl_init($url);

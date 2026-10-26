@@ -193,6 +193,7 @@ EMAIL_HOST_PASSWORD={mail_pass}
 DEFAULT_FROM_EMAIL={mail_user}
 ALLOW_MANUAL_MATCHDAY_SIMULATION=false
 HOSTING_LEGACY_MYSQL=1
+EMAIL_TIMEOUT=15
 """
     sftp = client.open_sftp()
     with sftp.file(env_path, "w") as f:

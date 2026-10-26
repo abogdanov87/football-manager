@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import secrets
+import threading
 from datetime import timedelta
 
 from django.contrib.auth import get_user_model
@@ -79,13 +80,17 @@ def request_otp(email: str, *, ip: str | None = None) -> None:
         "emails/otp.txt",
         {"code": code, "minutes": OTP_TTL_MINUTES},
     )
-    send_mail(
-        subject="Код входа — Football Manager",
-        message=text,
-        from_email=None,
-        recipient_list=[email],
-        html_message=html,
-    )
+    def _deliver() -> None:
+        send_mail(
+            subject="Код входа — Football Manager",
+            message=text,
+            from_email=None,
+            recipient_list=[email],
+            html_message=html,
+            fail_silently=False,
+        )
+
+    threading.Thread(target=_deliver, daemon=True).start()
 
 
 def verify_otp(email: str, code: str) -> tuple[User, AuthToken, str]:

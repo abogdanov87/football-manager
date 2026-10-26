@@ -289,6 +289,7 @@ def main() -> None:
             )
 
     deploy_path = f"{root}/football-manager/deploy/{deploy_dir}"
+    run(client, f"cp {deploy_path}/passenger_wsgi.py {root}/passenger_wsgi.py")
     run(client, f"cp {deploy_path}/htaccess {root}/.htaccess")
     run(
         client,
@@ -296,9 +297,9 @@ def main() -> None:
     )
     run(
         client,
-        f"cp {deploy_path}/start_gunicorn.sh {root}/start_gunicorn.sh && chmod +x {root}/start_gunicorn.sh",
+        "pkill -u $(whoami) -f 'gunicorn config.wsgi' 2>/dev/null || true; "
+        f"rm -f {root}/gunicorn.pid {root}/backend-proxy.php {root}/start_gunicorn.sh",
     )
-    run(client, f"cp {deploy_path}/backend-proxy.php {root}/backend-proxy.php")
 
     run(
         client,

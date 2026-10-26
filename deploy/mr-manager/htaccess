@@ -2,8 +2,11 @@ RewriteEngine On
 RewriteCond %{SERVER_PORT} !^443$
 RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
+# Reg.ru shared hosting: no custom ports (no Gunicorn). API via Passenger + passenger_wsgi.py.
+PassengerEnabled on
+
 RewriteCond %{REQUEST_URI} ^/api/
-RewriteRule ^api/ backend-proxy.php [L]
+RewriteRule ^ - [L]
 
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

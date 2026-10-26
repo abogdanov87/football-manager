@@ -5,8 +5,11 @@ from pathlib import Path
 SITE_ROOT = Path(__file__).resolve().parent
 BACKEND = SITE_ROOT / "football-manager" / "backend"
 ENV_FILE = SITE_ROOT / "site.env"
+VENV_SITE = SITE_ROOT / "venv" / "lib" / "python3.12" / "site-packages"
 
 sys.path.insert(0, str(BACKEND))
+if VENV_SITE.is_dir():
+    sys.path.insert(1, str(VENV_SITE))
 
 if ENV_FILE.is_file():
     for raw in ENV_FILE.read_text(encoding="utf-8").splitlines():
